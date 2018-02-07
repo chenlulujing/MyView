@@ -2,10 +2,13 @@ package com.san.os.myview.ui.view;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -13,6 +16,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.san.os.myview.R;
 
@@ -22,11 +26,17 @@ import com.san.os.myview.R;
  * @date 2018-02-07 15:00
  */
 
-public class TabVideoButtonPathView extends View {
+public class TabVideoButtonPathView extends View implements View.OnClickListener {
 
 
     private Paint mPaint;
     private Context mContext;
+
+
+    //bitmap
+    private Rect mSrcRect, mDestRect;
+    private Bitmap mBitmap;
+
 
     private int Y = 0;
     private int height;
@@ -61,6 +71,10 @@ public class TabVideoButtonPathView extends View {
         mPaint.setTextSize(sp2px(context, 25));
 
 
+        mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_wodedingyue);
+        mSrcRect = new Rect(0, 0, mBitmap.getWidth(), mBitmap.getHeight());
+
+
         height = dip2px(50);
         one = dip2px(1);
         dis = one * 6;
@@ -76,7 +90,18 @@ public class TabVideoButtonPathView extends View {
         locationX = getDisplayWidth((Activity) mContext) / 2;
         locationY = Y + half;
 
+//        setOnClickListener(this);
+
     }
+
+    private Paint mBitPaint;
+
+    private void initPaint() {
+        mBitPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mBitPaint.setFilterBitmap(true);
+        mBitPaint.setDither(true);
+    }
+
 
     private int width;
 
@@ -104,9 +129,9 @@ public class TabVideoButtonPathView extends View {
         mPaint.setColor(mContext.getResources().getColor(R.color.skin_color_tx_8));
 
 
-        //小视频图标 真正的圆
-        RectF rectf_head = new RectF(locationX - r, locationY - r, locationX + r, locationY + r);//确定外切矩形范围
-        canvas.drawArc(rectf_head, 0, 360, false, mPaint);//绘制圆弧，不含圆心
+        //小视频图标
+        mDestRect = new Rect(locationX - r, locationY - r, locationX + r, locationY + r);
+        canvas.drawBitmap(mBitmap, mSrcRect, mDestRect, mBitPaint);
 
         //大圆
         mPaint.setStyle(Paint.Style.STROKE);//设置空心
@@ -148,4 +173,8 @@ public class TabVideoButtonPathView extends View {
         return metrics;
     }
 
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(mContext, "TabVideoButtonPathView", Toast.LENGTH_SHORT).show();
+    }
 }
