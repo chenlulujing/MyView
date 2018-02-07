@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 网络图片加载下来后的蒙版 -->
+    <color name="skin_net_pic">@android:color/transparent</color>
+    <color name="skin_net_pic_night">#33181a1d</color>
+    <!--用于在 view 上在盖上一个 View-->
+    <color name="skin_color_net_pic">@android:color/transparent</color>
+    <color name="skin_color_net_pic_night">#33181a1d</color>
+    <!-- bg.1 下拉整体背景色-->
+    <color name="skin_color_bg_1">#ffffff</color>
+    <color name="skin_color_bg_1_night">#000000</color>
+    <!-- bg.2 区块间隔色/表单分组标题栏-->
+    <color name="skin_color_bg_2">#f5f5f5</color>
+    <color name="skin_color_bg_2_night">#121315</color>
+    <!-- bg.3 列表卡片背景色-->
+    <color name="skin_color_bg_3">#ffffff</color>
+    <color name="skin_color_bg_3_night">#181a1d</color>
+    <color name="skin_color_bg_3_press">#ececec</color>
+    <color name="skin_color_bg_3_press_night">#000000</color>
+    <!-- bg.4 转发背景色-->
+    <color name="skin_color_bg_4">#f5f5f5</color>
+    <color name="skin_color_bg_4_night">#32353a</color>
+    <color name="skin_color_bg_4_press">#7ff5f5f5</color>
+    <color name="skin_color_bg_4_press_night">#7f32353a</color>
+    <!-- bg.5 综合页卡片选择-->
+    <color name="skin_color_bg_5">#fbfbfb</color>
+    <color name="skin_color_bg_5_night">#17181b</color>
+    <!-- bg.6 搜索框-->
+    <color name="skin_color_bg_6">#ffffff</color>
+    <color name="skin_color_bg_6_night">#26292e</color>
+    <color name="skin_color_bg_6_press">#7fffffff</color>
+    <color name="skin_color_bg_6_press_night">#7f26292e</color>
+    <!-- bg.7 留言弹层-->
+    <color name="skin_color_bg_7">#f5f5f5</color>
+    <color name="skin_color_bg_7_night">#26292e</color>
+    <!-- bg.8 车款对比详情-->
+    <color name="skin_color_bg_8">#fffce7</color>
+    <color name="skin_color_bg_8_night">#d1cfbf</color>
+    <!-- bg.9 顶部蓝色通栏-->
+    <color name="skin_color_bg_9">#266de2</color>
+    <color name="skin_color_bg_9_night">#235cbb</color>
+
+    <!-- 普通view蒙版-->
+    <color name="skin_color_bg_mengban">@color/transparent</color>
+    <color name="skin_color_bg_mengban_night">#33181a1d</color>
+
+    <!-- ln.1 通用分割线-->
+    <color name="skin_color_ln_1">#ececec</color>
+    <color name="skin_color_ln_1_night">#26292e</color>
+    <color name="skin_color_ln_1_press">#7fececec</color>
+    <color name="skin_color_ln_1_press_night">#7f26292e</color>
+    <!-- ln.2 特殊强功能分割线-->
+    <color name="skin_color_ln_2">#dedede</color>
+    <color name="skin_color_ln_2_night">#26292e</color>
+    <color name="skin_color_ln_2_press">#7fdedede</color>
+    <color name="skin_color_ln_2_press_night">#7f26292e</color>
+    <!-- ln.3 弹层-->
+    <color name="skin_color_ln_3">#ececec</color>
+    <color name="skin_color_ln_3_night">#121315</color>
+    <!-- ln.4 关注度-->
+    <color name="skin_color_ln_4">#89ace7</color>
+    <color name="skin_color_ln_4_night">#244375</color>
+
+    <!-- tx.1 标题、主文字、正文、边框按钮文字-->
+    <color name="skin_color_tx_1">#333333</color>
+    <color name="skin_color_tx_1_night">#888888</color>
+    <color name="skin_color_tx_1_press">#7f333333</color>
+    <color name="skin_color_tx_1_press_night">#7f888888</color>
+    <!-- tx.2 分组标题栏文字、内容转发文字、相对重要 -->
+    <color name="skin_color_tx_2">#666666</color>
+    <color name="skin_color_tx_2_night">#666666</color>
+    <color name="skin_color_tx_2_press">#7f666666</color>
+    <color name="skin_color_tx_2_press_night">#7f666666</color>
+    <!-- tx.3 辅助信息文字（搜索框文字、地点、时间、评论数），列表文字选择后状态、评论页引用回复文字 -->
+    <color name="skin_color_tx_3">#999999</color>
+    <color name="skin_color_tx_3_night">#575757</color>
+    <color name="skin_color_tx_3_press">#7f999999</color>
+    <color name="skin_color_tx_3_press_night">#7f575757</color>
+    <!-- tx.4 信息提示 -->
+    <color name="skin_color_tx_4">#b7b7b7</color>
+    <color name="skin_color_tx_4_night">#575757</color>
+    <color name="skin_color_tx_4_press">#7fb7b7b7</color>
+    <color name="skin_color_tx_4_press_night">#7f575757</color>
+    <!-- tx.5 纯色按钮上文字 -->
+    <color name="skin_color_tx_5">#ffffff</color>
+    <color name="skin_color_tx_5_night">#cccccc</color>
+    <color name="skin_color_tx_5_press">#7fffffff</color>
+    <color name="skin_color_tx_5_press_night">#7fcccccc</color>
+    <!-- tx.6 易车蓝——标题颜色、tab 当前色、文字链接色、按钮文字 -->
+    <color name="skin_color_tx_6">#266de2</color>
+    <color name="skin_color_tx_6_night">#235cbb</color>
+    <color name="skin_color_tx_6_press">#7f266de2</color>
+    <color name="skin_color_tx_6_press_night">#7f235cbb</color>
+    <!-- tx.7 询价按钮 -->
+    <color name="skin_color_tx_7">#ff9900</color>
+    <color name="skin_color_tx_7_night">#d18006</color>
+    <color name="skin_color_tx_7_press">#7fff9900</color>
+    <color name="skin_color_tx_7_press_night">#7fd18006</color>
+    <!-- tx.8 头条、报价、4S -->
+    <color name="skin_color_tx_8">#dd2727</color>
+    <color name="skin_color_tx_8_night">#b62425</color>
+    <color name="skin_color_tx_8_press">#7fdd2727</color>
+    <color name="skin_color_tx_8_press_night">#7fb62425</color>
+    <!-- tx.9 降价价格 -->
+    <color name="skin_color_tx_9">#009900</color>
+    <color name="skin_color_tx_9_night">#058006</color>
+    <!-- tx.10 标题和二级标题栏-->
+    <color name="skin_color_tx_10">#999999</color>
+    <color name="skin_color_tx_10_night">#888888</color>
+    <!-- tx.11 蓝色确认按钮，线框按钮蓝色文字，点缀蓝 icon-->
+    <color name="skin_color_tx_11">#3f95fd</color>
+    <color name="skin_color_tx_11_night">#3478cb</color>
+    <!-- tx.12 标题栏目文字，蓝色按钮文字，蓝背景文字和线条 icon-->
+    <color name="skin_color_tx_12">#fff</color>
+    <color name="skin_color_tx_12_night">#a6c7ff</color>
+    <!-- tx.13 优惠提醒文字，红色提示泡，圆底-->
+    <color name="skin_color_tx_13">#ff4f50</color>
+    <color name="skin_color_tx_13_night">#d14445</color>
+    <!-- tx.14 易鑫资本金色字-->
+    <color name="skin_color_tx_14">#d0a44b</color>
+    <color name="skin_color_tx_14_night">#d0a44b</color>
+
+
+    <!-- cp.1 小车号牌数字区域-->
+    <color name="skin_color_cp_1">#3f95fd</color>
+    <color name="skin_color_cp_1_night">#3478cb</color>
+    <!-- cp.2 小车号牌省会区域-->
+    <color name="skin_color_cp_2">#337ffc</color>
+    <color name="skin_color_cp_2_night">#3478cb</color>
+    <!-- cp.3 大车号牌数字区域-->
+    <color name="skin_color_cp_3">#f9d54b</color>
+    <color name="skin_color_cp_3_night">#e3c623</color>
+    <!-- cp.4 大车号牌省会区域 -->
+    <color name="skin_color_cp_4">#f1c700</color>
+    <color name="skin_color_cp_4_night">#d7b80d</color>
+
+    <!-- kp.2 卡片底色-->
+    <color name="skin_color_kp_2">#fff</color>
+    <color name="skin_color_kp_2_night">#181a1d</color>
+
+    <color name="skin_color_cs_1">#ffffff</color>
+    <color name="skin_color_cs_1_night">#181a1d</color>
+    <color name="skin_color_cs_2">#ebf3ff</color>
+    <color name="skin_color_cs_2_night">#323c4c</color>
+    <color name="skin_color_cs_3">#85b3ff</color>
+    <color name="skin_color_cs_3_night">#1e3b6b</color>
+    <!--<color name="skin_color_cs_4">#ececec</color>-->
+    <!--<color name="skin_color_cs_4_night">#26282a</color> -->
+    <color name="skin_color_cs_5">#ececec</color>
+    <color name="skin_color_cs_5_night">#26282a</color>
+    <color name="skin_color_cs_6">#cccccc</color>
+    <color name="skin_color_cs_6_night">#32353a</color>
+
+    <color name="skin_color_cs_7">#266de2</color>
+    <color name="skin_color_cs_7_night">#314e7d</color>
+    <color name="skin_color_cs_8">#333333</color>
+    <color name="skin_color_cs_8_night">#7d7d7d</color>
+    <color name="skin_color_cs_9">#266de2</color>
+    <color name="skin_color_cs_9_night">#314e7d</color>
+    <color name="skin_color_cs_10">#666666</color>
+    <color name="skin_color_cs_10_night">#7d7d7d</color>
+    <color name="skin_color_cs_11">#666666</color>
+    <color name="skin_color_cs_11_night">#575757</color>
+    <color name="skin_color_cs_12">#000000</color>
+    <color name="skin_color_cs_12_night">#cccccc</color>
+    <color name="skin_color_cs_13">#f6f6f6</color>
+    <color name="skin_color_cs_13_night">#26282a</color>
+
+    <!-- 默认灰色，选中白色 -->
+    <color name="skin_color_tx_gray_white">#b7b7b7</color>
+    <color name="skin_color_tx_gray_white_night">#b7b7b7</color>
+    <color name="skin_color_tx_gray_white_press">#ffffff</color>
+    <color name="skin_color_txgray_white_press_night">#7fffffff</color>
+
+    <!-- 绑定易车账号 -->
+    <color name="skin_color_bg_blue_press">#266de2</color>
+    <color name="skin_color_bg_blue_press_night">#33266de2</color>
+
+    <color name="skin_color_tx_blue_white">#266de2</color>
+    <color name="skin_color_tx_blue_white_night">#33266de2</color>
+    <color name="skin_color_tx_blue_white_press">#ffffff</color>
+    <color name="skin_color_tx_blue_white_press_night">#181a1d</color>
+    <color name="skin_color_mb">#00000000</color>
+    <color name="skin_color_mb_night">#cc181a1d</color>
+    <!-- 通用规范 -->
+    <!-- 正文颜色 -->
+    <color name="txt_zhengwen">@color/black_454545</color>
+    <color name="txt_zhengwen60">#95454545</color>
+    <!-- 标题颜色 -->
+    <color name="txt_biaoti">@color/black_333333</color>
+    <!-- 辅助颜色 -->
+    <color name="txt_fuzhu">@color/grey_919191</color>
+    <color name="txt_fuzhu60">#95919191</color>
+    <!-- 正蓝色 -->
+    <color name="txt_lanse">@color/blue_2467d5</color>
+    <color name="blue_3976d9">#3976d5</color>
+
+    <color name="skin_color_bg_ccblue">#99266de2</color>
+    <color name="skin_color_bg_ccblue_night">#99235cbb</color>
+    <color name="skin_color_inner_bg_ccblue">#f2266de2</color>
+    <color name="skin_color_inner_bg_ccblue_night">#f2235cbb</color>
+
+    <color name="skin_text_color">@color/grey_33</color>
+    <color name="skin_text_color_night">@color/gray_EBECEB</color>
+
+    <color name="skin_text_background">@color/white</color>
+    <color name="skin_text_background_night">@color/black_181a1d</color>
+
+    <color name="skin_background">@color/grey_f2f2f2</color>
+    <color name="skin_background_night">@color/gray_26292e</color>
+
+    <color name="skin_line_background">#ececec</color>
+    <color name="skin_line_background_night">#26292e</color>
+
+    <color name="skin_color_hotbrand_item_bg_press">#d9d9d9</color>
+    <color name="skin_color_hotbrand_item_bg_press_night">@color/black_333333</color>
+
+    <color name="skin_color_other">#c9c9c9</color>
+    <color name="skin_color_other_night">#26292e</color>
+
+    <color name="skin_color_title_filter_bg">#EEEEEE</color>>
+    <color name="skin_color_title_filter_bg_night">#575757</color>>
+
+    <color name="skin_color_dingyue_bg">#bbbbbb</color>>
+    <color name="skin_color_dingyue_bg_night">#575757</color>>
+
+    <color name="skin_color_shadow_tt_bg">#f2f2f2</color>>
+    <color name="skin_color_shadow_tt_bg_night">#000000</color>>
+
+
+    <color name="skin_color_header_comment_bg">@color/white</color>>
+    <color name="skin_color_header_comment_bgnight">#a8a8a9</color>>
+
+
+    <color name="skin_color_album_titledes_bg">@color/white</color>>
+    <color name="skin_color_album_titledes_bg_night">#999999</color>>
+
+
+    <color name="skin_color_album_contentdes_bg">@color/white_dfdfdfdf</color>>
+    <color name="skin_color_album_contentdes_bg_night">#999999</color>>
+
+    <color name="skin_color_bottom_bg">@color/grey_f9f9f9</color>>
+    <color name="skin_color_bottom_bg_night">@color/skin_color_bg_6_night</color>>
+
+    <color name="param_different_bg">#FFFCE7</color>
+
+
+    <color name="skin_color_albumtitle_bg">#CC000000</color>
+    <color name="skin_color_albumtitle_bg_night">@color/skin_color_bg_3_night</color>
+
+    <color name="skin_color_tx_11_70">#b23f95fd</color>
+    <color name="skin_color_tx_11_70_night">#b23478cb</color>
+
+    <color name="skin_color_toutiao_lastposition">#f6f6f6</color>
+    <color name="skin_color_toutiao_lastposition_night">#000000</color>
+
+
+    <!-- 通用规范end -->
+    <color name="gold">#FFD700</color>
+    <color name="black">#000000</color>
+    <color name="black_2f2f2f">#2f2f2f</color>
+    <color name="blue_4696bc">#4696bc</color>
+    <color name="blue_0075a9">#0075a9</color>
+    <color name="grey_8b8b8b">#8b8b8b</color>
+    <color name="transparent_black">#88000000</color>
+    <color name="transparent_black_70">#CC000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_919191">#919191</color>
+    <color name="grey">#FF888888</color>
+    <color name="grey_33">#333333</color>
+    <color name="grey_cb">#cbcbcb</color>
+    <color name="grey_dedede">#dedede</color>
+    <color name="grey_99">#999999</color>
+    <color name="grey_66">#666666</color>
+    <color name="blue">#4F6895</color>
+    <color name="blue_95266de2">#95266de2</color>
+    <color name="blue_598bdd">#598bdd</color>
+    <color name="red">#f00</color>
+    <color name="red_CE0F0F">#CE0F0F</color>
+    <color name="red_ea6368">#ea6368</color>
+    <color name="red_cc">#cc0000</color>
+    <color name="red_ff4f4f">#ff4f4f</color>
+    <color name="red_fb9292">#fb9292</color>
+    <color name="red_dd2727">#dd2727</color>
+    <color name="red_c1000e">#c1000e</color>
+    <color name="title_grey">#E3E3E3</color>
+    <color name="address">#666666</color>
+    <color name="transparent">#0FFF</color>
+    <color name="text_num_gray">#333</color>
+    <color name="green">#005e15</color>
+    <color name="green_2bc633">#2bc633</color>
+    <color name="blue_2f67b3">#2f67b3</color>
+    <color name="blue_4e93eb">#4e93eb</color>
+    <color name="blue_3f95fd">#3f95fd</color>
+    <color name="blue_753f95fd">#753f95fd</color>
+    <color name="blue_4B8CDC">#4B8CDC</color>
+
+    <!-- 浅灰色 -->
+    <color name="light_grey">#bfbfbf</color>
+    <color name="light_grey_txt">#BBBBBB</color>
+    <!-- 浅灰色背景 -->
+    <color name="grey_bg_1">#F5F5F5</color>
+    <!-- 灰色背景 -->
+    <color name="grey_bg_2">#F8F8F8</color>
+    <!-- 字体蓝色 -->
+    <color name="blue_txt_2">#98C5E7</color>
+    <color name="normal_adapter_view_bottom">#E5E5E5</color>
+    <color name="normal_adapter_view_ng_bottom">#28292D</color>
+    <!-- 点击后 白色文字切换颜色 -->
+    <color name="grey_txt">#b3b3b3</color>
+    <color name="blue_txt_three">#75BAF1</color>
+    <color name="blue_height_txt">#4398BE</color>
+    <color name="txt_bg">#48A6EE</color>
+    <!-- 主标题字体颜色 -->
+    <color name="title_main_font_color">#00415F</color>
+    <!-- 副标题字体颜色 -->
+    <!-- 黑字颜色 -->
+    <color name="cus_font_black">#313131</color>
+    <!-- 透明 -->
+    <color name="clarity_color">#00000000</color>
+    <!-- 顶部字体颜色 -->
+    <color name="title_color">#6d6d6d</color>
+    <color name="refresh_tip">#393b3f</color>
+    <color name="refresh_time">#6a7077</color>
+    <color name="devider_serial">#e4e4e4</color>
+    <color name="comm_item_normal">#f6f6f6</color>
+    <color name="comm_item_pressed">#EAEAEA</color>
+    <!-- 自定义imageview的边框颜色 -->
+    <color name="imageview__section_clecked">#128ec6</color>
+    <color name="imageview__section">#e1e1e1</color>
+
+    <!-- 2013-07-30 4.4版本添加 -->
+    <!-- 所有标题中心文字 -->
+    <color name="title_center_txt">#4C4C4C</color>
+    <!-- 标题下tab默认文字 -->
+    <color name="title_bottom_tab_txt">#5F5B59</color>
+    <color name="skin_color_tabnewsnav_bg">#5F5B59</color>
+    <!-- 列表 行布局 标题 -->
+    <color name="list_item_title">#121212</color>
+    <!-- 列表 行布局 内容 -->
+    <color name="list_item_content">#707070</color>
+    <color name="day_text_color">#333333</color>
+    <color name="night_text_color">#a8b1bc</color>
+    <color name="day_text_hint_color">#999999</color>
+    <color name="night_text_hint_color">#717CB9</color>
+    <color name="more_text_color">#a8b0ba</color>
+    <!-- 选车部分的颜色 -->
+    <color name="text_jibie_color_checked">#5A84AC</color>
+    <color name="text_jibie_color">#979797</color>
+    <color name="button_country_color">#909090</color>
+    <color name="button_country_color_clecked">#E2E9F0</color>
+    <color name="text_price_color_unclecked">#ffffff</color>
+    <!-- 发送按钮 -->
+    <color name="bbs_send_btn_text_color">#ffffff</color>
+
+    <!-- 灰色 -->
+    <color name="gray">#989898</color>
+    <color name="gray_66">#666666</color>
+    <color name="gray_919191">#919191</color>
+    <color name="gray_454545">#454545</color>
+    <color name="gray_f4f5f8">#f4f5f8</color>
+    <color name="gray_ececec">#ececec</color>
+    <color name="gray_828282">#828282</color>
+    <color name="gray_616878">#616878</color>
+    <color name="gray_256de1">#256de1</color>
+    <color name="gray_EBECEB">#EBECEB</color>
+    <color name="gray_26292e">#26292e</color>
+
+    <!-- 灰色 -->
+    <color name="gray1">#E1E1E1</color>
+    <color name="select_height_txt_press">#137DAC</color>
+    <color name="select_height_txt">#F8F8F8</color>
+    <color name="select_height_dirvier">#E6E6E6</color>
+    <color name="gray3">#EEEEEE</color>
+    <color name="gray2">#999999</color>
+    <color name="gray_divider">#ececec</color>
+    <!-- list 背景颜色 -->
+    <color name="list_bg">#F7F7F7</color>
+    <color name="repulation_txt">#A1A1A1</color>
+    <!-- 选车页面 车型个数 -->
+    <color name="search_car_count_color">#666666</color>
+    <color name="price_day_bg">#EEEEEE</color>
+    <color name="price_night_bg">#26262A</color>
+    <!-- 选车页面 文字 -->
+    <color name="setlect_ng_txt">#626B76</color>
+    <color name="setlect_ng_txt_press">#114862</color>
+    <color name="setlect_ng_bg">#25262A</color>
+    <color name="setlect_day_bg">#FBFBFB</color>
+    <!-- 用户信息文字 -->
+    <color name="user_ng_txt">#99A1AB</color>
+    <!-- 电话 邮箱 -->
+    <color name="user_info_day_txt">#A6A6A6</color>
+    <color name="user_info_ng_txt">#707B88</color>
+    <!--  -->
+    <color name="user_info_day_txt_one">#0477AA</color>
+    <color name="user_info_ng_txt_one">#10455D</color>
+    <!-- 加入对比 购车计算  一键询价 -->
+    <color name="brand_day_btn">#404040</color>
+    <color name="brand_ng_btn">#494F57</color>
+    <color name="brand_day_header">#DFDFDF</color>
+    <color name="brand_displacement_day_txt">#979797</color>
+    <color name="brand_displacement_ng_txt">#555F6A</color>
+    <color name="brand_bg_ng">#141517</color>
+    <color name="brand_bg_day">#EEEEEE</color>
+    <color name="brand_txt_day">#707070</color>
+    <color name="brand_txt_ng">#303439</color>
+
+    <!--  -->
+    <color name="quick_txt">#666666</color>
+    <color name="quick_txt_press">#0075A9</color>
+
+    <!-- #0b0c0d -->
+    <color name="quick_ng_bg">#0b0c0d</color>
+    <!--  -->
+    <color name="carcalculator_txt_ng_color">#a8b1bc</color>
+    <color name="carcalculator_txt_color">#707070</color>
+    <color name="select_header_txt_color">#737373</color>
+    <color name="select_header_txt__hot_color">#A8A8A8</color>
+    <color name="setting_txt_color">#7F7F7F</color>
+
+    <!-- 分享到dialog项目字色 -->
+    <color name="shareto_item_text">#324F85</color>
+    <!-- 车身颜色灰色边框 -->
+    <color name="car_select_color_frame">#cccccc</color>
+    <!-- 车身颜色文字 -->
+    <color name="car_filter_color_txt">#666666</color>
+    <!-- 新手引导 -->
+    <color name="new_feature_start">#ff624d</color>
+    <color name="new_feature_start_press">#d34633</color>
+    <!-- 友盟的的版本更新 -->
+    <color name="umeng_fb_color_btn_normal">#333333</color>
+    <color name="umeng_fb_color_btn_pressed">#1495F7</color>
+    <color name="image_default_bg">#f2f2f2</color>
+
+    <!-- 修改头像 -->
+    <color name="caijian_default_bg">#aa000000</color>
+    <!-- 灰色 -->
+    <color name="grey_91acea">#91acea</color>
+    <color name="grey_b0b8e0">#b0b8e0</color>
+    <color name="grey_c9c9c9">#c9c9c9</color>
+    <color name="grey_f2f2f2">#f2f2f2</color>
+    <color name="grey_f4f4f4">#f4f4f4</color>
+    <color name="grey_f5f5f5">#f5f5f5</color>
+    <color name="grey_f6f6f6">#f6f6f6</color>
+    <color name="grey_f7f7f7">#f7f7f7</color>
+    <color name="grey_f8f8f8">#f8f8f8</color>
+    <color name="grey_dfdfe0">#dfdfe0</color>
+    <color name="grey_eaeaea">#eaeaea</color>
+    <color name="grey_bfbfbf">#bfbfbf</color>
+    <color name="gery_dfdfe0">#dfdfe0</color>
+    <color name="grey_919191">#919191</color>
+    <color name="grey_b7b7b7">#B7B7B7</color>
+    <color name="gray_A9A9A9">#A9A9A9</color>
+    <color name="grey_8e8e8e">#8E8E8E</color>
+    <color name="gray_c6cace">#c6cace</color>
+    <color name="gray_cfcfcf">#77cfcfcf</color>
+    <color name="grey_ebebeb">#ebebeb</color>
+    <color name="grey_797979">#797979</color>
+    <color name="grey_999999">#999999</color>
+    <color name="grey_82">#828282</color>
+    <color name="grey_A0A0A0">#A0A0A0</color>
+    <color name="grey_d2d2d2">#d2d2d2</color>
+    <color name="grey_f9f9f9">#f9f9f9</color>
+    <color name="grey_f3f2f2">#f3f2f2</color>
+    <color name="grey_fcfcfc">#fcfcfc</color>
+    <color name="grey_303F46">#303F46</color>
+    <color name="grey_505050">#505050</color>
+    <color name="grey_f3f3f3">#f3f3f3</color>
+    <color name="grey_a1c3ed">#a1c3ed</color>
+
+    <color name="blue_2467d5">#2467d5</color>
+    <color name="blue_2467D5">#2467D5</color>
+    <color name="skin_color_tabnewsnav_bg_press">#2467D5</color>
+    <color name="blue_256ce0">#256ce0</color>
+    <color name="blue_c3d0f0">#c3d0f0</color>
+    <color name="blue_2668d5">#2668D5</color>
+    <color name="blue_266de2">#266de2</color>
+    <color name="blue_7ba3e5">#7BA3E5</color>
+    <color name="black_333333">#333333</color>
+    <color name="black_454545">#454545</color>
+    <color name="black_181a1d">#181a1d</color>
+    <color name="white_90ffffff">#90ffffff</color>
+    <color name="white_fcfcfc">#fcfcfc</color>
+    <color name="blue_602467d5">#952467d5</color>
+    <color name="white_95ffffff">#95ffffff</color>
+    <color name="white_dfdfdfdf">#DFDFDF</color>
+    <color name="blue_a8c5f3">#a8c5f3</color>
+    <!-- 橙色 -->
+    <color name="orange_ff9900">#FF9900</color>
+    <color name="orange_ff8800">#ff8800</color>
+    <color name="orange_ffcf99">#ffcf99</color>
+    <color name="orange_fd8500">#77fd8500</color>
+    <color name="orange_ff862b">#ff862b</color>
+    <color name="orange_ff6d02">#ff6d02</color>
+    <color name="orange_fd7e1e">#fd7e1e</color>
+    <!-- 黄色 -->
+    <color name="yellow_fefaed">#fefaed</color>
+
+    <!-- 绿色 -->
+    <color name="green_009900">#009900</color>
+    <color name="green_99D699">#99D699</color>
+    <color name="green_51b20a">#51b20a</color>
+    <color name="green_00ba97">#00ba97</color>
+    <!-- 二手车 -->
+    <color name="secondhand_car_detail_title_bg">#fbfbfb</color>
+    <!-- <color name="secondhand_car_detail_title_bg">#F3F1F1</color> -->
+    <color name="grey_e5e5e5">#e5e5e5</color>
+    <color name="blue_8dc6fc">#8dc6fc</color>
+    <color name="red_f37b7b">#f37b7b</color>
+
+    <color name="psts_background_tab_pressed">#1AFFFFFF</color>
+    <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
+    <color name="grey_7f999999">#7f999999</color>
+    <color name="grey_666666">#666666</color>
+    <color name="grey_ececec">#ececec</color>
+    <color name="white_fefefe">#fefefe</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="grey_888888">#888888</color>
+    <color name="blue_235cbb">#235cbb</color>
+    <color name="grey_5f26292e">#26292e</color>
+    <color name="car_wash_coupon_red">#ff4f4f</color>
+
+</resources>

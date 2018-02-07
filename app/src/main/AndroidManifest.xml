@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.san.os.myview">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".MyViewApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HandlerActivity"></activity>
+        <activity android:name=".PopActivity"></activity>
+        <activity android:name=".LineActivity"></activity>
+        <activity android:name=".EventActivity"></activity>
+        <activity android:name="com.san.os.myview.ParamsActivity"></activity>
+        <activity android:name="com.san.os.myview.AnimationActivity"></activity>
+        <activity android:name=".ui.activity.NavActivity"></activity>
+        <activity android:name=".ui.activity.CanvasActivity"></activity>
+        <activity android:name=".ui.activity.VoteActivity"></activity>
+        <activity android:name=".ui.activity.LetterActivity"></activity>
+        <activity android:name="com.san.os.myview.ExContainActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.MyTextActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.FloatingActionMenuActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.RadioButtonActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.TabViewActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.MemoryDemoActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.ViewPagerActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.MeasureActivity"></activity>
+        <activity android:name="com.san.os.myview.TabViewBottomActivity"></activity>
+    </application>
+
+</manifest>

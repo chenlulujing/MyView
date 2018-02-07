@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="biaoti">标题</string>
+    <string name="gengduo">更多</string>
+    <string name="shou_qi">收起</string>
+
+</resources>

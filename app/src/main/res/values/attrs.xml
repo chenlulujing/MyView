@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Adheaderview">
+        <attr name="remind" format="string" />
+        <attr name="adColor" format="color" />
+        <attr name="titleSize" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="RadioButtonView">
+        <attr name="titletext" format="string" />
+        <attr name="rowcount" format="integer" />
+        <attr name="radiobuttonmargin" format="dimension" />
+        <attr name="radiobuttonheight" format="dimension" />
+        <attr name="drawablepadding" format="dimension" />
+        <attr name="textsize" format="dimension" />
+        <attr name="marginver" format="dimension" />
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingRight" />
+    </declare-styleable>
+</resources>

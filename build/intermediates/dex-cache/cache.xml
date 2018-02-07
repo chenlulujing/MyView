@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/.android/build-cache/72ee928472b13f90793868e3dfa382c902fc4587/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_0ad5e034a6c09d4cd90d35cea727f8df490b9599.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/.android/build-cache/ece204a1966aac8b215343a264e6651bafc77f96/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_5b6bea544fe4123a14afd04640f3d1bbfc2aa2e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/.android/build-cache/ece204a1966aac8b215343a264e6651bafc77f96/output/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1_c8659a580254c48f9e21b46d6744248738028f96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/Documents/Demo/MyView/floatingmenu/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e74e74ab128a6c81d184098111fac3561bab53e8">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_56da89519e66200dc9e816dd8ec79e40d5281f9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/Documents/AndroidTool/AndroidSDK/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1_e31d0ec2483e24fc0ff709c1281dbb1ae0f95441.jar" />
+    </item>
+
+</items>

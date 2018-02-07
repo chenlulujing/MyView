@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    >
+
+    <com.san.os.myview.ui.view.MyTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="更新23条"
+        android:id="@+id/recommend"
+        android:textColor="@color/white" />
+
+</LinearLayout>

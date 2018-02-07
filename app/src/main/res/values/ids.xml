@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <item name="publish_btn" type="id"></item>
+    <item name="publish_btn_tiche" type="id" />
+    <item name="publish_btn_tiwen" type="id" />
+    <item name="publish_btn_toupiao" type="id" />
+    <item name="publish_btn_zhuti" type="id" />
+</resources>

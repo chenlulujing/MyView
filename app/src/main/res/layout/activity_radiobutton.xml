@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    >
+
+    <com.san.os.myview.ui.view.RadioButtonView xmlns:apps="http://schemas.android.com/apk/res/com.san.os.myview"
+        android:id="@+id/radiobutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        apps:marginver="5dp"
+        apps:radiobuttonheight="35dp"
+        apps:rowcount="3"
+        apps:textsize="10sp"
+        apps:titletext="颜色"></com.san.os.myview.ui.view.RadioButtonView>
+
+    <CheckBox
+        android:id="@+id/iszhifubao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/radiobutton"
+        android:background="@drawable/loan_dealer_checkbox_selector"
+        android:button="@null"></CheckBox>
+    <TextView
+        android:id="@+id/span_text_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="指导价格："
+        />
+
+</LinearLayout>

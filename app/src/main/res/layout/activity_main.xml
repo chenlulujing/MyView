@@ -1,0 +1,225 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.san.os.myview.TextImageView
+        android:id="@+id/myview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></com.san.os.myview.TextImageView>
+
+    <com.san.os.myview.SearchEditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myview" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext"
+        android:text="update" />
+
+    <Button
+        android:id="@+id/handler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update"
+        android:text="go" />
+
+    <Button
+        android:id="@+id/pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/handler"
+        android:text="popwindow" />
+
+    <Button
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext"
+        android:layout_toRightOf="@id/update"
+        android:text="view" />
+
+    <Button
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext"
+        android:layout_toRightOf="@id/view"
+        android:text="line" />
+
+
+    <Button
+        android:id="@+id/params"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_toRightOf="@id/handler"
+        android:text="params" />
+
+    <Button
+        android:id="@+id/dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_toRightOf="@id/params"
+        android:text="dialog" />
+
+    <Button
+        android:id="@+id/animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/params"
+        android:layout_toEndOf="@+id/pop"
+        android:layout_toRightOf="@+id/pop"
+        android:text="Animation" />
+
+    <Button
+        android:id="@+id/event_dispath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/animation"
+        android:layout_toEndOf="@+id/animation"
+        android:layout_toRightOf="@+id/animation"
+        android:text="event_dispath" />
+
+    <Button
+        android:id="@+id/share_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/line"
+        android:layout_toEndOf="@+id/line"
+        android:layout_toRightOf="@+id/line"
+        android:text="share_system" />
+
+    <Button
+        android:id="@+id/chose_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/event_dispath"
+        android:layout_alignEnd="@+id/share_system"
+        android:layout_alignRight="@+id/share_system"
+        android:text="chose_file" />
+
+    <Button
+        android:id="@+id/bt_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/pop"
+        android:text="nav" />
+
+    <Button
+        android:id="@+id/canvas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pop"
+        android:layout_toEndOf="@+id/bt_nav"
+        android:layout_toRightOf="@+id/bt_nav"
+        android:text="canvas" />
+
+    <Button
+        android:id="@+id/list_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/canvas"
+        android:layout_toLeftOf="@+id/share_system"
+        android:layout_toStartOf="@+id/share_system"
+        android:text="List" />
+
+    <Button
+        android:id="@+id/vote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/list_insert"
+        android:layout_toEndOf="@+id/list_insert"
+        android:layout_toRightOf="@+id/list_insert"
+        android:text="Vote" />
+
+    <Button
+        android:id="@+id/letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bt_nav"
+        android:text="letter" />
+
+    <Button
+        android:id="@+id/ex_contain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/letter"
+        android:layout_toEndOf="@+id/letter"
+        android:layout_toRightOf="@+id/letter"
+        android:text="ex" />
+
+    <Button
+        android:id="@+id/mytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ex_contain"
+        android:layout_toEndOf="@+id/ex_contain"
+        android:layout_toRightOf="@+id/ex_contain"
+        android:text="text" />
+
+    <Button
+        android:id="@+id/floatingactionmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mytext"
+        android:layout_toEndOf="@+id/mytext"
+        android:layout_toRightOf="@+id/mytext"
+        android:text="FloatingActionMenu" />
+
+    <Button
+        android:id="@+id/radiobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/letter"
+        android:text="radiobutton" />
+
+    <Button
+        android:id="@+id/tabview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/letter"
+        android:layout_toRightOf="@id/radiobutton"
+        android:text="tabview" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/memory_demo"
+        android:text="memory_demo"
+        android:layout_toRightOf="@id/tabview"
+        android:layout_below="@id/letter"
+        />
+    <Button
+        android:id="@+id/autoviewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiobutton"
+        android:text="autoviewpager"
+        />
+    <Button
+        android:id="@+id/measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiobutton"
+        android:layout_toRightOf="@id/autoviewpager"
+        android:text="measure"
+        />
+    <Button
+        android:id="@+id/tabview_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiobutton"
+        android:layout_toRightOf="@id/autoviewpager"
+        android:text="tabview_bottom"
+        />
+</RelativeLayout>
