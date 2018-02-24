@@ -11,10 +11,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ViewPropertyAnimator;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -35,7 +37,7 @@ import com.san.os.myview.R;
 public class GuideClassifyGroupView extends RelativeLayout {
 
 
-    private ImageView mPersonView, mView1, mView2, mView4, mView7_1, mView7_2, mView7_3, mView8_1;
+    private ImageView mPersonView, mView1, mView2, mView4, mView6,mView6_2, mView3, mView5, mView9, mView7_1, mView7_2, mView7_3, mView8_1;
 
     private int mWholeWidth, mWholeHeight;
 
@@ -594,7 +596,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     }
 
-    private Path path;//声明动画集合
+    private Path mPath;//声明动画集合
     private PathMeasure mPathMeasure;
     private float[] mCurrentPosition = new float[2];
 
@@ -607,17 +609,21 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img2);
                 mView2 = new ImageView(getContext());
                 mView2.setImageBitmap(bitmap);
+
+
                 final RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
                 rl.topMargin = mWholeHeight;
                 rl.leftMargin = (mWholeWidth) / 2 + 90;
                 addView(mView2, rl);
 
 
-                path = new Path();
-                path.moveTo((mWholeWidth) / 2 + 90, mWholeHeight);
-                path.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - bitmap.getHeight() - distance);
-                path.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - bitmap.getHeight());
-                mPathMeasure = new PathMeasure(path, false);
+
+
+                mPath = new Path();
+                mPath.moveTo((mWholeWidth) / 2 + 90, mWholeHeight);
+                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - bitmap.getHeight() - distance);
+                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - bitmap.getHeight());
+                mPathMeasure = new PathMeasure(mPath, false);
                 mCurrentPosition = new float[2];
 
 
@@ -664,11 +670,11 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 });
                 valueAnimator.start();
             } else {
-                path = new Path();
-                path.moveTo((mWholeWidth) / 2 + 90, mWholeHeight - mView2.getHeight());
-                path.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - mView2.getHeight() - distance);
-                path.lineTo((mWholeWidth) / 2 + 90, mWholeHeight);
-                mPathMeasure.setPath(path, false);
+                mPath = new Path();
+                mPath.moveTo((mWholeWidth) / 2 + 90, mWholeHeight - mView2.getHeight());
+                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - mView2.getHeight() - distance);
+                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight);
+                mPathMeasure.setPath(mPath, false);
 
                 final RelativeLayout.LayoutParams rl = (LayoutParams) mView2.getLayoutParams();
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
@@ -715,8 +721,124 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 valueAnimator.start();
             }
         }
+    }
 
 
+    private boolean mDone6 = true;
+
+    public void addView6() {
+        if (mDone6) {
+            mDone6 = false;
+            if (mView6 == null) {
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_1);
+                mView6 = new ImageView(getContext());
+                mView6.setImageBitmap(bitmap);
+
+                mView6_2 = new ImageView(getContext());
+                Bitmap bitmap6_2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_2);
+                mView6_2.setImageBitmap(bitmap6_2);
+
+                final RelativeLayout.LayoutParams rl6_2 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+                rl6_2.topMargin = 100;
+                rl6_2.leftMargin = (mWholeWidth) / 2 - 90;
+                addView(mView6_2, rl6_2);
+
+
+                final RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+                addView(mView6, rl);
+
+                mPath = new Path();
+                mPath.moveTo(mWholeWidth / 2 - 100, 0);
+                RectF rectF = new RectF(mWholeWidth / 2 - 100, -100, mWholeWidth / 2 + 100, 100);
+                mPath.addArc(rectF, 180, -25);
+
+                mPathMeasure = new PathMeasure(mPath, false);
+                ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
+                valueAnimator.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        mDone6 = true;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
+                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        float value = (float) animation.getAnimatedValue();
+                        mPathMeasure.getPosTan(value, mCurrentPosition, null);
+                        rl.leftMargin = (int) mCurrentPosition[0];
+                        rl.topMargin = (int) mCurrentPosition[1];
+                        mView6.setLayoutParams(rl);
+                    }
+                });
+                valueAnimator.start();
+            } else {
+                final RelativeLayout.LayoutParams rl = (LayoutParams) mView6.getLayoutParams();
+                mPath.rewind();
+
+                RectF rectF = new RectF(mWholeWidth / 2 - 100, -100, mWholeWidth / 2 + 100, 100);
+                mPath.addArc(rectF, 155, 25);
+
+
+                mPathMeasure = new PathMeasure(mPath, false);
+                ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
+                valueAnimator.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        post(new Runnable() {
+                            @Override
+                            public void run() {
+                                removeView(mView6);
+                                mView6 = null;
+                                mDone6 = true;
+                            }
+                        });
+
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
+                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        float value = (float) animation.getAnimatedValue();
+                        mPathMeasure.getPosTan(value, mCurrentPosition, null);
+                        rl.leftMargin = (int) mCurrentPosition[0];
+                        rl.topMargin = (int) mCurrentPosition[1];
+                        mView6.setLayoutParams(rl);
+                    }
+                });
+                valueAnimator.start();
+
+            }
+        }
     }
 
 
