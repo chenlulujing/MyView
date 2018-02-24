@@ -15,6 +15,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.san.os.myview.ui.activity.AnimationGuideActivity;
 import com.san.os.myview.ui.activity.MeasureActivity;
 import com.san.os.myview.ui.activity.MemoryDemoActivity;
 import com.san.os.myview.ui.activity.TabViewActivity;
@@ -58,6 +59,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mMemoryDemo;
     private Button mMeasure;
     private Button mTabViewBottomView;
+    private Button mAnimation_guide;
 
     private int FILE_SELECT_CODE = 100;
 
@@ -93,6 +95,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mMemoryDemo = (Button) findViewById(R.id.memory_demo);
         mMeasure = (Button) findViewById(R.id.measure);
         mTabViewBottomView = (Button) findViewById(R.id.tabview_bottom);
+        mAnimation_guide = (Button) findViewById(R.id.animation_guide);
 
         mBtnUpdate.setOnClickListener(this);
         mBtnHandler.setOnClickListener(this);
@@ -117,6 +120,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mMemoryDemo.setOnClickListener(this);
         mMeasure.setOnClickListener(this);
         mTabViewBottomView.setOnClickListener(this);
+        mAnimation_guide.setOnClickListener(this);
     }
 
     @Override
@@ -243,6 +247,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.tabview_bottom:
                 Intent intent20 = new Intent(this, TabViewBottomActivity.class);
                 startActivity(intent20);
+                break;
+            case R.id.animation_guide:
+                Intent intent21 = new Intent(this, AnimationGuideActivity.class);
+                startActivity(intent21);
                 break;
 
 

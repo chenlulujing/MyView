@@ -34,7 +34,8 @@ public class TabVideoButtonPathView extends View implements View.OnClickListener
 
 
     //bitmap
-    private Rect mSrcRect, mDestRect;
+    private Rect mSrcRect;  //bitmap源矩形
+    private Rect mDestRect; //bitmap位置矩形
     private Bitmap mBitmap;
 
 
@@ -46,6 +47,12 @@ public class TabVideoButtonPathView extends View implements View.OnClickListener
     private int dis;
     private int half;
     private int paddingBottom;
+
+
+    /**
+     * View的显示区域。
+     */
+    final Rect bounds = new Rect();
 
     public TabVideoButtonPathView(Context context) {
         super(context);
@@ -67,6 +74,7 @@ public class TabVideoButtonPathView extends View implements View.OnClickListener
         mPaint = new Paint();
         mPaint.setColor(mContext.getResources().getColor(R.color.skin_color_tx_9));
         mPaint.setAntiAlias(true);
+        mPaint.setStrokeWidth(5);
         mPaint.setTextAlign(Paint.Align.CENTER);
         mPaint.setTextSize(sp2px(context, 25));
 
@@ -112,7 +120,7 @@ public class TabVideoButtonPathView extends View implements View.OnClickListener
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        setMeasuredDimension(getDisplayWidth((Activity) mContext), height + Y + paddingBottom);
+        setMeasuredDimension(getDisplayWidth((Activity) mContext), Y + height);
     }
 
 
@@ -120,27 +128,88 @@ public class TabVideoButtonPathView extends View implements View.OnClickListener
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+//        canvas.save();
+        canvas.drawColor(Color.RED);
+//        Paint paint = new Paint();
+//
+//        /**
+//         * 设置画笔的锯齿效果，去锯齿
+//         * 设置画笔颜色，蓝色
+//         * 设置画笔风格，空心
+//         * 设置空心画笔的宽度，3
+//         */
+//        paint.setAntiAlias(true);
+//        paint.setColor(Color.BLUE);
+//        paint.setStyle(Paint.Style.STROKE);
+//        paint.setStrokeWidth(3);
+//
+//
+
+        canvas.save();
+        Path path = new Path();
+        path.moveTo(0, Y);
+        path.lineTo(getDisplayWidth((Activity) mContext) / 2 - half, Y);
+        RectF rectf_head_big = new RectF((locationX - r_big), locationY - r_big, locationX + r_big, locationY + r_big);//确定外切矩形范围
+        path.addArc(rectf_head_big, -45, -90);
+        path.lineTo(getDisplayWidth((Activity) mContext), Y);
+        path.rLineTo(0, height);
+        path.lineTo(0, height + Y);
+        path.lineTo(0, Y);
+        canvas.clipPath(path);
+        drawScene(canvas);
+        canvas.restore();
+
+
+//        canvas.save();
+//        canvas.translate(160, 160);
+//        canvas.clipRect(0, 0, 60, 60);
+//        canvas.clipRect(40, 40, 100, 100, Region.Op.UNION);
+//        drawScene(canvas);
+//        canvas.restore();
+
+
+//        getDrawingRect(bounds);
+//
+//        getDrawingRect(bounds);
+//        mPaint.setStyle(Paint.Style.FILL);
+//        canvas.drawCircle(bounds.centerX(), bounds.centerY(), (bounds.right - bounds.left) / 2, mPaint);
+//            //绘制出局
+//            drawOutState(canvas);
+
 
         canvas.drawLine(0, Y, getDisplayWidth((Activity) mContext) / 2 - half, Y, mPaint);
 
         canvas.drawLine(getDisplayWidth((Activity) mContext) / 2 + half, Y, getDisplayWidth((Activity) mContext), Y, mPaint);
-
-
-        mPaint.setColor(mContext.getResources().getColor(R.color.skin_color_tx_8));
-
-
+//
+//
+//
+//
         //小视频图标
         mDestRect = new Rect(locationX - r, locationY - r, locationX + r, locationY + r);
         canvas.drawBitmap(mBitmap, mSrcRect, mDestRect, mBitPaint);
-
-        //大圆
+//
+//        //大圆
         mPaint.setStyle(Paint.Style.STROKE);//设置空心
-        RectF rectf_head_big = new RectF((locationX - r_big), locationY - r_big, locationX + r_big, locationY + r_big);//确定外切矩形范围
+
+
+//        RectF rectf_head_big = new RectF((locationX - r_big), locationY - r_big, locationX + r_big, locationY + r_big);//确定外切矩形范围
         canvas.drawArc(rectf_head_big, -45, -90, false, mPaint);//绘制圆弧，不含圆心
 
 
     }
 
+
+    private void drawOutState(Canvas canvas) {
+        canvas.drawCircle(bounds.centerX(), bounds.centerY(), (bounds.right - bounds.left) / 2 - one * 5, mPaint);
+    }
+
+
+    private void drawScene(Canvas canvas) {
+
+        mPaint.setColor(Color.WHITE);
+        canvas.drawRect(0, 0, getDisplayWidth((Activity) mContext), Y + height, mPaint);
+
+    }
 
     public int sp2px(Context context, float spValue) {
         final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
@@ -172,6 +241,7 @@ public class TabVideoButtonPathView extends View implements View.OnClickListener
         wm.getDefaultDisplay().getMetrics(metrics);
         return metrics;
     }
+
 
     @Override
     public void onClick(View v) {

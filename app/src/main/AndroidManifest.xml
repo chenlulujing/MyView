@@ -40,6 +40,7 @@
         <activity android:name="com.san.os.myview.ui.activity.ViewPagerActivity"></activity>
         <activity android:name="com.san.os.myview.ui.activity.MeasureActivity"></activity>
         <activity android:name="com.san.os.myview.TabViewBottomActivity"></activity>
+        <activity android:name="com.san.os.myview.ui.activity.AnimationGuideActivity"></activity>
     </application>
 
 </manifest>
