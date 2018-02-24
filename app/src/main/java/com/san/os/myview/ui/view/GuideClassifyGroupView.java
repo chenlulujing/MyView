@@ -6,17 +6,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewPropertyAnimator;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -37,7 +34,7 @@ import com.san.os.myview.R;
 public class GuideClassifyGroupView extends RelativeLayout {
 
 
-    private ImageView mPersonView, mView1, mView2, mView4, mView6,mView6_2, mView3, mView5, mView9, mView7_1, mView7_2, mView7_3, mView8_1;
+    private ImageView mPersonView, mView1, mView2, mView4, mView6, mView6_2, mView3, mView5, mView9, mView7_1, mView7_2, mView7_3, mView8_1;
 
     private int mWholeWidth, mWholeHeight;
 
@@ -56,8 +53,14 @@ public class GuideClassifyGroupView extends RelativeLayout {
         init();
     }
 
+    Bitmap bitmap6_2;
 
     private void init() {
+
+        mView6_2 = new ImageView(getContext());
+        mView6_2.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        bitmap6_2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_2);
+        mView6_2.setImageBitmap(bitmap6_2);
 
 
         mPersonView = new ImageView(getContext());
@@ -68,6 +71,15 @@ public class GuideClassifyGroupView extends RelativeLayout {
 //        RelativeLayout.LayoutParams rlPerson = new RelativeLayout.LayoutParams(Personbitmap.getWidth(),Personbitmap.getHeight());
 //        rlPerson.addRule(RelativeLayout.CENTER_IN_PARENT);
 //        addView(mPersonView, rlPerson);
+
+        //女司机头发
+        final RelativeLayout.LayoutParams rl6_2 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        rl6_2.topMargin = 100;
+        rl6_2.leftMargin = (mWholeWidth) / 2 - 102;
+        rl6_2.height = 0;
+        addView(mView6_2, rl6_2);
+
+        //人物背景
         addView(mPersonView);
 
     }
@@ -617,8 +629,6 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 addView(mView2, rl);
 
 
-
-
                 mPath = new Path();
                 mPath.moveTo((mWholeWidth) / 2 + 90, mWholeHeight);
                 mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - bitmap.getHeight() - distance);
@@ -729,19 +739,11 @@ public class GuideClassifyGroupView extends RelativeLayout {
     public void addView6() {
         if (mDone6) {
             mDone6 = false;
+            final RelativeLayout.LayoutParams rl6_2 = (LayoutParams) mView6_2.getLayoutParams();
             if (mView6 == null) {
                 Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_1);
                 mView6 = new ImageView(getContext());
                 mView6.setImageBitmap(bitmap);
-
-                mView6_2 = new ImageView(getContext());
-                Bitmap bitmap6_2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_2);
-                mView6_2.setImageBitmap(bitmap6_2);
-
-                final RelativeLayout.LayoutParams rl6_2 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-                rl6_2.topMargin = 100;
-                rl6_2.leftMargin = (mWholeWidth) / 2 - 90;
-                addView(mView6_2, rl6_2);
 
 
                 final RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
@@ -752,8 +754,11 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 RectF rectF = new RectF(mWholeWidth / 2 - 100, -100, mWholeWidth / 2 + 100, 100);
                 mPath.addArc(rectF, 180, -25);
 
+
+
                 mPathMeasure = new PathMeasure(mPath, false);
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
+                valueAnimator.setDuration(900);
                 valueAnimator.addListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
@@ -782,10 +787,15 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         mPathMeasure.getPosTan(value, mCurrentPosition, null);
                         rl.leftMargin = (int) mCurrentPosition[0];
                         rl.topMargin = (int) mCurrentPosition[1];
+                        rl6_2.height = (int)(bitmap6_2.getHeight()*value / mPathMeasure.getLength());
+                        mView6_2.setLayoutParams(rl6_2);
                         mView6.setLayoutParams(rl);
                     }
                 });
+
                 valueAnimator.start();
+
+
             } else {
                 final RelativeLayout.LayoutParams rl = (LayoutParams) mView6.getLayoutParams();
                 mPath.rewind();
@@ -833,6 +843,9 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         rl.leftMargin = (int) mCurrentPosition[0];
                         rl.topMargin = (int) mCurrentPosition[1];
                         mView6.setLayoutParams(rl);
+
+                        rl6_2.height = (int)((1-value / mPathMeasure.getLength())*bitmap6_2.getHeight());
+                        mView6_2.setLayoutParams(rl6_2);
                     }
                 });
                 valueAnimator.start();
