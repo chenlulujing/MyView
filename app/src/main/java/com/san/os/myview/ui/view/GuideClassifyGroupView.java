@@ -12,7 +12,6 @@ import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -34,7 +33,7 @@ import com.san.os.myview.R;
 public class GuideClassifyGroupView extends RelativeLayout {
 
 
-    private ImageView mPersonView, mView1, mView2, mView4, mView6, mView6_2, mView3, mView5, mView9, mView7_1, mView7_2, mView7_3, mView8_1;
+    private ImageView mPersonView, mView1, mView2, mView4, mView6, mView6_2, mView6_3, mView6_4, mView3, mView5, mView9, mView7_1, mView7_2, mView7_3, mView8_1;
 
     private int mWholeWidth, mWholeHeight;
 
@@ -57,6 +56,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private void init() {
 
+        //头发
         mView6_2 = new ImageView(getContext());
         mView6_2.setScaleType(ImageView.ScaleType.CENTER_CROP);
         bitmap6_2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_2);
@@ -79,8 +79,31 @@ public class GuideClassifyGroupView extends RelativeLayout {
         rl6_2.height = 0;
         addView(mView6_2, rl6_2);
 
+
         //人物背景
         addView(mPersonView);
+
+        //新能源衣服
+        mView3 = new ImageView(getContext());
+        mView3.setAlpha(0.0f);
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img3);
+        mView3.setImageBitmap(bitmap3);
+        RelativeLayout.LayoutParams rl3 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        rl3.topMargin = mWholeHeight - bitmap3.getHeight();
+        rl3.leftMargin = mWholeWidth / 2 - bitmap3.getWidth()/2 - 16;
+        addView(mView3, rl3);
+
+
+        //头巾
+        mView5 = new ImageView(getContext());
+        mView5.setAlpha(0.0f);
+        Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img5);
+        mView5.setImageBitmap(bitmap5);
+        RelativeLayout.LayoutParams rl5 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        rl5.topMargin = 70;
+        rl5.leftMargin = mWholeWidth / 2 - bitmap5.getWidth() / 2 - 16;
+        addView(mView5, rl5);
+
 
     }
 
@@ -741,9 +764,29 @@ public class GuideClassifyGroupView extends RelativeLayout {
             mDone6 = false;
             final RelativeLayout.LayoutParams rl6_2 = (LayoutParams) mView6_2.getLayoutParams();
             if (mView6 == null) {
+
                 Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_1);
                 mView6 = new ImageView(getContext());
                 mView6.setImageBitmap(bitmap);
+
+                //左边脸
+                mView6_3 = new ImageView(getContext());
+                mView6_3.setAlpha(0.0f);
+                Bitmap bitmap6_3 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_3);
+                mView6_3.setImageBitmap(bitmap6_3);
+                RelativeLayout.LayoutParams rl6_3 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+                rl6_3.leftMargin = mWholeWidth / 2 - 28 - 50;
+                rl6_3.topMargin = 155;
+                addView(mView6_3, rl6_3);
+
+                //右边脸
+                mView6_4 = new ImageView(getContext());
+                mView6_4.setAlpha(0.0f);
+                mView6_4.setImageBitmap(bitmap6_3);
+                RelativeLayout.LayoutParams rl6_4 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+                rl6_4.leftMargin = mWholeWidth / 2 - 28 + 50;
+                rl6_4.topMargin = 155;
+                addView(mView6_4, rl6_4);
 
 
                 final RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
@@ -754,8 +797,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 RectF rectF = new RectF(mWholeWidth / 2 - 100, -100, mWholeWidth / 2 + 100, 100);
                 mPath.addArc(rectF, 180, -25);
 
-
-
+                //头花、头发
                 mPathMeasure = new PathMeasure(mPath, false);
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
                 valueAnimator.setDuration(900);
@@ -787,13 +829,36 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         mPathMeasure.getPosTan(value, mCurrentPosition, null);
                         rl.leftMargin = (int) mCurrentPosition[0];
                         rl.topMargin = (int) mCurrentPosition[1];
-                        rl6_2.height = (int)(bitmap6_2.getHeight()*value / mPathMeasure.getLength());
+                        rl6_2.height = (int) (bitmap6_2.getHeight() * value / mPathMeasure.getLength());
                         mView6_2.setLayoutParams(rl6_2);
                         mView6.setLayoutParams(rl);
                     }
                 });
 
                 valueAnimator.start();
+
+                //脸蛋
+                mView6_3.animate().alpha(1.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        mView6_4.animate().alpha(1.0f).start();
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                }).start();
 
 
             } else {
@@ -803,9 +868,10 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 RectF rectF = new RectF(mWholeWidth / 2 - 100, -100, mWholeWidth / 2 + 100, 100);
                 mPath.addArc(rectF, 155, 25);
 
-
+                //头花、头发
                 mPathMeasure = new PathMeasure(mPath, false);
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
+                valueAnimator.setDuration(900);
                 valueAnimator.addListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
@@ -844,15 +910,275 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         rl.topMargin = (int) mCurrentPosition[1];
                         mView6.setLayoutParams(rl);
 
-                        rl6_2.height = (int)((1-value / mPathMeasure.getLength())*bitmap6_2.getHeight());
+                        rl6_2.height = (int) ((1 - value / mPathMeasure.getLength()) * bitmap6_2.getHeight());
                         mView6_2.setLayoutParams(rl6_2);
                     }
                 });
                 valueAnimator.start();
 
+
+                //脸蛋
+                mView6_4.animate().alpha(0.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        post(new Runnable() {
+                            @Override
+                            public void run() {
+                                removeView(mView6_4);
+                                mView6_3.animate().alpha(0.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                                    @Override
+                                    public void onAnimationStart(Animator animation) {
+
+                                    }
+
+                                    @Override
+                                    public void onAnimationEnd(Animator animation) {
+                                        post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                removeView(mView6_3);
+                                            }
+                                        });
+                                    }
+
+                                    @Override
+                                    public void onAnimationCancel(Animator animation) {
+
+                                    }
+
+                                    @Override
+                                    public void onAnimationRepeat(Animator animation) {
+
+                                    }
+                                }).start();
+                            }
+                        });
+
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                }).start();
+
+            }
+        }
+    }
+
+    private boolean mDone5 = true;
+
+    public void addView5() {
+        if (mDone5) {
+            mDone5 = false;
+
+            if (mView5.getAlpha() == 0) {
+
+                mView5.animate()
+                        .alpha(1.0f)
+                        .translationY(-10)
+                        .setDuration(400)
+                        .setListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                mDone5 = true;
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        })
+                        .start();
+            } else {
+
+                mView5.animate()
+                        .alpha(0.0f)
+                        .translationY(10)
+                        .setDuration(400)
+                        .setListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mDone5 = true;
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        })
+                        .start();
+            }
+        }
+    }
+
+    private boolean mDone3 = true;
+
+    public void addView3() {
+        if (mDone3) {
+            mDone3 = false;
+            if (mView3.getAlpha() == 0) {
+                mView3.animate().alpha(1.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        mDone3 = true;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                }).start();
+            } else {
+                mView3.animate().alpha(0.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        mDone3 = true;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                }).start();
             }
         }
     }
 
 
+    private boolean mDone9 = true;
+    public void addView9() {
+        if (mDone9) {
+            mDone9 = false;
+
+            if (mView9 == null) {
+                mView9 = new ImageView(getContext());
+                mView9.setAlpha(0.0f);
+                Bitmap bitmap9 = BitmapFactory.decodeResource(getResources(),R.drawable.ic_guide_img9);
+                mView9.setImageBitmap(bitmap9);
+
+                RelativeLayout.LayoutParams rl9 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+                rl9.topMargin = 120;
+                rl9.leftMargin = mWholeWidth / 2 - bitmap9.getWidth() / 2 - 16;
+                addView(mView9,rl9);
+
+                mView9.animate()
+                        .alpha(1.0f)
+                        .translationY(-10)
+                        .setDuration(400)
+                        .setListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                mDone9 = true;
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        })
+                        .start();
+            } else {
+
+                mView9.animate()
+                        .alpha(0.0f)
+                        .translationY(10)
+                        .setDuration(400)
+                        .setListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        removeView(mView9);
+                                        mView9 = null;
+                                        mDone9 = true;
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        })
+                        .start();
+            }
+        }
+    }
 }

@@ -73,11 +73,13 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
                 mGuideView.addView2_1();
                 break;
             case R.id.button3:
+                mGuideView.addView3();
                 break;
             case R.id.button4:
                 mGuideView.addView4();
                 break;
             case R.id.button5:
+                mGuideView.addView5();
                 break;
             case R.id.button6:
                 mGuideView.addView6();
@@ -89,7 +91,7 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
                 mGuideView.addView8();
                 break;
             case R.id.button9:
-                mGuideView.addView7();
+                mGuideView.addView9();
                 break;
         }
     }
