@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.san.os.myview.R;
 import com.san.os.myview.ui.view.GuideClassifyGroupView;
@@ -27,6 +26,8 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
     private Button mButton7;
     private Button mButton8;
     private Button mButton9;
+
+    private int FLAG = 0x0000000000000000;
 
     private GuideClassifyGroupView mGuideView;
 
@@ -67,7 +68,13 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button1:
-                mGuideView.addView1();
+                mGuideView.addView1(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton1.setClickable(true);
+                    }
+                });
+                mButton1.setClickable(false);
                 break;
             case R.id.button2:
                 mGuideView.addView2_1();

@@ -37,6 +37,8 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private int mWholeWidth, mWholeHeight;
 
+
+
     public GuideClassifyGroupView(Context context) {
         super(context);
         init();
@@ -56,13 +58,20 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private void init() {
 
-        //头发
+
+        //添加元素顺序
+            //1、女司机头发
+            //2、人物基础图
+            //3、中国头巾
+            //4、头花
+
+        //女司机头发
         mView6_2 = new ImageView(getContext());
         mView6_2.setScaleType(ImageView.ScaleType.CENTER_CROP);
         bitmap6_2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_2);
         mView6_2.setImageBitmap(bitmap6_2);
 
-
+        //基础人物图
         mPersonView = new ImageView(getContext());
         Bitmap Personbitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_person);
         mPersonView.setImageBitmap(Personbitmap);
@@ -116,7 +125,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone1 = true;
 
-    public void addView1() {
+    public void addView1(final Runnable action) {
         if (mDone1) {
             mDone1 = false;
             if (mView1 == null) {
@@ -142,6 +151,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             @Override
                             public void onAnimationEnd(Animator animation) {
                                 mDone1 = true;
+                                action.run();
                             }
 
                             @Override
@@ -173,6 +183,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                         removeView(mView1);
                                         mView1 = null;
                                         mDone1 = true;
+                                        action.run();
                                     }
                                 });
                             }
@@ -554,7 +565,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
             mDone8 = false;
             if (mView8_1 == null) {
                 mView8_1 = new ImageView(getContext());
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img_8_1);
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img8);
                 mView8_1.setImageBitmap(bitmap);
 
                 RelativeLayout.LayoutParams rl1 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
