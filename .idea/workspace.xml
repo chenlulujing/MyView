@@ -29,19 +29,22 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="lulu_animation" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe64141-61e2-4515-af09-ba8da18c2f2b" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img7.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img7_1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img9.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java" />
     </list>
     <ignored path="MyView.iws" />
@@ -89,8 +92,8 @@
       <file leaf-file-name="AnimationGuideActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+            <state relative-caret-position="158">
+              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2679#2858#0" expanded="true" />
@@ -126,44 +129,50 @@
       <file leaf-file-name="GuideClassifyGroupView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="389" column="21" lean-forward="true" selection-start-line="389" selection-start-column="21" selection-end-line="389" selection-end-column="21" />
+            <state relative-caret-position="355">
+              <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7165#7166#0" expanded="true" />
-                <element signature="e#7205#7206#0" expanded="true" />
-                <element signature="e#30546#30751#0" expanded="true" />
-                <element signature="e#30750#30751#0" expanded="true" />
-                <element signature="e#31096#31795#0" expanded="true" />
-                <element signature="e#31794#31795#0" expanded="true" />
-                <element signature="e#33501#34016#0" expanded="true" />
-                <element signature="e#34015#34016#0" expanded="true" />
-                <marker date="1519635705000" expanded="false" signature="32852:32954" ph="() → {" />
-                <marker date="1519635705000" expanded="false" signature="33125:33156" ph="}" />
-                <marker date="1519635705000" expanded="false" signature="36510:36537" ph=" { " />
-                <marker date="1519635705000" expanded="false" signature="36551:36573" ph=" }" />
-                <marker date="1519635705000" expanded="false" signature="36894:37045" ph="(animation) → {" />
-                <marker date="1519635705000" expanded="false" signature="37564:37587" ph="}" />
-                <marker date="1519635705000" expanded="false" signature="39210:39312" ph="() → {" />
-                <marker date="1519635705000" expanded="false" signature="39483:39514" ph="}" />
-                <marker date="1519635705000" expanded="false" signature="39860:40011" ph="(animation) → {" />
-                <marker date="1519635705000" expanded="false" signature="40537:40560" ph="}" />
-                <marker date="1519635705000" expanded="false" signature="40988:41090" ph="() → {" />
-                <marker date="1519635705000" expanded="false" signature="41620:41754" ph="() → {" />
-                <marker date="1519635705000" expanded="false" signature="41865:41912" ph="}" />
-                <marker date="1519635705000" expanded="false" signature="42369:42400" ph="}" />
-                <marker date="1519635705000" expanded="false" signature="43384:43419" ph=" { " />
-                <marker date="1519635705000" expanded="false" signature="43433:43463" ph=" }" />
-                <marker date="1519635705000" expanded="false" signature="44373:44491" ph="() → {" />
-                <marker date="1519635705000" expanded="false" signature="44579:44618" ph="}" />
-                <marker date="1519635705000" expanded="false" signature="45529:45556" ph=" { " />
-                <marker date="1519635705000" expanded="false" signature="45570:45592" ph=" }" />
-                <marker date="1519635705000" expanded="false" signature="46223:46250" ph=" { " />
-                <marker date="1519635705000" expanded="false" signature="46264:46286" ph=" }" />
-                <marker date="1519635705000" expanded="false" signature="47776:47811" ph=" { " />
-                <marker date="1519635705000" expanded="false" signature="47825:47855" ph=" }" />
-                <marker date="1519635705000" expanded="false" signature="48765:48883" ph="() → {" />
-                <marker date="1519635705000" expanded="false" signature="49086:49125" ph="}" />
+                <element signature="e#7108#7109#0" expanded="true" />
+                <element signature="e#7148#7149#0" expanded="true" />
+                <element signature="e#31312#31517#0" expanded="true" />
+                <element signature="e#31516#31517#0" expanded="true" />
+                <element signature="e#31862#32561#0" expanded="true" />
+                <element signature="e#32560#32561#0" expanded="true" />
+                <element signature="e#34267#34782#0" expanded="true" />
+                <element signature="e#34781#34782#0" expanded="true" />
+                <element signature="e#40340#40644#0" expanded="true" />
+                <element signature="e#40643#40644#0" expanded="true" />
+                <element signature="e#49659#49660#0" expanded="true" />
+                <element signature="e#49736#49737#0" expanded="true" />
+                <element signature="e#50497#50498#0" expanded="true" />
+                <element signature="e#50574#50575#0" expanded="true" />
+                <element signature="e#51498#51862#0" expanded="true" />
+                <element signature="e#51861#51862#0" expanded="true" />
+                <element signature="e#52743#53107#0" expanded="true" />
+                <element signature="e#53106#53107#0" expanded="true" />
+                <element signature="e#54742#54743#0" expanded="true" />
+                <element signature="e#54820#54821#0" expanded="true" />
+                <marker date="1519649286000" expanded="false" signature="33618:33720" ph="() → {" />
+                <marker date="1519649286000" expanded="false" signature="33891:33922" ph="}" />
+                <marker date="1519649286000" expanded="false" signature="37283:37310" ph=" { " />
+                <marker date="1519649286000" expanded="false" signature="37324:37346" ph=" }" />
+                <marker date="1519649286000" expanded="false" signature="37667:37818" ph="(animation) → {" />
+                <marker date="1519649286000" expanded="false" signature="38667:38690" ph="}" />
+                <marker date="1519649286000" expanded="false" signature="40990:41141" ph="(animation) → {" />
+                <marker date="1519649286000" expanded="false" signature="41778:41801" ph="}" />
+                <marker date="1519649286000" expanded="false" signature="42229:42331" ph="() → {" />
+                <marker date="1519649286000" expanded="false" signature="42861:42995" ph="() → {" />
+                <marker date="1519649286000" expanded="false" signature="43106:43153" ph="}" />
+                <marker date="1519649286000" expanded="false" signature="43610:43641" ph="}" />
+                <marker date="1519649286000" expanded="false" signature="44636:44671" ph=" { " />
+                <marker date="1519649286000" expanded="false" signature="44685:44715" ph=" }" />
+                <marker date="1519649286000" expanded="false" signature="45636:45754" ph="() → {" />
+                <marker date="1519649286000" expanded="false" signature="45842:45881" ph="}" />
+                <marker date="1519649286000" expanded="false" signature="46792:46819" ph=" { " />
+                <marker date="1519649286000" expanded="false" signature="46833:46855" ph=" }" />
+                <marker date="1519649286000" expanded="false" signature="47486:47513" ph=" { " />
+                <marker date="1519649286000" expanded="false" signature="47527:47549" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -317,12 +326,13 @@
       <find>addView2</find>
       <find>mView6_2</find>
       <find>rl6_2</find>
-      <find>mView5</find>
       <find>mPersonView</find>
       <find>mWholeWidth</find>
       <find>mWholeHeight</find>
       <find>mView2_cover</find>
       <find>mView3</find>
+      <find>mView6_3</find>
+      <find>mView5</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3198,7 +3208,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519635742918" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519649425005" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3246,7 +3256,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519635742919" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519649425005" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3429,7 +3439,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519635742920" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519649425006" />
       </method>
     </configuration>
     <list size="1">
@@ -3588,12 +3598,12 @@
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10095643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26248673" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24867162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10839532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3693,13 +3703,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
-          <line>1098</line>
+          <line>1125</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
-          <line>140</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
@@ -3715,19 +3725,18 @@
           <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
+          <line>1243</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="86" />
+      <option name="time" value="87" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/DashLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/HandlerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -4263,10 +4272,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+        <state relative-caret-position="158">
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2679#2858#0" expanded="true" />
@@ -4275,51 +4289,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img3.png">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img7_1.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="389" column="21" lean-forward="true" selection-start-line="389" selection-start-column="21" selection-end-line="389" selection-end-column="21" />
+        <state relative-caret-position="355">
+          <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7165#7166#0" expanded="true" />
-            <element signature="e#7205#7206#0" expanded="true" />
-            <element signature="e#30546#30751#0" expanded="true" />
-            <element signature="e#30750#30751#0" expanded="true" />
-            <element signature="e#31096#31795#0" expanded="true" />
-            <element signature="e#31794#31795#0" expanded="true" />
-            <element signature="e#33501#34016#0" expanded="true" />
-            <element signature="e#34015#34016#0" expanded="true" />
-            <marker date="1519635705000" expanded="false" signature="32852:32954" ph="() → {" />
-            <marker date="1519635705000" expanded="false" signature="33125:33156" ph="}" />
-            <marker date="1519635705000" expanded="false" signature="36510:36537" ph=" { " />
-            <marker date="1519635705000" expanded="false" signature="36551:36573" ph=" }" />
-            <marker date="1519635705000" expanded="false" signature="36894:37045" ph="(animation) → {" />
-            <marker date="1519635705000" expanded="false" signature="37564:37587" ph="}" />
-            <marker date="1519635705000" expanded="false" signature="39210:39312" ph="() → {" />
-            <marker date="1519635705000" expanded="false" signature="39483:39514" ph="}" />
-            <marker date="1519635705000" expanded="false" signature="39860:40011" ph="(animation) → {" />
-            <marker date="1519635705000" expanded="false" signature="40537:40560" ph="}" />
-            <marker date="1519635705000" expanded="false" signature="40988:41090" ph="() → {" />
-            <marker date="1519635705000" expanded="false" signature="41620:41754" ph="() → {" />
-            <marker date="1519635705000" expanded="false" signature="41865:41912" ph="}" />
-            <marker date="1519635705000" expanded="false" signature="42369:42400" ph="}" />
-            <marker date="1519635705000" expanded="false" signature="43384:43419" ph=" { " />
-            <marker date="1519635705000" expanded="false" signature="43433:43463" ph=" }" />
-            <marker date="1519635705000" expanded="false" signature="44373:44491" ph="() → {" />
-            <marker date="1519635705000" expanded="false" signature="44579:44618" ph="}" />
-            <marker date="1519635705000" expanded="false" signature="45529:45556" ph=" { " />
-            <marker date="1519635705000" expanded="false" signature="45570:45592" ph=" }" />
-            <marker date="1519635705000" expanded="false" signature="46223:46250" ph=" { " />
-            <marker date="1519635705000" expanded="false" signature="46264:46286" ph=" }" />
-            <marker date="1519635705000" expanded="false" signature="47776:47811" ph=" { " />
-            <marker date="1519635705000" expanded="false" signature="47825:47855" ph=" }" />
-            <marker date="1519635705000" expanded="false" signature="48765:48883" ph="() → {" />
-            <marker date="1519635705000" expanded="false" signature="49086:49125" ph="}" />
+            <element signature="e#7108#7109#0" expanded="true" />
+            <element signature="e#7148#7149#0" expanded="true" />
+            <element signature="e#31312#31517#0" expanded="true" />
+            <element signature="e#31516#31517#0" expanded="true" />
+            <element signature="e#31862#32561#0" expanded="true" />
+            <element signature="e#32560#32561#0" expanded="true" />
+            <element signature="e#34267#34782#0" expanded="true" />
+            <element signature="e#34781#34782#0" expanded="true" />
+            <element signature="e#40340#40644#0" expanded="true" />
+            <element signature="e#40643#40644#0" expanded="true" />
+            <element signature="e#49659#49660#0" expanded="true" />
+            <element signature="e#49736#49737#0" expanded="true" />
+            <element signature="e#50497#50498#0" expanded="true" />
+            <element signature="e#50574#50575#0" expanded="true" />
+            <element signature="e#51498#51862#0" expanded="true" />
+            <element signature="e#51861#51862#0" expanded="true" />
+            <element signature="e#52743#53107#0" expanded="true" />
+            <element signature="e#53106#53107#0" expanded="true" />
+            <element signature="e#54742#54743#0" expanded="true" />
+            <element signature="e#54820#54821#0" expanded="true" />
+            <marker date="1519649286000" expanded="false" signature="33618:33720" ph="() → {" />
+            <marker date="1519649286000" expanded="false" signature="33891:33922" ph="}" />
+            <marker date="1519649286000" expanded="false" signature="37283:37310" ph=" { " />
+            <marker date="1519649286000" expanded="false" signature="37324:37346" ph=" }" />
+            <marker date="1519649286000" expanded="false" signature="37667:37818" ph="(animation) → {" />
+            <marker date="1519649286000" expanded="false" signature="38667:38690" ph="}" />
+            <marker date="1519649286000" expanded="false" signature="40990:41141" ph="(animation) → {" />
+            <marker date="1519649286000" expanded="false" signature="41778:41801" ph="}" />
+            <marker date="1519649286000" expanded="false" signature="42229:42331" ph="() → {" />
+            <marker date="1519649286000" expanded="false" signature="42861:42995" ph="() → {" />
+            <marker date="1519649286000" expanded="false" signature="43106:43153" ph="}" />
+            <marker date="1519649286000" expanded="false" signature="43610:43641" ph="}" />
+            <marker date="1519649286000" expanded="false" signature="44636:44671" ph=" { " />
+            <marker date="1519649286000" expanded="false" signature="44685:44715" ph=" }" />
+            <marker date="1519649286000" expanded="false" signature="45636:45754" ph="() → {" />
+            <marker date="1519649286000" expanded="false" signature="45842:45881" ph="}" />
+            <marker date="1519649286000" expanded="false" signature="46792:46819" ph=" { " />
+            <marker date="1519649286000" expanded="false" signature="46833:46855" ph=" }" />
+            <marker date="1519649286000" expanded="false" signature="47486:47513" ph=" { " />
+            <marker date="1519649286000" expanded="false" signature="47527:47549" ph=" }" />
           </folding>
         </state>
       </provider>

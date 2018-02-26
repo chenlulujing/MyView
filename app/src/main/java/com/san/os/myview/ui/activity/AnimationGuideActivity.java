@@ -104,6 +104,8 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
                 break;
             case R.id.button8:
                 mGuideView.addView8();
+                mGuideView.addView10();
+
                 break;
             case R.id.button9:
                 mGuideView.addView9();
