@@ -370,8 +370,9 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView4.setImageBitmap(bitmap);
 
                 RelativeLayout.LayoutParams rl1 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-                rl1.topMargin = mWholeHeight - bitmap.getHeight();
-                rl1.leftMargin = (mWholeWidth) / 2 - 140;
+                rl1.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                rl1.leftMargin = translate(108);
+                rl1.bottomMargin = translate(16);
                 addView(mView4, rl1);
 
                 AnimationSet set = new AnimationSet(false);
