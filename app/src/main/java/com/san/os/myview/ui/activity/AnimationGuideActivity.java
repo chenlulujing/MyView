@@ -1,10 +1,15 @@
 package com.san.os.myview.ui.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.san.os.myview.R;
 import com.san.os.myview.ui.view.GuideClassifyGroupView;
@@ -26,6 +31,7 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
     private Button mButton7;
     private Button mButton8;
     private Button mButton9;
+    private Button mButton10;
 
     private int FLAG = 0x0000000000000000;
 
@@ -46,11 +52,12 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
         mButton7 = (Button) findViewById(R.id.button7);
         mButton8 = (Button) findViewById(R.id.button8);
         mButton9 = (Button) findViewById(R.id.button9);
+        mButton10 = (Button) findViewById(R.id.button10);
         mGuideView = (GuideClassifyGroupView) findViewById(R.id.guide_groupview);
-//        LinearLayout.LayoutParams llp = (LinearLayout.LayoutParams) mGuideView.getLayoutParams();
-//        llp.width = 465;
-//        llp.height = 363;
-//        mGuideView.setLayoutParams(llp);
+        LinearLayout.LayoutParams llp = (LinearLayout.LayoutParams) mGuideView.getLayoutParams();
+        llp.width = (int)(getDisplayWidth(this)*((float)330/375));
+        llp.height =(int)(llp.width*((float)180/330)) ;
+        mGuideView.setLayoutParams(llp);
 
         mButton1.setOnClickListener(this);
         mButton2.setOnClickListener(this);
@@ -61,6 +68,7 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
         mButton7.setOnClickListener(this);
         mButton8.setOnClickListener(this);
         mButton9.setOnClickListener(this);
+        mButton10.setOnClickListener(this);
 
     }
 
@@ -100,7 +108,42 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
             case R.id.button9:
                 mGuideView.addView9();
                 break;
+            case R.id.button10:
+                mGuideView.addView10();
+                break;
         }
+    }
+
+
+    public int sp2px(Context context, float spValue) {
+        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * fontScale + 0.5f);
+    }
+
+    public int dip2px(float dpValue) {
+        float rs = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, getDisplayMetrics());
+        return (int) rs;
+    }
+
+
+    public static int getDisplayHeight(Activity activity) {
+        DisplayMetrics dm = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        return dm.heightPixels;
+    }
+
+    public static int getDisplayWidth(Activity activity) {
+        DisplayMetrics dm = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        return dm.widthPixels;
+    }
+
+    public DisplayMetrics getDisplayMetrics() {
+        DisplayMetrics metrics = new DisplayMetrics();
+        WindowManager wm =
+                (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(metrics);
+        return metrics;
     }
 
 }

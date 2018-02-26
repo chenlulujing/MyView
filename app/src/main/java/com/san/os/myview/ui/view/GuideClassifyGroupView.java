@@ -11,8 +11,12 @@ import android.graphics.PathMeasure;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.View;
 import android.view.ViewPropertyAnimator;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -33,37 +37,63 @@ import com.san.os.myview.R;
 public class GuideClassifyGroupView extends RelativeLayout {
 
 
-    private ImageView mPersonView, mView1, mView2, mView4, mView6, mView6_2, mView6_3, mView6_4, mView3, mView5, mView9, mView7_1, mView7_2, mView7_3, mView8_1;
+    private ImageView mPersonView, mBackgroudCircleView, mBackgroudStars1View, mBackgroudStars2View, mView1, mView2, mView4, mView6, mView6_2, mView6_3, mView6_4, mView3, mView5, mView9, mView7_1, mView7_2, mView7_3, mView8_1;
+    private View mView2_cover;
 
     private int mWholeWidth, mWholeHeight;
+    private float ONE;
 
+
+    private static final int VIEW_WIDTH = 330;
+    private static final int VIEW_HEIGHT = 180;
+
+    private static final int SCREEN_WIDTH = 375;
+
+    private static final int PERSON_HEIGHT = 145;
+    private static final int PERSON_WIDTH = 175;
+
+    private static final int BACKGROUD_CIRCLE_WIDTH = 170;
+
+    private static final int STARS1_HEIGHT = 78;
+    private static final int STARS1_WIDTH = 162;
+
+    private static final int STARS2_HEIGHT = 58;
+    private static final int STARS2_WIDTH = 147;
 
 
     public GuideClassifyGroupView(Context context) {
         super(context);
-        init();
+        init(context);
     }
 
     public GuideClassifyGroupView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context);
     }
 
     public GuideClassifyGroupView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(context);
     }
 
     Bitmap bitmap6_2;
 
-    private void init() {
+    private void init(Context context) {
+        setBackgroundColor(getResources().getColor(R.color.skin_color_bg_1));
+        ONE = (getDisplayWidth((Activity) context) / ((float) SCREEN_WIDTH));
+
+
+        mWholeWidth = (int) (ONE * VIEW_WIDTH);
+        mWholeHeight = (int) (ONE * VIEW_HEIGHT);
+        Log.i("lulu_size", "mWholeWidth=" + mWholeWidth);
+        Log.i("lulu_size", "mWholeHeight=" + mWholeHeight);
 
 
         //添加元素顺序
-            //1、女司机头发
-            //2、人物基础图
-            //3、中国头巾
-            //4、头花
+        //1、女司机头发
+        //2、人物基础图
+        //3、中国头巾
+        //4、头花
 
         //女司机头发
         mView6_2 = new ImageView(getContext());
@@ -71,47 +101,77 @@ public class GuideClassifyGroupView extends RelativeLayout {
         bitmap6_2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img6_2);
         mView6_2.setImageBitmap(bitmap6_2);
 
+        //背景圆圈
+        mBackgroudCircleView = new ImageView(getContext());
+        Bitmap bitmapCircle = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_circle);
+        mBackgroudCircleView.setImageBitmap(bitmapCircle);
+        RelativeLayout.LayoutParams rlCircle = new RelativeLayout.LayoutParams(translate(BACKGROUD_CIRCLE_WIDTH), translate(BACKGROUD_CIRCLE_WIDTH));
+        rlCircle.addRule(RelativeLayout.CENTER_IN_PARENT);
+        addView(mBackgroudCircleView, rlCircle);
+
+        //背景星星1
+        mBackgroudStars1View = new ImageView(getContext());
+        Bitmap bitmapStar1 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_stars1);
+        mBackgroudStars1View.setImageBitmap(bitmapStar1);
+        RelativeLayout.LayoutParams rlStars1 = new RelativeLayout.LayoutParams(translate(STARS1_WIDTH), translate(STARS1_HEIGHT));
+        rlStars1.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+        rlStars1.leftMargin = translate(73);
+        rlStars1.topMargin = translate(41);
+        addView(mBackgroudStars1View, rlStars1);
+
+        //背景星星2
+        mBackgroudStars2View = new ImageView(getContext());
+        Bitmap bitmapStar2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_stars2);
+        mBackgroudStars2View.setImageBitmap(bitmapStar2);
+        RelativeLayout.LayoutParams rlStars2 = new RelativeLayout.LayoutParams(translate(STARS2_WIDTH), translate(STARS2_HEIGHT));
+        rlStars2.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        rlStars2.rightMargin = translate(64);
+        rlStars2.topMargin = translate(57);
+        addView(mBackgroudStars2View, rlStars2);
+
+
         //基础人物图
         mPersonView = new ImageView(getContext());
-        Bitmap Personbitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_person);
-        mPersonView.setImageBitmap(Personbitmap);
-        mWholeWidth = Personbitmap.getWidth();
-        mWholeHeight = Personbitmap.getHeight();
-//        RelativeLayout.LayoutParams rlPerson = new RelativeLayout.LayoutParams(Personbitmap.getWidth(),Personbitmap.getHeight());
-//        rlPerson.addRule(RelativeLayout.CENTER_IN_PARENT);
-//        addView(mPersonView, rlPerson);
+        Bitmap bitmapPerson = BitmapFactory.decodeResource(getResources(), R.drawable.ic_person);
+        mPersonView.setScaleType(ImageView.ScaleType.FIT_XY);
+        mPersonView.setImageBitmap(bitmapPerson);
+        RelativeLayout.LayoutParams rlPerson = new RelativeLayout.LayoutParams(translate(PERSON_WIDTH), translate(PERSON_HEIGHT));
+        Log.i("lulu_size", "pserson_width=" + rlPerson.width);
+        Log.i("lulu_size", "pserson_height=" + rlPerson.height);
+        rlPerson.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        rlPerson.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        rlPerson.bottomMargin = translate(15);
+        addView(mPersonView, rlPerson);
+
 
         //女司机头发
-        final RelativeLayout.LayoutParams rl6_2 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        rl6_2.topMargin = 100;
-        rl6_2.leftMargin = (mWholeWidth) / 2 - 102;
-        rl6_2.height = 0;
-        addView(mView6_2, rl6_2);
+//        final RelativeLayout.LayoutParams rl6_2 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+//        rl6_2.topMargin = 100;
+//        rl6_2.leftMargin = (mWholeWidth) / 2 - 102;
+//        rl6_2.height = 0;
+//        addView(mView6_2, rl6_2);
 
 
-        //人物背景
-        addView(mPersonView);
-
-        //新能源衣服
-        mView3 = new ImageView(getContext());
-        mView3.setAlpha(0.0f);
-        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img3);
-        mView3.setImageBitmap(bitmap3);
-        RelativeLayout.LayoutParams rl3 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        rl3.topMargin = mWholeHeight - bitmap3.getHeight();
-        rl3.leftMargin = mWholeWidth / 2 - bitmap3.getWidth()/2 - 16;
-        addView(mView3, rl3);
-
-
-        //头巾
-        mView5 = new ImageView(getContext());
-        mView5.setAlpha(0.0f);
-        Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img5);
-        mView5.setImageBitmap(bitmap5);
-        RelativeLayout.LayoutParams rl5 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        rl5.topMargin = 70;
-        rl5.leftMargin = mWholeWidth / 2 - bitmap5.getWidth() / 2 - 16;
-        addView(mView5, rl5);
+//        //新能源衣服
+//        mView3 = new ImageView(getContext());
+//        mView3.setAlpha(0.0f);
+//        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img3);
+//        mView3.setImageBitmap(bitmap3);
+//        RelativeLayout.LayoutParams rl3 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+//        rl3.topMargin = mWholeHeight - bitmap3.getHeight();
+//        rl3.leftMargin = mWholeWidth / 2 - bitmap3.getWidth() / 2 - 16;
+//        addView(mView3, rl3);
+//
+//
+//        //头巾
+//        mView5 = new ImageView(getContext());
+//        mView5.setAlpha(0.0f);
+//        Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img5);
+//        mView5.setImageBitmap(bitmap5);
+//        RelativeLayout.LayoutParams rl5 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+//        rl5.topMargin = 70;
+//        rl5.leftMargin = mWholeWidth / 2 - bitmap5.getWidth() / 2 - 16;
+//        addView(mView5, rl5);
 
 
     }
@@ -120,6 +180,10 @@ public class GuideClassifyGroupView extends RelativeLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         setMeasuredDimension(mWholeWidth, mWholeHeight);
+    }
+
+    private int translate(int ori) {
+        return (int) (ONE * ori);
     }
 
 
@@ -135,8 +199,9 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView1.setAlpha(0.0f);
 
                 RelativeLayout.LayoutParams rl1 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-                rl1.topMargin = mWholeHeight - bitmap1.getHeight();
-                rl1.leftMargin = (mWholeWidth - bitmap1.getWidth()) / 2;
+                rl1.addRule(RelativeLayout.CENTER_HORIZONTAL);
+                rl1.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                rl1.bottomMargin = translate(4);
                 addView(mView1, rl1);
 
                 mView1.animate().alpha(1.0f)
@@ -648,6 +713,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     public void addView2_1() {
         int distance = 20;
+        final int standardLine = mWholeHeight - translate(16);
         if (mDone2) {
             mDone2 = false;
             if (mView2 == null) {
@@ -657,16 +723,25 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView2.setImageBitmap(bitmap);
 
 
-                final RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-                rl.topMargin = mWholeHeight;
-                rl.leftMargin = (mWholeWidth) / 2 + 90;
+                //奶瓶
+                final RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(translate(26), translate(44));
+                rl.leftMargin = translate(207);
+                rl.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 addView(mView2, rl);
+
+                //奶瓶遮挡
+                mView2_cover = new View(getContext());
+                mView2_cover.setBackgroundColor(getResources().getColor(R.color.skin_color_bg_1));
+                RelativeLayout.LayoutParams rl2_cover = new RelativeLayout.LayoutParams(translate(26), translate(15));
+                rl2_cover.leftMargin = rl.leftMargin;
+                rl2_cover.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                addView(mView2_cover, rl2_cover);
 
 
                 mPath = new Path();
-                mPath.moveTo((mWholeWidth) / 2 + 90, mWholeHeight);
-                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - bitmap.getHeight() - distance);
-                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - bitmap.getHeight());
+                mPath.moveTo(rl.leftMargin, standardLine);
+                mPath.lineTo(rl.leftMargin, standardLine - translate(44) - distance);
+                mPath.lineTo(rl.leftMargin, standardLine - translate(44));
                 mPathMeasure = new PathMeasure(mPath, false);
                 mCurrentPosition = new float[2];
 
@@ -707,17 +782,17 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         float value = (Float) animation.getAnimatedValue();
                         // 获取当前点坐标封装到mCurrentPosition
                         mPathMeasure.getPosTan(value, mCurrentPosition, null);
-                        rl.topMargin = (int) mCurrentPosition[1];
-                        Log.i("lulu_animation", "rl1.topMargin=" + ((int) mCurrentPosition[1] - bitmap.getHeight()));
+                        rl.bottomMargin = standardLine - (int) mCurrentPosition[1] - translate(44) + translate(16);
+                        Log.i("lulu_animation", "rl.bottomMargin=" + (standardLine - (int) mCurrentPosition[1] - translate(44)));
                         mView2.setLayoutParams(rl);
                     }
                 });
                 valueAnimator.start();
             } else {
                 mPath = new Path();
-                mPath.moveTo((mWholeWidth) / 2 + 90, mWholeHeight - mView2.getHeight());
-                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight - mView2.getHeight() - distance);
-                mPath.lineTo((mWholeWidth) / 2 + 90, mWholeHeight);
+                mPath.moveTo((mWholeWidth) / 2 + 90, standardLine - mView2.getHeight());
+                mPath.lineTo((mWholeWidth) / 2 + 90, standardLine - mView2.getHeight() - distance);
+                mPath.lineTo((mWholeWidth) / 2 + 90, standardLine);
                 mPathMeasure.setPath(mPath, false);
 
                 final RelativeLayout.LayoutParams rl = (LayoutParams) mView2.getLayoutParams();
@@ -758,7 +833,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     public void onAnimationUpdate(ValueAnimator animation) {
                         float value = (Float) animation.getAnimatedValue();
                         mPathMeasure.getPosTan(value, mCurrentPosition, null);
-                        rl.topMargin = (int) mCurrentPosition[1];
+                        rl.bottomMargin = standardLine - (int) mCurrentPosition[1] - translate(44) + translate(16);
                         mView2.setLayoutParams(rl);
                     }
                 });
@@ -1113,6 +1188,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
 
     private boolean mDone9 = true;
+
     public void addView9() {
         if (mDone9) {
             mDone9 = false;
@@ -1120,13 +1196,13 @@ public class GuideClassifyGroupView extends RelativeLayout {
             if (mView9 == null) {
                 mView9 = new ImageView(getContext());
                 mView9.setAlpha(0.0f);
-                Bitmap bitmap9 = BitmapFactory.decodeResource(getResources(),R.drawable.ic_guide_img9);
+                Bitmap bitmap9 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img9);
                 mView9.setImageBitmap(bitmap9);
 
                 RelativeLayout.LayoutParams rl9 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
                 rl9.topMargin = 120;
                 rl9.leftMargin = mWholeWidth / 2 - bitmap9.getWidth() / 2 - 16;
-                addView(mView9,rl9);
+                addView(mView9, rl9);
 
                 mView9.animate()
                         .alpha(1.0f)
@@ -1191,5 +1267,39 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         .start();
             }
         }
+    }
+
+    public void addView10() {
+    }
+
+    public int sp2px(Context context, float spValue) {
+        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * fontScale + 0.5f);
+    }
+
+    public int dip2px(float dpValue) {
+        float rs = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, getDisplayMetrics());
+        return (int) rs;
+    }
+
+
+    public static int getDisplayHeight(Activity activity) {
+        DisplayMetrics dm = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        return dm.heightPixels;
+    }
+
+    public static int getDisplayWidth(Activity activity) {
+        DisplayMetrics dm = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        return dm.widthPixels;
+    }
+
+    public DisplayMetrics getDisplayMetrics() {
+        DisplayMetrics metrics = new DisplayMetrics();
+        WindowManager wm =
+                (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(metrics);
+        return metrics;
     }
 }
