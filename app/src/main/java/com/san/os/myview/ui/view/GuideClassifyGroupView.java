@@ -152,15 +152,16 @@ public class GuideClassifyGroupView extends RelativeLayout {
 //        addView(mView6_2, rl6_2);
 
 
-//        //新能源衣服
-//        mView3 = new ImageView(getContext());
-//        mView3.setAlpha(0.0f);
-//        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img3);
-//        mView3.setImageBitmap(bitmap3);
-//        RelativeLayout.LayoutParams rl3 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-//        rl3.topMargin = mWholeHeight - bitmap3.getHeight();
-//        rl3.leftMargin = mWholeWidth / 2 - bitmap3.getWidth() / 2 - 16;
-//        addView(mView3, rl3);
+        //新能源衣服
+        mView3 = new ImageView(getContext());
+        mView3.setAlpha(0.0f);
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img3);
+        mView3.setImageBitmap(bitmap3);
+        RelativeLayout.LayoutParams rl3 = new RelativeLayout.LayoutParams(translate(83), translate(47));
+        rl3.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        rl3.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        rl3.bottomMargin = translate(16);
+        addView(mView3, rl3);
 //
 //
 //        //头巾
