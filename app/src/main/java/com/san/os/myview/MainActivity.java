@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.san.os.myview.ui.activity.AnimationGuideActivity;
 import com.san.os.myview.ui.activity.MeasureActivity;
 import com.san.os.myview.ui.activity.MemoryDemoActivity;
+import com.san.os.myview.ui.activity.MyLinearayoutActivity;
 import com.san.os.myview.ui.activity.TabViewActivity;
 import com.san.os.myview.ui.activity.CanvasActivity;
 import com.san.os.myview.ui.activity.FloatingActionMenuActivity;
@@ -60,6 +61,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mMeasure;
     private Button mTabViewBottomView;
     private Button mAnimation_guide;
+    private Button mLinearLayout;
+    private Button mSearchTags;
 
     private int FILE_SELECT_CODE = 100;
 
@@ -96,6 +99,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mMeasure = (Button) findViewById(R.id.measure);
         mTabViewBottomView = (Button) findViewById(R.id.tabview_bottom);
         mAnimation_guide = (Button) findViewById(R.id.animation_guide);
+        mLinearLayout = (Button) findViewById(R.id.mylinearayout);
+        mSearchTags = (Button) findViewById(R.id.searchtags);
 
         mBtnUpdate.setOnClickListener(this);
         mBtnHandler.setOnClickListener(this);
@@ -121,6 +126,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mMeasure.setOnClickListener(this);
         mTabViewBottomView.setOnClickListener(this);
         mAnimation_guide.setOnClickListener(this);
+        mLinearLayout.setOnClickListener(this);
+        mSearchTags.setOnClickListener(this);
     }
 
     @Override
@@ -252,7 +259,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent21 = new Intent(this, AnimationGuideActivity.class);
                 startActivity(intent21);
                 break;
-
+            case R.id.mylinearayout:
+                Intent intent22 = new Intent(this, MyLinearayoutActivity.class);
+                startActivity(intent22);
+                break;
 
         }
 

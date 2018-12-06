@@ -235,6 +235,21 @@
                 android:layout_below="@id/tabview_bottom"
                 android:text="animation_guide"
                 />
+            <Button
+                android:id="@+id/mylinearayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/animation_guide"
+                android:text="mylinearayout"
+                />
+
+            <Button
+                android:id="@+id/searchtags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mylinearayout"
+                android:text="searchtags"
+                />
 
         </RelativeLayout>
 

@@ -7,4 +7,5 @@
     <item name="publish_btn_tiwen" type="id" />
     <item name="publish_btn_toupiao" type="id" />
     <item name="publish_btn_zhuti" type="id" />
+    <item name="search_des" type="id" />
 </resources>

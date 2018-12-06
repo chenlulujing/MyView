@@ -33,7 +33,20 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
     private Button mButton9;
     private Button mButton10;
 
-    private int FLAG = 0x0000000000000000;
+    private int FLAG1 = 1 << 0;
+    private int FLAG2 = 1 << 1;
+    private int FLAG3 = 1 << 2;
+    private int FLAG4 = 1 << 3;
+    private int FLAG5 = 1 << 4;
+    private int FLAG6 = 1 << 5;
+    private int FLAG7 = 1 << 6;
+    private int FLAG8 = 1 << 7;
+    private int FLAG9 = 1 << 8;
+    private int FLAG10 = 1 << 9;
+
+    private int mFlag;
+
+    private int FLAG = 0000000000000000;
 
     private GuideClassifyGroupView mGuideView;
 
@@ -55,8 +68,8 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
         mButton10 = (Button) findViewById(R.id.button10);
         mGuideView = (GuideClassifyGroupView) findViewById(R.id.guide_groupview);
         LinearLayout.LayoutParams llp = (LinearLayout.LayoutParams) mGuideView.getLayoutParams();
-        llp.width = (int)(getDisplayWidth(this)*((float)330/375));
-        llp.height =(int)(llp.width*((float)180/330)) ;
+        llp.width = (int) (getDisplayWidth(this) * ((float) 330 / 375));
+        llp.height = (int) (llp.width * ((float) 180 / 330));
         mGuideView.setLayoutParams(llp);
 
         mButton1.setOnClickListener(this);
@@ -76,6 +89,7 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button1:
+                mFlag = mFlag | FLAG1;
                 mGuideView.addView1(new Runnable() {
                     @Override
                     public void run() {
@@ -85,33 +99,89 @@ public class AnimationGuideActivity extends Activity implements View.OnClickList
                 mButton1.setClickable(false);
                 break;
             case R.id.button2:
-                mGuideView.addView2_1();
+                mFlag = mFlag | FLAG2;
+                mGuideView.addView2_1(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton2.setClickable(true);
+                    }
+                });
+                mButton2.setClickable(false);
                 break;
             case R.id.button3:
-                mGuideView.addView3();
+                mFlag = mFlag | FLAG3;
+                mGuideView.addView3(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton3.setClickable(true);
+                    }
+                });
+                mButton3.setClickable(false);
                 break;
             case R.id.button4:
-                mGuideView.addView4();
+                mFlag = mFlag | FLAG4;
+                mGuideView.addView4(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton4.setClickable(true);
+                    }
+                });
+                mButton4.setClickable(false);
                 break;
             case R.id.button5:
-                mGuideView.addView5();
+                mGuideView.addView5(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton5.setClickable(true);
+                    }
+                });
+                mButton5.setClickable(false);
                 break;
             case R.id.button6:
-                mGuideView.addView6();
+                mGuideView.addView6(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton6.setClickable(true);
+                    }
+                });
+                mButton6.setClickable(false);
                 break;
             case R.id.button7:
-                mGuideView.addView7();
+                mGuideView.addView7(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton7.setClickable(true);
+                    }
+                });
+                mButton7.setClickable(false);
                 break;
             case R.id.button8:
-                mGuideView.addView8();
-                mGuideView.addView10();
+                mGuideView.addView8(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton8.setClickable(true);
+                    }
+                });
+                mButton8.setClickable(false);
 
                 break;
             case R.id.button9:
-                mGuideView.addView9();
+                mGuideView.addView9(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton9.setClickable(true);
+                    }
+                });
+                mButton9.setClickable(false);
                 break;
             case R.id.button10:
-                mGuideView.addView10();
+                mGuideView.addView10(new Runnable() {
+                    @Override
+                    public void run() {
+                        mButton10.setClickable(true);
+                    }
+                });
+                mButton10.setClickable(false);
                 break;
         }
     }

@@ -29,23 +29,37 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="lulu_margin_" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe64141-61e2-4515-af09-ba8da18c2f2b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img7.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img7_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyLinearayoutActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/utils/SizeUtils.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_22_2_1_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_22_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_1.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img9.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyTextActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyTextActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/ids.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/ids.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/floatingmenu/floatingmenu.iml" afterPath="$PROJECT_DIR$/floatingmenu/floatingmenu.iml" />
     </list>
     <ignored path="MyView.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,222 +96,91 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="106" column="40" lean-forward="false" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+            <state relative-caret-position="229">
+              <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimationGuideActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java">
+      <file leaf-file-name="FlowGroupLayout.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/FlowGroupLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="308">
+              <caret line="188" column="40" lean-forward="false" selection-start-line="188" selection-start-column="40" selection-end-line="188" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToastActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/ToastActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2679#2858#0" expanded="true" />
-                <element signature="e#2857#2858#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_animation_guide.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_animation_guide.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="ITransientNotification.aidl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/aidl/android/app/ITransientNotification.aidl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimationActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/AnimationActivity.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="550">
+              <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuideClassifyGroupView.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java">
+      <file leaf-file-name="SearchHistoryView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/SearchHistoryView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7108#7109#0" expanded="true" />
-                <element signature="e#7148#7149#0" expanded="true" />
-                <element signature="e#31312#31517#0" expanded="true" />
-                <element signature="e#31516#31517#0" expanded="true" />
-                <element signature="e#31862#32561#0" expanded="true" />
-                <element signature="e#32560#32561#0" expanded="true" />
-                <element signature="e#34267#34782#0" expanded="true" />
-                <element signature="e#34781#34782#0" expanded="true" />
-                <element signature="e#40340#40644#0" expanded="true" />
-                <element signature="e#40643#40644#0" expanded="true" />
-                <element signature="e#49659#49660#0" expanded="true" />
-                <element signature="e#49736#49737#0" expanded="true" />
-                <element signature="e#50497#50498#0" expanded="true" />
-                <element signature="e#50574#50575#0" expanded="true" />
-                <element signature="e#51498#51862#0" expanded="true" />
-                <element signature="e#51861#51862#0" expanded="true" />
-                <element signature="e#52743#53107#0" expanded="true" />
-                <element signature="e#53106#53107#0" expanded="true" />
-                <element signature="e#54742#54743#0" expanded="true" />
-                <element signature="e#54820#54821#0" expanded="true" />
-                <marker date="1519649286000" expanded="false" signature="33618:33720" ph="() → {" />
-                <marker date="1519649286000" expanded="false" signature="33891:33922" ph="}" />
-                <marker date="1519649286000" expanded="false" signature="37283:37310" ph=" { " />
-                <marker date="1519649286000" expanded="false" signature="37324:37346" ph=" }" />
-                <marker date="1519649286000" expanded="false" signature="37667:37818" ph="(animation) → {" />
-                <marker date="1519649286000" expanded="false" signature="38667:38690" ph="}" />
-                <marker date="1519649286000" expanded="false" signature="40990:41141" ph="(animation) → {" />
-                <marker date="1519649286000" expanded="false" signature="41778:41801" ph="}" />
-                <marker date="1519649286000" expanded="false" signature="42229:42331" ph="() → {" />
-                <marker date="1519649286000" expanded="false" signature="42861:42995" ph="() → {" />
-                <marker date="1519649286000" expanded="false" signature="43106:43153" ph="}" />
-                <marker date="1519649286000" expanded="false" signature="43610:43641" ph="}" />
-                <marker date="1519649286000" expanded="false" signature="44636:44671" ph=" { " />
-                <marker date="1519649286000" expanded="false" signature="44685:44715" ph=" }" />
-                <marker date="1519649286000" expanded="false" signature="45636:45754" ph="() → {" />
-                <marker date="1519649286000" expanded="false" signature="45842:45881" ph="}" />
-                <marker date="1519649286000" expanded="false" signature="46792:46819" ph=" { " />
-                <marker date="1519649286000" expanded="false" signature="46833:46855" ph=" }" />
-                <marker date="1519649286000" expanded="false" signature="47486:47513" ph=" { " />
-                <marker date="1519649286000" expanded="false" signature="47527:47549" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="924">
+              <caret line="55" column="43" lean-forward="false" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TabVideoButtonPathClipView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/TabVideoButtonPathClipView.java">
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="218" column="3" lean-forward="false" selection-start-line="218" selection-start-column="3" selection-end-line="247" selection-end-column="5" />
+            <state relative-caret-position="422906">
+              <caret line="19737" column="32" lean-forward="false" selection-start-line="19737" selection-start-column="32" selection-end-line="19737" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/widget/ImageView.java">
+      <file leaf-file-name="MaxWidthTextView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MaxWidthTextView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12834">
-              <caret line="623" column="8" lean-forward="false" selection-start-line="623" selection-start-column="8" selection-end-line="623" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#48362#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#4419#4420#0" expanded="false" />
-                <element signature="e#4458#4459#0" expanded="false" />
-                <element signature="e#9124#9125#0" expanded="false" />
-                <element signature="e#9164#9165#0" expanded="false" />
-                <element signature="e#10450#10451#0" expanded="false" />
-                <element signature="e#10482#10483#0" expanded="false" />
-                <element signature="e#11508#11509#0" expanded="false" />
-                <element signature="e#11544#11545#0" expanded="false" />
-                <element signature="e#11789#11790#0" expanded="false" />
-                <element signature="e#11822#11823#0" expanded="false" />
-                <element signature="e#12855#12856#0" expanded="false" />
-                <element signature="e#12893#12894#0" expanded="false" />
-                <element signature="e#13023#13024#0" expanded="false" />
-                <element signature="e#13055#13056#0" expanded="false" />
-                <element signature="e#16821#16822#0" expanded="false" />
-                <element signature="e#16861#16862#0" expanded="false" />
-                <element signature="e#17787#17788#0" expanded="false" />
-                <element signature="e#17827#17828#0" expanded="false" />
-                <element signature="e#21928#21929#0" expanded="false" />
-                <element signature="e#21966#21967#0" expanded="false" />
-                <element signature="e#22837#22838#0" expanded="false" />
-                <element signature="e#22870#22871#0" expanded="false" />
-                <element signature="e#24176#24177#0" expanded="false" />
-                <element signature="e#24213#24214#0" expanded="false" />
-                <element signature="e#42604#42605#0" expanded="false" />
-                <element signature="e#42647#42648#0" expanded="false" />
-                <element signature="e#43361#43362#0" expanded="false" />
-                <element signature="e#43424#43425#0" expanded="false" />
-                <element signature="e#43468#43469#0" expanded="false" />
-                <element signature="e#43504#43505#0" expanded="false" />
-                <element signature="e#44032#44033#0" expanded="false" />
-                <element signature="e#44067#44068#0" expanded="false" />
-                <element signature="e#44744#44745#0" expanded="false" />
-                <element signature="e#44773#44774#0" expanded="false" />
-                <element signature="e#45038#45039#0" expanded="false" />
-                <element signature="e#45069#45070#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="484">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValueAnimator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/animation/ValueAnimator.java">
+      <file leaf-file-name="ExaclyWidthTextView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/ExaclyWidthTextView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13018">
-              <caret line="600" column="0" lean-forward="false" selection-start-line="600" selection-start-column="0" selection-end-line="600" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#61365#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#9458#9459#0" expanded="false" />
-                <element signature="e#9504#9505#0" expanded="false" />
-                <element signature="e#9579#9580#0" expanded="false" />
-                <element signature="e#9616#9617#0" expanded="false" />
-                <element signature="e#20002#20003#0" expanded="false" />
-                <element signature="e#20032#20033#0" expanded="false" />
-                <element signature="e#21584#21585#0" expanded="false" />
-                <element signature="e#21654#21655#0" expanded="false" />
-                <element signature="e#21854#21855#0" expanded="false" />
-                <element signature="e#21894#21895#0" expanded="false" />
-                <element signature="e#27288#27289#0" expanded="false" />
-                <element signature="e#27356#27357#0" expanded="false" />
-                <element signature="e#27457#27458#0" expanded="false" />
-                <element signature="e#27500#27501#0" expanded="false" />
-                <element signature="e#31362#31363#0" expanded="false" />
-                <element signature="e#31404#31405#0" expanded="false" />
-                <element signature="e#32480#32481#0" expanded="false" />
-                <element signature="e#32532#32533#0" expanded="false" />
-                <element signature="e#33271#33272#0" expanded="false" />
-                <element signature="e#33326#33327#0" expanded="false" />
-                <element signature="e#35798#35799#0" expanded="false" />
-                <element signature="e#35834#35835#0" expanded="false" />
-                <element signature="e#36066#36067#0" expanded="false" />
-                <element signature="e#36101#36102#0" expanded="false" />
-                <element signature="e#36437#36438#0" expanded="false" />
-                <element signature="e#36472#36473#0" expanded="false" />
-                <element signature="e#36665#36666#0" expanded="false" />
-                <element signature="e#36699#36700#0" expanded="false" />
-                <element signature="e#39046#39047#0" expanded="false" />
-                <element signature="e#39082#39083#0" expanded="false" />
-                <element signature="e#43748#43749#0" expanded="false" />
-                <element signature="e#43776#43777#0" expanded="false" />
-                <element signature="e#45785#45786#0" expanded="false" />
-                <element signature="e#45846#45847#0" expanded="false" />
-                <element signature="e#45894#45895#0" expanded="false" />
-                <element signature="e#45925#45926#0" expanded="false" />
-                <element signature="e#46964#46965#0" expanded="false" />
-                <element signature="e#46991#46992#0" expanded="false" />
-                <element signature="e#49146#49147#0" expanded="false" />
-                <element signature="e#49179#49180#0" expanded="false" />
-                <element signature="e#54734#54735#0" expanded="false" />
-                <element signature="e#54773#54774#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="132">
+              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -308,21 +191,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="ASClass" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tabview</find>
-      <find>getDisplayWidth</find>
-      <find>setMeasuredDimension</find>
-      <find>one</find>
-      <find>mPaint</find>
-      <find>mSrcRect</find>
-      <find>mDestRect</find>
-      <find>setDuration</find>
-      <find>bitmap6_2</find>
       <find>addView2</find>
       <find>mView6_2</find>
       <find>rl6_2</find>
@@ -333,6 +208,26 @@
       <find>mView3</find>
       <find>mView6_3</find>
       <find>mView5</find>
+      <find>translate</find>
+      <find>x</find>
+      <find>AnimatorSet</find>
+      <find>blur</find>
+      <find>mParent</find>
+      <find>ViewRootImpl</find>
+      <find>CALLBACK_TRAVERSAL</find>
+      <find>performTraversals</find>
+      <find>doTraversal</find>
+      <find>TraversalRunnable</find>
+      <find>mTraversalRunnable</find>
+      <find>scheduleTraversals</find>
+      <find>performDraw</find>
+      <find>performMeasure</find>
+      <find>TRACE_TAG_VIEW</find>
+      <find>mParent =</find>
+      <find>onDraw</find>
+      <find>lineWidth</find>
+      <find>lineHeight</find>
+      <find>t3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2804,41 +2699,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/loan_dealer_checkbox_selector.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_radiobutton.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/RadioButtonActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/RadioButtonView.java" />
-        <option value="$PROJECT_DIR$/floatingmenu/src/main/res/drawable-xhdpi/skin_color_tabtext_selector.xml" />
-        <option value="$PROJECT_DIR$/floatingmenu/src/main/res/color/skin_color_tabtext_selector.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/fragment/TabFragmentPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MemoryDemoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/ViewPagerActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/ScrollViewPager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/AutoNextViewPager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/view_banner.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/BannerView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/tool/CollectionsWrapper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/FocusAdapter.java" />
-        <option value="$PROJECT_DIR$/floatingmenu/src/main/res/drawable/line.xml" />
-        <option value="$PROJECT_DIR$/floatingmenu/src/main/res/layout/view_pre_live.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/view_pre_live.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/PreViewTimeText.java" />
-        <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-        <option value="$PROJECT_DIR$/floatingmenu/src/main/res/drawable/shape_news_detail_setting_seek_thum.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_news_detail_setting_seek_thum.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_tabview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/skin_drawable_gradient_l2r_white.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/TabViewActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/myradiobutton.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/fragment/TabFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/TabView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MeasureActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_measure.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MyTextView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyTextActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_textview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/TabViewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/TabVideoButtonView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_label_stroke_ffffff.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/TabViewBottomClipActivity.java" />
@@ -2847,14 +2707,49 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/TabVideoButtonPathClipView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_tabview_bottom.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/TabVideoButtonPathView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/AnimationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_animation_guide.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/RecomendCarItemView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/commen/IAdaptiveSize.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/commen/AdaptiveSizeLinearLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/utils/SizeUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/commen/SanLinearLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/RecomendBigVView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/commen/ISanLinearLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyTextActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/commen/ISanRelativeLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_mylinearlayout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyLinearayoutActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/SanLinearLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/ISanView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MyLinearLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MyLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/Decorator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MyLinearLayoutDecorator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/decorator/MyLinearLayoutDecorator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/decorator/Decorator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/decorator/MyLayout.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/pop_more_window.xml" />
+        <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/pop_more_window.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/decorator/MyLinearLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/decorator/SanLinearLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MoreWindow.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/ids.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/FixedWidthTextView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/SearchTagsActvity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MaxWidthTextView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/ExaclyWidthTextView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/SearchHistoryView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/ToastActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/ExToast.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/FlowGroupLayout.java" />
       </list>
     </option>
   </component>
@@ -2869,7 +2764,7 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-361" />
+    <option name="x" value="-257" />
     <option name="y" value="-1057" />
     <option name="width" value="1920" />
     <option name="height" value="1057" />
@@ -2890,9 +2785,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2901,22 +2795,8 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="floatingmenu" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyView" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="floatingmenu" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2927,28 +2807,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyView" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2981,32 +2839,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="myview" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyView" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myview" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -3057,19 +2889,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyView" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3085,22 +2908,21 @@
     <property name="options.searchVisible" value="true" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/autovideoplayer-master" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="1bab33d2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
-    <property name="DEBUGGABLE_DEVICE" value="smartisan-sm705-1bab33d2" />
+    <property name="DEBUGGABLE_DEVICE" value="smartisan-os105-756046e" />
     <property name="DEBUGGABLE_PROCESS" value="com.san.os.myview" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="extractMethod.generateAnnotations" value="true" />
-    <property name="device.picker.selection" value="1bab33d2" />
+    <property name="device.picker.selection" value="71UBBL624E24" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="GpuMonitor.paused" value="false" />
-    <property name="sync.plugin.last.upgrade.timestamp" value="1519544299725" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1543566931266" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
   </component>
   <component name="RecentsManager">
@@ -3113,16 +2935,17 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.san.os.myview.ui.view" />
+      <recent name="com.san.os.myview.ui.view.commen" />
       <recent name="com.san.os.myview" />
       <recent name="com.san.os.myview.tool" />
       <recent name="com.san.os.myview.ui.fragment" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/san/os/myview" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/floatingmenu/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/floatingmenu/src/main/res/layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -3208,7 +3031,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519649425005" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1543567569006" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3256,7 +3079,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519649425005" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1543567569006" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3334,13 +3157,13 @@
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <module name="MyView" />
       <envs />
       <method />
@@ -3354,6 +3177,30 @@
       <option name="passParentEnvs" value="true" />
       <option name="workingDirectory" />
       <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <envs />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <envs />
       <method />
     </configuration>
@@ -3439,7 +3286,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519649425006" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1543567569009" />
       </method>
     </configuration>
     <list size="1">
@@ -3591,36 +3438,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-361" y="-1057" width="1920" height="1057" extended-state="6" />
+    <frame x="-257" y="-1057" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26248673" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21572796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18172157" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10839532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20935175" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26783812" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2879915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11052072" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21991481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1943557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Freeline" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android WiFi ADB" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46971306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android WiFi ADB" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15974441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -3637,7 +3482,19 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="100" y="123" width="1080" height="512" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3056443" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22422954" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -3655,7 +3512,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java</url>
-          <line>223</line>
+          <line>230</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
@@ -3703,285 +3560,279 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
-          <line>1125</line>
+          <line>1151</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
-          <line>148</line>
-          <properties />
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
-          <line>82</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
-          <line>87</line>
+          <line>98</line>
           <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java</url>
-          <line>1243</line>
+          <line>1272</line>
           <properties />
           <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="87" />
+      <option name="time" value="91" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="translate(20)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/HandlerActivity.java">
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/animation/Animator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/LIneGridView.java">
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/RenderNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="329">
+          <caret line="505" column="28" lean-forward="false" selection-start-line="505" selection-start-column="28" selection-end-line="505" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/LineActivity.java">
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/ViewPropertyAnimator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="7632">
+          <caret line="341" column="58" lean-forward="false" selection-start-line="341" selection-start-column="58" selection-end-line="341" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_line.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ViewoutActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/animation/ValueAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7008">
+          <caret line="320" column="32" lean-forward="false" selection-start-line="320" selection-start-column="32" selection-end-line="320" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/ViewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129096">
+          <caret line="5496" column="40" lean-forward="false" selection-start-line="5496" selection-start-column="40" selection-end-line="5496" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/AnimationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/animation/TimeInterpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/animation/Interpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/animation/BaseInterpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/animation/LinearInterpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/graphics/drawable/BitmapDrawable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="142" column="11" lean-forward="false" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pub_popwindow.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="144">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/graphics/Canvas.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17572">
-          <caret line="825" column="26" lean-forward="false" selection-start-line="825" selection-start-column="26" selection-end-line="825" selection-end-column="26" />
+        <state relative-caret-position="614">
+          <caret line="666" column="36" lean-forward="true" selection-start-line="666" selection-start-column="36" selection-end-line="666" selection-end-column="36" />
           <folding>
-            <element signature="e#0#89981#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1780#1781#0" expanded="false" />
-            <element signature="e#1823#1824#0" expanded="false" />
-            <element signature="e#3076#3077#0" expanded="false" />
-            <element signature="e#3135#3136#0" expanded="false" />
-            <element signature="e#5290#5291#0" expanded="false" />
-            <element signature="e#5317#5318#0" expanded="false" />
-            <element signature="e#5669#5670#0" expanded="false" />
-            <element signature="e#5697#5698#0" expanded="false" />
-            <element signature="e#7818#7819#0" expanded="false" />
-            <element signature="e#7878#7879#0" expanded="false" />
-            <element signature="e#8038#8039#0" expanded="false" />
-            <element signature="e#8098#8099#0" expanded="false" />
-            <element signature="e#8261#8262#0" expanded="false" />
-            <element signature="e#8322#8323#0" expanded="false" />
-            <element signature="e#8787#8788#0" expanded="false" />
-            <element signature="e#8818#8819#0" expanded="false" />
-            <element signature="e#9584#9585#0" expanded="false" />
-            <element signature="e#9624#9625#0" expanded="false" />
-            <element signature="e#9898#9899#0" expanded="false" />
-            <element signature="e#9941#9942#0" expanded="false" />
-            <element signature="e#10217#10218#0" expanded="false" />
-            <element signature="e#10260#10261#0" expanded="false" />
-            <element signature="e#19596#19597#0" expanded="false" />
-            <element signature="e#19648#19649#0" expanded="false" />
-            <element signature="e#19834#19835#0" expanded="false" />
-            <element signature="e#19898#19899#0" expanded="false" />
-            <element signature="e#20744#20745#0" expanded="false" />
-            <element signature="e#20806#20807#0" expanded="false" />
-            <element signature="e#21020#21021#0" expanded="false" />
-            <element signature="e#21078#21079#0" expanded="false" />
-            <element signature="e#21735#21736#0" expanded="false" />
-            <element signature="e#21795#21796#0" expanded="false" />
-            <element signature="e#22456#22457#0" expanded="false" />
-            <element signature="e#22513#22514#0" expanded="false" />
-            <element signature="e#29251#29252#0" expanded="false" />
-            <element signature="e#29309#29310#0" expanded="false" />
-            <element signature="e#30973#30974#0" expanded="false" />
-            <element signature="e#31007#31008#0" expanded="false" />
-            <element signature="e#31657#31658#0" expanded="false" />
-            <element signature="e#31707#31708#0" expanded="false" />
-            <element signature="e#36599#36600#0" expanded="false" />
-            <element signature="e#36644#36645#0" expanded="false" />
-            <element signature="e#37172#37173#0" expanded="false" />
-            <element signature="e#37221#37222#0" expanded="false" />
-            <element signature="e#62585#62586#0" expanded="false" />
-            <element signature="e#62635#62636#0" expanded="false" />
-            <element signature="e#79419#79420#0" expanded="false" />
-            <element signature="e#79455#79456#0" expanded="false" />
+            <element signature="e#9836#10250#0" expanded="true" />
+            <element signature="e#10249#10250#0" expanded="true" />
+            <element signature="e#12907#13267#0" expanded="true" />
+            <element signature="e#13266#13267#0" expanded="true" />
+            <element signature="e#16488#16904#0" expanded="true" />
+            <element signature="e#16903#16904#0" expanded="true" />
+            <element signature="e#22620#22881#0" expanded="true" />
+            <element signature="e#22880#22881#0" expanded="true" />
+            <element signature="e#23584#23893#0" expanded="true" />
+            <element signature="e#23892#23893#0" expanded="true" />
+            <element signature="e#24681#25165#0" expanded="true" />
+            <element signature="e#25164#25165#0" expanded="true" />
+            <element signature="e#29122#29542#0" expanded="true" />
+            <element signature="e#29541#29542#0" expanded="true" />
+            <element signature="e#32318#32571#0" expanded="true" />
+            <element signature="e#32570#32571#0" expanded="true" />
+            <element signature="e#32916#33615#0" expanded="true" />
+            <element signature="e#33614#33615#0" expanded="true" />
+            <element signature="e#34677#35029#0" expanded="true" />
+            <element signature="e#35028#35029#0" expanded="true" />
+            <element signature="e#35374#35889#0" expanded="true" />
+            <element signature="e#35888#35889#0" expanded="true" />
+            <element signature="e#38845#39868#0" expanded="true" />
+            <element signature="e#39867#39868#0" expanded="true" />
+            <element signature="e#41554#41906#0" expanded="true" />
+            <element signature="e#41905#41906#0" expanded="true" />
+            <element signature="e#42252#43063#0" expanded="true" />
+            <element signature="e#43062#43063#0" expanded="true" />
+            <element signature="e#43498#44917#0" expanded="true" />
+            <element signature="e#44916#44917#0" expanded="true" />
+            <element signature="e#47060#47361#0" expanded="true" />
+            <element signature="e#47360#47361#0" expanded="true" />
+            <element signature="e#53225#53645#0" expanded="true" />
+            <element signature="e#53644#53645#0" expanded="true" />
+            <element signature="e#54531#54951#0" expanded="true" />
+            <element signature="e#54950#54951#0" expanded="true" />
+            <element signature="e#57669#58088#0" expanded="true" />
+            <element signature="e#58087#58088#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/TabViewBottomClipActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/TabViewBottomActivity.java">
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/widget/PopupWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state relative-caret-position="-11">
+          <caret line="309" column="16" lean-forward="false" selection-start-line="309" selection-start-column="16" selection-end-line="309" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_tabview_bottom.xml">
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37829">
+          <caret line="2129" column="0" lean-forward="false" selection-start-line="2129" selection-start-column="0" selection-end-line="2129" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/extras/android/m2repository/com/android/support/appcompat-v7/22.2.1/appcompat-v7-22.2.1-sources.jar!/android/support/v7/app/AppCompatDelegateImplV7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="902" column="13" lean-forward="false" selection-start-line="902" selection-start-column="13" selection-end-line="902" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/PhoneWindow.java" />
+    <entry file="file://$USER_HOME$/Downloads/ViewRootImpl.java" />
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/widget/LinearLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="316" column="7" lean-forward="true" selection-start-line="316" selection-start-column="7" selection-end-line="316" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/commen/ISanLinearLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/LayoutInflater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7562">
+          <caret line="441" column="16" lean-forward="false" selection-start-line="441" selection-start-column="16" selection-end-line="441" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/ViewRootImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="98" column="31" lean-forward="false" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/ViewParent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3686">
+          <caret line="210" column="7" lean-forward="false" selection-start-line="210" selection-start-column="7" selection-end-line="210" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pop_more_window.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3082">
-          <caret line="134" column="45" lean-forward="false" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
+        <state relative-caret-position="304">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/graphics/Rect.java">
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/pop_more_window.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="68" column="11" lean-forward="false" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#22436#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1813#1814#0" expanded="false" />
-            <element signature="e#1874#1875#0" expanded="false" />
-            <element signature="e#4061#4062#0" expanded="false" />
-            <element signature="e#4120#4121#0" expanded="false" />
-            <element signature="e#6259#6260#0" expanded="false" />
-            <element signature="e#6312#6313#0" expanded="false" />
-            <element signature="e#6499#6500#0" expanded="false" />
-            <element signature="e#6534#6535#0" expanded="false" />
-            <element signature="e#6723#6724#0" expanded="false" />
-            <element signature="e#6758#6759#0" expanded="false" />
-            <element signature="e#7012#7013#0" expanded="false" />
-            <element signature="e#7054#7055#0" expanded="false" />
-            <element signature="e#7306#7307#0" expanded="false" />
-            <element signature="e#7348#7349#0" expanded="false" />
-            <element signature="e#7481#7482#0" expanded="false" />
-            <element signature="e#7525#7526#0" expanded="false" />
-            <element signature="e#7656#7657#0" expanded="false" />
-            <element signature="e#7700#7701#0" expanded="false" />
-            <element signature="e#7784#7785#0" expanded="false" />
-            <element signature="e#7831#7832#0" expanded="false" />
-            <element signature="e#14888#14889#0" expanded="false" />
-            <element signature="e#14954#14955#0" expanded="false" />
-            <element signature="e#19020#19021#0" expanded="false" />
-            <element signature="e#19075#19076#0" expanded="false" />
-            <element signature="e#20334#20335#0" expanded="false" />
-            <element signature="e#20358#20359#0" expanded="false" />
-            <element signature="e#21211#21212#0" expanded="false" />
-            <element signature="e#21256#21257#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-9">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/decorator/MyLinearLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="42" column="84" lean-forward="false" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/TabVideoButtonPathView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="104" selection-start-column="3" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_tabview_bottom_clip.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/decorator/SanLinearLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="500">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/animation/AnimationSet.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MoreWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="119" column="11" lean-forward="false" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/animation/ScaleAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1514">
-          <caret line="144" column="11" lean-forward="false" selection-start-line="144" selection-start-column="11" selection-end-line="144" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/animation/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img7_3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img_8_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/HeaderText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/LettersView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MyRadioButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MyRadioGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MyTextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="209">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3990,357 +3841,153 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4140">
-          <caret line="180" column="45" lean-forward="false" selection-start-line="180" selection-start-column="45" selection-end-line="180" selection-end-column="45" />
+        <state relative-caret-position="609">
+          <caret line="246" column="43" lean-forward="false" selection-start-line="246" selection-start-column="43" selection-end-line="246" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/graphics/Path.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyTextActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12328">
-          <caret line="574" column="16" lean-forward="false" selection-start-line="574" selection-start-column="16" selection-end-line="574" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#31952#0" expanded="false" />
-            <element signature="e#1297#1298#0" expanded="false" />
-            <element signature="e#1334#1335#0" expanded="false" />
-            <element signature="e#4200#4201#0" expanded="false" />
-            <element signature="e#4241#4242#0" expanded="false" />
-            <element signature="e#5566#5567#0" expanded="false" />
-            <element signature="e#5617#5618#0" expanded="false" />
-            <element signature="e#6372#6373#0" expanded="false" />
-            <element signature="e#6410#6411#0" expanded="false" />
-            <element signature="e#6892#6893#0" expanded="false" />
-            <element signature="e#6962#6963#0" expanded="false" />
-            <element signature="e#7150#7151#0" expanded="false" />
-            <element signature="e#7211#7212#0" expanded="false" />
-            <element signature="e#7991#7992#0" expanded="false" />
-            <element signature="e#8041#8042#0" expanded="false" />
-            <element signature="e#8482#8483#0" expanded="false" />
-            <element signature="e#8537#8538#0" expanded="false" />
-            <element signature="e#9348#9349#0" expanded="false" />
-            <element signature="e#9408#9409#0" expanded="false" />
-            <element signature="e#9666#9667#0" expanded="false" />
-            <element signature="e#9714#9715#0" expanded="false" />
-            <element signature="e#10258#10259#0" expanded="false" />
-            <element signature="e#10309#10310#0" expanded="false" />
-            <element signature="e#17546#17547#0" expanded="false" />
-            <element signature="e#17584#17585#0" expanded="false" />
-            <element signature="e#26939#26940#0" expanded="false" />
-            <element signature="e#26973#26974#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/ViewPropertyAnimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15686">
-          <caret line="709" column="32" lean-forward="false" selection-start-line="709" selection-start-column="32" selection-end-line="709" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/animation/ValueAnimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13018">
-          <caret line="600" column="0" lean-forward="false" selection-start-line="600" selection-start-column="0" selection-end-line="600" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#61365#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9458#9459#0" expanded="false" />
-            <element signature="e#9504#9505#0" expanded="false" />
-            <element signature="e#9579#9580#0" expanded="false" />
-            <element signature="e#9616#9617#0" expanded="false" />
-            <element signature="e#20002#20003#0" expanded="false" />
-            <element signature="e#20032#20033#0" expanded="false" />
-            <element signature="e#21584#21585#0" expanded="false" />
-            <element signature="e#21654#21655#0" expanded="false" />
-            <element signature="e#21854#21855#0" expanded="false" />
-            <element signature="e#21894#21895#0" expanded="false" />
-            <element signature="e#27288#27289#0" expanded="false" />
-            <element signature="e#27356#27357#0" expanded="false" />
-            <element signature="e#27457#27458#0" expanded="false" />
-            <element signature="e#27500#27501#0" expanded="false" />
-            <element signature="e#31362#31363#0" expanded="false" />
-            <element signature="e#31404#31405#0" expanded="false" />
-            <element signature="e#32480#32481#0" expanded="false" />
-            <element signature="e#32532#32533#0" expanded="false" />
-            <element signature="e#33271#33272#0" expanded="false" />
-            <element signature="e#33326#33327#0" expanded="false" />
-            <element signature="e#35798#35799#0" expanded="false" />
-            <element signature="e#35834#35835#0" expanded="false" />
-            <element signature="e#36066#36067#0" expanded="false" />
-            <element signature="e#36101#36102#0" expanded="false" />
-            <element signature="e#36437#36438#0" expanded="false" />
-            <element signature="e#36472#36473#0" expanded="false" />
-            <element signature="e#36665#36666#0" expanded="false" />
-            <element signature="e#36699#36700#0" expanded="false" />
-            <element signature="e#39046#39047#0" expanded="false" />
-            <element signature="e#39082#39083#0" expanded="false" />
-            <element signature="e#43748#43749#0" expanded="false" />
-            <element signature="e#43776#43777#0" expanded="false" />
-            <element signature="e#45785#45786#0" expanded="false" />
-            <element signature="e#45846#45847#0" expanded="false" />
-            <element signature="e#45894#45895#0" expanded="false" />
-            <element signature="e#45925#45926#0" expanded="false" />
-            <element signature="e#46964#46965#0" expanded="false" />
-            <element signature="e#46991#46992#0" expanded="false" />
-            <element signature="e#49146#49147#0" expanded="false" />
-            <element signature="e#49179#49180#0" expanded="false" />
-            <element signature="e#54734#54735#0" expanded="false" />
-            <element signature="e#54773#54774#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/widget/ImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12834">
-          <caret line="623" column="8" lean-forward="false" selection-start-line="623" selection-start-column="8" selection-end-line="623" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#48362#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#4419#4420#0" expanded="false" />
-            <element signature="e#4458#4459#0" expanded="false" />
-            <element signature="e#9124#9125#0" expanded="false" />
-            <element signature="e#9164#9165#0" expanded="false" />
-            <element signature="e#10450#10451#0" expanded="false" />
-            <element signature="e#10482#10483#0" expanded="false" />
-            <element signature="e#11508#11509#0" expanded="false" />
-            <element signature="e#11544#11545#0" expanded="false" />
-            <element signature="e#11789#11790#0" expanded="false" />
-            <element signature="e#11822#11823#0" expanded="false" />
-            <element signature="e#12855#12856#0" expanded="false" />
-            <element signature="e#12893#12894#0" expanded="false" />
-            <element signature="e#13023#13024#0" expanded="false" />
-            <element signature="e#13055#13056#0" expanded="false" />
-            <element signature="e#16821#16822#0" expanded="false" />
-            <element signature="e#16861#16862#0" expanded="false" />
-            <element signature="e#17787#17788#0" expanded="false" />
-            <element signature="e#17827#17828#0" expanded="false" />
-            <element signature="e#21928#21929#0" expanded="false" />
-            <element signature="e#21966#21967#0" expanded="false" />
-            <element signature="e#22837#22838#0" expanded="false" />
-            <element signature="e#22870#22871#0" expanded="false" />
-            <element signature="e#24176#24177#0" expanded="false" />
-            <element signature="e#24213#24214#0" expanded="false" />
-            <element signature="e#42604#42605#0" expanded="false" />
-            <element signature="e#42647#42648#0" expanded="false" />
-            <element signature="e#43361#43362#0" expanded="false" />
-            <element signature="e#43424#43425#0" expanded="false" />
-            <element signature="e#43468#43469#0" expanded="false" />
-            <element signature="e#43504#43505#0" expanded="false" />
-            <element signature="e#44032#44033#0" expanded="false" />
-            <element signature="e#44067#44068#0" expanded="false" />
-            <element signature="e#44744#44745#0" expanded="false" />
-            <element signature="e#44773#44774#0" expanded="false" />
-            <element signature="e#45038#45039#0" expanded="false" />
-            <element signature="e#45069#45070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floatingmenu/src/main/res/drawable/skin_color_tabtext_selector.xml">
-      <provider editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="647">
+          <caret line="44" column="66" lean-forward="false" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/MyLinearayoutActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="106" column="40" lean-forward="false" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+        <state relative-caret-position="285">
+          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/tool/ToolBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/ids.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/FlowRadioGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2170">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../AndroidTool/AndroidSDK/sources/android-22/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="7066" column="16" lean-forward="false" selection-start-line="7066" selection-start-column="16" selection-end-line="7066" selection-end-column="16" />
+        <state relative-caret-position="422906">
+          <caret line="19737" column="32" lean-forward="false" selection-start-line="19737" selection-start-column="32" selection-end-line="19737" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/smallcar_selected.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/bigcar_selected.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floatingmenu/src/main/res/drawable-xhdpi/button_action_touch.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floatingmenu/src/main/res/drawable-xhdpi/button_action.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floatingmenu/src/main/res/drawable/button_action_selector.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_search_hot_1.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_search_hot_3.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/MaxWidthTextView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="71" lean-forward="true" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+        <state relative-caret-position="484">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/checkbox_agreement_selected.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floatingmenu/src/main/res/drawable-xhdpi/button_sub_action_dark_touch.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floatingmenu/src/main/res/drawable/button_sub_action_dark_selector.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/ExaclyWidthTextView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="76" lean-forward="true" selection-start-line="3" selection-start-column="76" selection-end-line="3" selection-end-column="76" />
+        <state relative-caret-position="132">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/AnimationActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/SearchHistoryView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="924">
+          <caret line="55" column="43" lean-forward="false" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/TabVideoButtonPathClipView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/aidl/android/app/ITransientNotification.aidl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="218" column="3" lean-forward="false" selection-start-line="218" selection-start-column="3" selection-end-line="247" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_animation_guide.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/ExToast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        <state relative-caret-position="33">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_person.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_stars1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_stars2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="550">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/SearchTagsActvity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/AnimationGuideActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/activity/ToastActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="506">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2679#2858#0" expanded="true" />
-            <element signature="e#2857#2858#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_guide_img7_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/GuideClassifyGroupView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/ui/view/FlowGroupLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7108#7109#0" expanded="true" />
-            <element signature="e#7148#7149#0" expanded="true" />
-            <element signature="e#31312#31517#0" expanded="true" />
-            <element signature="e#31516#31517#0" expanded="true" />
-            <element signature="e#31862#32561#0" expanded="true" />
-            <element signature="e#32560#32561#0" expanded="true" />
-            <element signature="e#34267#34782#0" expanded="true" />
-            <element signature="e#34781#34782#0" expanded="true" />
-            <element signature="e#40340#40644#0" expanded="true" />
-            <element signature="e#40643#40644#0" expanded="true" />
-            <element signature="e#49659#49660#0" expanded="true" />
-            <element signature="e#49736#49737#0" expanded="true" />
-            <element signature="e#50497#50498#0" expanded="true" />
-            <element signature="e#50574#50575#0" expanded="true" />
-            <element signature="e#51498#51862#0" expanded="true" />
-            <element signature="e#51861#51862#0" expanded="true" />
-            <element signature="e#52743#53107#0" expanded="true" />
-            <element signature="e#53106#53107#0" expanded="true" />
-            <element signature="e#54742#54743#0" expanded="true" />
-            <element signature="e#54820#54821#0" expanded="true" />
-            <marker date="1519649286000" expanded="false" signature="33618:33720" ph="() → {" />
-            <marker date="1519649286000" expanded="false" signature="33891:33922" ph="}" />
-            <marker date="1519649286000" expanded="false" signature="37283:37310" ph=" { " />
-            <marker date="1519649286000" expanded="false" signature="37324:37346" ph=" }" />
-            <marker date="1519649286000" expanded="false" signature="37667:37818" ph="(animation) → {" />
-            <marker date="1519649286000" expanded="false" signature="38667:38690" ph="}" />
-            <marker date="1519649286000" expanded="false" signature="40990:41141" ph="(animation) → {" />
-            <marker date="1519649286000" expanded="false" signature="41778:41801" ph="}" />
-            <marker date="1519649286000" expanded="false" signature="42229:42331" ph="() → {" />
-            <marker date="1519649286000" expanded="false" signature="42861:42995" ph="() → {" />
-            <marker date="1519649286000" expanded="false" signature="43106:43153" ph="}" />
-            <marker date="1519649286000" expanded="false" signature="43610:43641" ph="}" />
-            <marker date="1519649286000" expanded="false" signature="44636:44671" ph=" { " />
-            <marker date="1519649286000" expanded="false" signature="44685:44715" ph=" }" />
-            <marker date="1519649286000" expanded="false" signature="45636:45754" ph="() → {" />
-            <marker date="1519649286000" expanded="false" signature="45842:45881" ph="}" />
-            <marker date="1519649286000" expanded="false" signature="46792:46819" ph=" { " />
-            <marker date="1519649286000" expanded="false" signature="46833:46855" ph=" }" />
-            <marker date="1519649286000" expanded="false" signature="47486:47513" ph=" { " />
-            <marker date="1519649286000" expanded="false" signature="47527:47549" ph=" }" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="188" column="40" lean-forward="false" selection-start-line="188" selection-start-column="40" selection-end-line="188" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,7 @@
 package com.san.os.myview.ui.view;
 
 import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
@@ -21,12 +22,14 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.DecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.san.os.myview.R;
+import com.san.os.myview.tool.ToolBox;
 
 /**
  * @author luluc@yiche.com
@@ -75,13 +78,21 @@ public class GuideClassifyGroupView extends RelativeLayout {
         super(context, attrs, defStyleAttr);
         init(context);
     }
-
     Bitmap bitmap6_2;
 
     private void init(Context context) {
+
+
+
         setBackgroundColor(getResources().getColor(R.color.skin_color_bg_1));
         ONE = (getDisplayWidth((Activity) context) / ((float) SCREEN_WIDTH));
 
+
+
+        Log.i("lulu_unit","dip2px(1) == "+dip2px(1));
+        Log.i("lulu_unit","ONE == "+ONE);
+        Log.i("lulu_unit","screen_width == "+getDisplayWidth((Activity) getContext()));
+        Log.i("lulu_unit","screen_height == "+getDisplayHeight((Activity) getContext()));
 
         mWholeWidth = (int) (ONE * VIEW_WIDTH);
         mWholeHeight = (int) (ONE * VIEW_HEIGHT);
@@ -207,7 +218,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                 mView1.animate().alpha(1.0f)
                         .rotation(360)
-                        .setDuration(1000)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -268,7 +279,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 });
                 animator.alpha(0.0f)
                         .rotation(0)
-                        .setDuration(500)
+                        .setDuration(DURATION)
                         .start();
             }
         }
@@ -291,7 +302,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 addView(mView2, rl1);
 
                 mView2.animate().alpha(1.0f)
-                        .setDuration(1000)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -351,7 +362,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     }
                 });
                 animator.alpha(0.0f)
-                        .setDuration(500)
+                        .setDuration(DURATION)
                         .start();
             }
         }
@@ -361,7 +372,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone4 = true;
 
-    public void addView4() {
+    public void addView4(final Runnable runnable) {
         if (mDone4) {
             mDone4 = false;
             if (mView4 == null) {
@@ -377,11 +388,11 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                 AnimationSet set = new AnimationSet(false);
                 AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
-                alphaAnimation.setDuration(500);
+                alphaAnimation.setDuration(DURATION);
                 RotateAnimation rotateAnimator = new RotateAnimation(-90, 0, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 1.0f);
                 set.addAnimation(alphaAnimation);
                 set.addAnimation(rotateAnimator);
-                rotateAnimator.setDuration(500);
+                rotateAnimator.setDuration(DURATION);
                 rotateAnimator.setFillAfter(true);
                 rotateAnimator.setAnimationListener(new Animation.AnimationListener() {
                     @Override
@@ -392,6 +403,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         mDone4 = true;
+                        runnable.run();
                     }
 
                     @Override
@@ -402,9 +414,9 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView4.startAnimation(set);
             } else {
                 AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
-                alphaAnimation.setDuration(500);
+                alphaAnimation.setDuration(DURATION);
                 RotateAnimation rotateAnimator = new RotateAnimation(0, -90, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 1.0f);
-                rotateAnimator.setDuration(500);
+                rotateAnimator.setDuration(DURATION);
                 rotateAnimator.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
@@ -421,6 +433,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                         removeView(mView4);
                                         mView4 = null;
                                         mDone4 = true;
+                                        runnable.run();
                                     }
                                 });
 
@@ -445,13 +458,13 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone7 = true;
 
-    public void addView7() {
+    public void addView7(final Runnable runnable) {
         if (mDone7) {
             mDone7 = false;
             if (mView7_1 == null) {
                 mView7_1 = new ImageView(getContext());
                 final Bitmap bitmap7_1 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img7_1);
-                final Bitmap bitmap7_2 = BitmapFactory.decodeResource(getResources(),R.drawable.ic_guide_img7_2);
+                final Bitmap bitmap7_2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img7_2);
                 final Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_guide_img7_3);
 
                 mView7_1.setImageBitmap(bitmap7_1);
@@ -471,7 +484,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
 
                 ScaleAnimation scaleAnimation = new ScaleAnimation(0.5f, 0.8f, 0.5f, 0.8f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-                scaleAnimation.setDuration(300);
+                scaleAnimation.setDuration((int)(DURATION/(float)4));
                 scaleAnimation.setFillAfter(true);
                 scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
                     @Override
@@ -486,7 +499,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         rl.leftMargin = translate(219);
                         addView(mView7_2, rl);
                         ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1, 0.8f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-                        scaleAnimation.setDuration(300);
+                        scaleAnimation.setDuration((int)(DURATION/(float)4));
                         scaleAnimation.setFillAfter(true);
                         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
                             @Override
@@ -496,12 +509,12 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
-                                RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(translate(47), translate(47));
+                                final RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(translate(47), translate(47));
                                 rl.topMargin = translate(17);
                                 rl.leftMargin = translate(233);
                                 addView(mView7_3, rl);
                                 ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1, 0.8f, 1, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-                                scaleAnimation.setDuration(300);
+                                scaleAnimation.setDuration((int)(DURATION/(float)2));
                                 scaleAnimation.setFillAfter(true);
                                 scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
                                     @Override
@@ -512,6 +525,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                     @Override
                                     public void onAnimationEnd(Animation animation) {
                                         mDone7 = true;
+                                        runnable.run();
                                     }
 
                                     @Override
@@ -538,7 +552,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView7_1.startAnimation(scaleAnimation);
             } else {
                 ScaleAnimation scaleAnimation = new ScaleAnimation(1f, 0.8f, 1f, 0.8f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-                scaleAnimation.setDuration(300);
+                scaleAnimation.setDuration((int)(DURATION/(float)4));
                 scaleAnimation.setFillAfter(true);
                 scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
                     @Override
@@ -556,7 +570,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             }
                         });
                         ScaleAnimation scaleAnimation = new ScaleAnimation(1f, 0.8f, 1f, 0.8f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-                        scaleAnimation.setDuration(300);
+                        scaleAnimation.setDuration((int)(DURATION/(float)4));
                         scaleAnimation.setFillAfter(true);
                         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
                             @Override
@@ -575,7 +589,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                 });
 
                                 ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 0.5f, 0.8f, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-                                scaleAnimation.setDuration(300);
+                                scaleAnimation.setDuration((int)(DURATION/(float)2));
                                 scaleAnimation.setFillAfter(true);
                                 scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
                                     @Override
@@ -591,6 +605,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                                 removeView(mView7_1);
                                                 mView7_1 = null;
                                                 mDone7 = true;
+                                                runnable.run();
                                             }
                                         });
 
@@ -627,7 +642,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone8 = true;
 
-    public void addView8() {
+    public void addView8(final Runnable runnable) {
         if (mDone8) {
             mDone8 = false;
             if (mView8_1 == null) {
@@ -657,7 +672,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                 mView8_1.animate()
                         .translationX(-translate(104))
-                        .setDuration(300)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -667,6 +682,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             @Override
                             public void onAnimationEnd(Animator animation) {
                                 mDone8 = true;
+                                runnable.run();
                                 mView8_2.setVisibility(VISIBLE);
                             }
 
@@ -700,6 +716,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                         removeView(mView8_1);
                                         mView8_1 = null;
                                         mDone8 = true;
+                                        runnable.run();
                                     }
                                 });
 
@@ -719,7 +736,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     }
                 });
                 animator.translationX(translate(104))
-                        .setDuration(300)
+                        .setDuration(DURATION)
                         .start();
             }
         }
@@ -730,7 +747,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
     private PathMeasure mPathMeasure;
     private float[] mCurrentPosition = new float[2];
 
-    public void addView2_1() {
+    public void addView2_1(final Runnable runnable) {
         int distance = 20;
         final int standardLine = mWholeHeight - translate(16);
         if (mDone2) {
@@ -766,7 +783,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
 
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
-                valueAnimator.setDuration(800);
+                valueAnimator.setDuration(DURATION);
                 valueAnimator.setInterpolator(new DecelerateInterpolator());
                 valueAnimator.addListener(new Animator.AnimatorListener() {
                     @Override
@@ -779,6 +796,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         post(new Runnable() {
                             @Override
                             public void run() {
+                                runnable.run();
                                 mDone2 = true;
                             }
                         });
@@ -816,7 +834,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                 final RelativeLayout.LayoutParams rl = (LayoutParams) mView2.getLayoutParams();
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
-                valueAnimator.setDuration(800);
+                valueAnimator.setDuration(DURATION);
                 valueAnimator.setInterpolator(new DecelerateInterpolator());
                 valueAnimator.addListener(new Animator.AnimatorListener() {
                     @Override
@@ -832,6 +850,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                 removeView(mView2);
                                 mView2 = null;
                                 mDone2 = true;
+                                runnable.run();
                             }
                         });
                     }
@@ -865,7 +884,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
     private boolean mDone6 = true;
     int x, y;
 
-    public void addView6() {
+    public void addView6(final Runnable runnable) {
         int r = translate(45);
         if (mDone6) {
             mDone6 = false;
@@ -906,10 +925,13 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 RectF rectF = new RectF(mWholeWidth / 2 - r, -r, mWholeWidth / 2 + r, r);
                 mPath.addArc(rectF, 130, -20);
 
+
+
+
                 //头花、头发
                 mPathMeasure = new PathMeasure(mPath, false);
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
-                valueAnimator.setDuration(400);
+                valueAnimator.setDuration(DURATION);
                 valueAnimator.addListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
@@ -919,6 +941,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         mDone6 = true;
+                        runnable.run();
                     }
 
                     @Override
@@ -952,7 +975,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 valueAnimator.start();
 
                 //脸蛋
-                mView6_3.animate().alpha(1.0f).setDuration(400).setListener(new Animator.AnimatorListener() {
+                mView6_3.animate().alpha(1.0f).setDuration(DURATION/2).setListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
 
@@ -960,7 +983,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                     @Override
                     public void onAnimationEnd(Animator animation) {
-                        mView6_4.animate().alpha(1.0f).start();
+                        mView6_4.animate().alpha(1.0f).setDuration(DURATION/2).start();
                     }
 
                     @Override
@@ -985,7 +1008,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 //头花、头发
                 mPathMeasure = new PathMeasure(mPath, false);
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
-                valueAnimator.setDuration(400);
+                valueAnimator.setDuration(DURATION);
                 valueAnimator.addListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
@@ -1000,6 +1023,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                 removeView(mView6);
                                 mView6 = null;
                                 mDone6 = true;
+                                runnable.run();
                             }
                         });
 
@@ -1033,7 +1057,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
 
                 //脸蛋
-                mView6_4.animate().alpha(0.0f).setDuration(400).setListener(new Animator.AnimatorListener() {
+                mView6_4.animate().alpha(0.0f).setDuration(DURATION/2).setListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
 
@@ -1045,7 +1069,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             @Override
                             public void run() {
                                 removeView(mView6_4);
-                                mView6_3.animate().alpha(0.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                                mView6_3.animate().alpha(0.0f).setDuration(DURATION/2).setListener(new Animator.AnimatorListener() {
                                     @Override
                                     public void onAnimationStart(Animator animation) {
 
@@ -1093,7 +1117,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone5 = true;
 
-    public void addView5() {
+    public void addView5(final Runnable runnable) {
         if (mDone5) {
             mDone5 = false;
 
@@ -1102,7 +1126,8 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView5.animate()
                         .alpha(1.0f)
                         .translationY(-translate(10))
-                        .setDuration(400)
+                        .setDuration(DURATION)
+                        .setInterpolator(new LinearInterpolator())
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -1112,6 +1137,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             @Override
                             public void onAnimationEnd(Animator animation) {
                                 mDone5 = true;
+                                runnable.run();
                             }
 
                             @Override
@@ -1130,7 +1156,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView5.animate()
                         .alpha(0.0f)
                         .translationY(translate(10))
-                        .setDuration(400)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -1143,6 +1169,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                     @Override
                                     public void run() {
                                         mDone5 = true;
+                                        runnable.run();
                                     }
                                 });
                             }
@@ -1164,11 +1191,11 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone3 = true;
 
-    public void addView3() {
+    public void addView3(final Runnable runnable) {
         if (mDone3) {
             mDone3 = false;
             if (mView3.getAlpha() == 0) {
-                mView3.animate().alpha(1.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                mView3.animate().alpha(1.0f).setDuration(DURATION).setListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
 
@@ -1177,6 +1204,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         mDone3 = true;
+                        runnable.run();
                     }
 
                     @Override
@@ -1190,7 +1218,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     }
                 }).start();
             } else {
-                mView3.animate().alpha(0.0f).setDuration(450).setListener(new Animator.AnimatorListener() {
+                mView3.animate().alpha(0.0f).setDuration(DURATION).setListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(Animator animation) {
 
@@ -1199,6 +1227,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         mDone3 = true;
+                        runnable.run();
                     }
 
                     @Override
@@ -1218,7 +1247,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone9 = true;
 
-    public void addView9() {
+    public void addView9(final Runnable runnable) {
         if (mDone9) {
             mDone9 = false;
 
@@ -1230,7 +1259,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView9_1.setImageBitmap(bitmap9);
                 RelativeLayout.LayoutParams rl9_1 = new RelativeLayout.LayoutParams(translate(56), translate(20));
                 rl9_1.addRule(RelativeLayout.CENTER_HORIZONTAL);
-                rl9_1.topMargin = translate(61) + translate(10);
+                rl9_1.topMargin = translate(66) + translate(10);
                 addView(mView9_1, rl9_1);
 
                 //耳钉
@@ -1246,7 +1275,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView9_1.animate()
                         .alpha(1.0f)
                         .translationY(-translate(10))
-                        .setDuration(400)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -1256,6 +1285,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             @Override
                             public void onAnimationEnd(Animator animation) {
                                 mDone9 = true;
+                                runnable.run();
                             }
 
                             @Override
@@ -1270,7 +1300,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                         })
                         .start();
 
-                mView9_2.animate().alpha(1.0f).setDuration(400)
+                mView9_2.animate().alpha(1.0f).setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -1280,6 +1310,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             @Override
                             public void onAnimationEnd(Animator animation) {
                                 mDone9 = true;
+                                runnable.run();
                             }
 
                             @Override
@@ -1298,7 +1329,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView9_1.animate()
                         .alpha(0.0f)
                         .translationY(translate(10))
-                        .setDuration(400)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -1313,6 +1344,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                         removeView(mView9_1);
                                         mView9_1 = null;
                                         mDone9 = true;
+                                        runnable.run();
                                     }
                                 });
                             }
@@ -1331,7 +1363,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                 mView9_2.animate()
                         .alpha(0.0f)
-                        .setDuration(400)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -1346,6 +1378,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                         removeView(mView9_2);
                                         mView9_2 = null;
                                         mDone9 = true;
+                                        runnable.run();
                                     }
                                 });
                             }
@@ -1367,7 +1400,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
     private boolean mDone10 = true;
 
-    public void addView10() {
+    public void addView10(final Runnable runnable) {
         if (mDone10) {
             mDone10 = false;
             if (mView10 == null) {
@@ -1376,7 +1409,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                 mView10.setImageBitmap(bitmap);
 
 
-                RelativeLayout.LayoutParams rl10 = new RelativeLayout.LayoutParams(translate(80), translate(45));
+                final RelativeLayout.LayoutParams rl10 = new RelativeLayout.LayoutParams(translate(80), translate(45));
                 rl10.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
                 rl10.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 rl10.bottomMargin = translate(16);
@@ -1385,7 +1418,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
 
                 mView10.animate()
                         .translationX(translate(116))
-                        .setDuration(300)
+                        .setDuration(DURATION)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
                             public void onAnimationStart(Animator animation) {
@@ -1395,6 +1428,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                             @Override
                             public void onAnimationEnd(Animator animation) {
                                 mDone10 = true;
+                                runnable.run();
                             }
 
                             @Override
@@ -1426,6 +1460,7 @@ public class GuideClassifyGroupView extends RelativeLayout {
                                         removeView(mView10);
                                         mView10 = null;
                                         mDone10 = true;
+                                        runnable.run();
                                     }
                                 });
 
@@ -1445,12 +1480,13 @@ public class GuideClassifyGroupView extends RelativeLayout {
                     }
                 });
                 animator.translationX(translate(-116))
-                        .setDuration(300)
+                        .setDuration(DURATION)
                         .start();
             }
         }
     }
 
+    private static final int DURATION = 500;
     public int sp2px(Context context, float spValue) {
         final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
         return (int) (spValue * fontScale + 0.5f);
