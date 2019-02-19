@@ -87,6 +87,7 @@ public class SearchReslultFragment extends Fragment {
             @Override
 
             public void onClick(View v) {
+                mDropDownMenu.switchMenu();
             }
         });
 
@@ -104,7 +105,6 @@ public class SearchReslultFragment extends Fragment {
 
     private String citys[] = {"不限", "武汉", "北京", "上海", "成都", "广州", "深圳", "重庆", "天津", "西安", "南京", "杭州"};
     private String headers[] = {"城市"};
-    private List<View> popupViews = new ArrayList<>();
     private void initDropDownMenu() {
 
         LinearLayout sortRootView = new LinearLayout(getActivity());
@@ -115,8 +115,7 @@ public class SearchReslultFragment extends Fragment {
             tv.setText(citys[i]);
             sortRootView.addView(tv);
         }
-        popupViews.add(sortRootView);
         //init dropdownview
-        mDropDownMenu.setDropDownMenu(Arrays.asList(headers), popupViews);
+        mDropDownMenu.setDropDownMenu(Arrays.asList(headers), sortRootView);
     }
 }
