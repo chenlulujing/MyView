@@ -10,29 +10,55 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:weightSum="2">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/sort"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="排序" />
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="筛选" />
+                <TextView
+                    android:id="@+id/sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="排序" />
+
+                <TextView
+                    android:id="@+id/filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="筛选" />
+            </LinearLayout>
+
+            <com.san.os.myview.view.DropDownMenu xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/dropdownmenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:dddividerColor="@color/gray"
+                app:ddmaskColor="@color/gray"
+                app:ddmenuBackgroundColor="@color/white"
+                app:ddmenuMenuHeightPercent="0.5"
+                app:ddmenuSelectedIcon="@mipmap/bg_dujia"
+                app:ddmenuTextSize="13sp"
+                app:ddmenuUnselectedIcon="@mipmap/bg_dujia"
+                app:ddtextSelectedColor="@color/gray"
+                app:ddtextUnselectedColor="@color/gray"
+                app:ddunderlineColor="@color/gray"></com.san.os.myview.view.DropDownMenu>
+
         </LinearLayout>
+
+        <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
         <FrameLayout
             android:id="@+id/drawer_content"
@@ -40,5 +66,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="end"
             android:clickable="true" />
+
+        <!--</FrameLayout>-->
+
     </android.support.v4.widget.DrawerLayout>
 </RelativeLayout>

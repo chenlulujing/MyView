@@ -5,10 +5,21 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.san.os.myview.tool.ToolBox;
+import com.san.os.myview.view.DropDownMenu;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author chenlulu@qiyi.com
@@ -22,6 +33,7 @@ public class SearchReslultFragment extends Fragment {
 
     private DrawerLayout mDrawerLayout;
     private FrameLayout mDrawerContent;
+    private DropDownMenu mDropDownMenu;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,7 +56,11 @@ public class SearchReslultFragment extends Fragment {
     private void initView() {
 
         mDrawerLayout = (DrawerLayout) mRootView.findViewById(R.id.drawer_layout);
-        mDrawerContent = (FrameLayout)  mRootView.findViewById(R.id.drawer_content);
+        mDrawerContent = (FrameLayout) mRootView.findViewById(R.id.drawer_content);
+        mDropDownMenu = (DropDownMenu) mRootView.findViewById(R.id.dropdownmenu);
+
+        initDropDownMenu();
+
         mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         mDrawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
@@ -78,8 +94,29 @@ public class SearchReslultFragment extends Fragment {
         mRootView.findViewById(R.id.filter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDrawerLayout.openDrawer(mDrawerContent);
+//                mDrawerLayout.openDrawer(mDrawerContent);
+                if (getActivity() instanceof SearchFilterActivity) {
+                    ((SearchFilterActivity) getActivity()).openFilterPage();
+                }
             }
         });
+    }
+
+    private String citys[] = {"不限", "武汉", "北京", "上海", "成都", "广州", "深圳", "重庆", "天津", "西安", "南京", "杭州"};
+    private String headers[] = {"城市"};
+    private List<View> popupViews = new ArrayList<>();
+    private void initDropDownMenu() {
+
+        LinearLayout sortRootView = new LinearLayout(getActivity());
+        sortRootView.setBackgroundColor(ToolBox.getResources().getColor(R.color.white));
+        sortRootView.setOrientation(LinearLayout.VERTICAL);
+        for(int i=0,size=citys.length;i<size;i++){
+            TextView tv = new TextView(getActivity());
+            tv.setText(citys[i]);
+            sortRootView.addView(tv);
+        }
+        popupViews.add(sortRootView);
+        //init dropdownview
+        mDropDownMenu.setDropDownMenu(Arrays.asList(headers), popupViews);
     }
 }
