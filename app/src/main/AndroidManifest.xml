@@ -42,7 +42,7 @@
         <activity android:name="com.san.os.myview.TabViewBottomActivity"></activity>
         <activity android:name="com.san.os.myview.ui.activity.AnimationGuideActivity"></activity>
         <activity android:name="com.san.os.myview.ui.activity.MyLinearayoutActivity"></activity>
-        <activity android:name="com.san.os.myview.ui.activity.SearchTagsActvity"></activity>
+        <activity android:name="com.san.os.myview.SearchFilterActivity"></activity>
     </application>
 
 </manifest>

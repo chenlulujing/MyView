@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,6 +34,7 @@ import com.san.os.myview.ui.activity.VoteActivity;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -63,8 +67,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mAnimation_guide;
     private Button mLinearLayout;
     private Button mSearchTags;
+    private Button mSearchFilter;
 
     private int FILE_SELECT_CODE = 100;
+
+    private Thread mTread;
+    private MyThread mThread = new MyThread();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +109,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mAnimation_guide = (Button) findViewById(R.id.animation_guide);
         mLinearLayout = (Button) findViewById(R.id.mylinearayout);
         mSearchTags = (Button) findViewById(R.id.searchtags);
+        mSearchFilter = (Button) findViewById(R.id.search_filter);
 
         mBtnUpdate.setOnClickListener(this);
         mBtnHandler.setOnClickListener(this);
@@ -128,6 +137,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mAnimation_guide.setOnClickListener(this);
         mLinearLayout.setOnClickListener(this);
         mSearchTags.setOnClickListener(this);
+        mSearchFilter.setOnClickListener(this);
     }
 
     @Override
@@ -136,9 +146,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.handler:
                 Intent intent1 = new Intent(this, HandlerActivity.class);
                 startActivity(intent1);
+
+
                 break;
             case R.id.update:
-                updateView();
+//                updateView();
+//                try {
+//                    mTread.start();
+                mThread.start();
+                mThread.start();
+                thread_1.start();
+
+//                }catch (Throwable e){
+//                    e.printStackTrace();
+//                }
+
                 break;
             case R.id.pop:
                 Intent intent2 = new Intent(this, PopActivity.class);
@@ -263,6 +285,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent22 = new Intent(this, MyLinearayoutActivity.class);
                 startActivity(intent22);
                 break;
+            case R.id.search_filter:
+                Intent intent23 = new Intent(this, SearchFilterActivity.class);
+                startActivity(intent23);
+                break;
 
         }
 
@@ -342,4 +368,42 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+    class MyThread extends Thread {
+
+        @Override
+        public void run() {
+            super.run();
+        }
+    }
+
+    class mThread extends Thread {
+        public void run() {
+            while (true) {
+
+            }
+        }
+
+    }
+
+    private int jisuqi_1 = 0;//计数器
+    private mHandler handler;
+    private mThread thread_1;
+
+    class mHandler extends Handler {
+        public void handleMessage(Message msg) {
+            switch (msg.arg1) {
+                case 1: {
+                    jisuqi_1++;
+                    break;
+                }
+            }
+        }
+    }
+
+//    public void a(int i) {
+//        if(i%2==0){
+//            throw  new Exception();
+//        }
+//    }
 }
