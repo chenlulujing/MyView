@@ -197,34 +197,43 @@ public class FilterItemView extends LinearLayout {
         mSecondTagsView.setVisibility(VISIBLE);
     }
 
-    public void clearSelectedStatus() {
+    public void clearOtherSelectedStatus() {
         if (mTagsView != null) {
             for (int i = 0, size = mTagsView.getChildCount(); i < size; i++) {
-                if(mTagsView.getChildAt(i).getTag()!=null&&mTagsView.getChildAt(i).getTag() instanceof FilterItemModel){
-                    mTagsView.getChildAt(i).setSelected(TextUtils.equals(((FilterItemModel) mTagsView.getChildAt(i).getTag()).tagId,mTagId));
-                }else {
+                if (mTagsView.getChildAt(i).getTag() != null && mTagsView.getChildAt(i).getTag() instanceof FilterItemModel) {
+                    mTagsView.getChildAt(i).setSelected(TextUtils.equals(((FilterItemModel) mTagsView.getChildAt(i).getTag()).tagId, mTagId));
+                } else {
                     mTagsView.getChildAt(i).setSelected(false);
                 }
             }
         }
         if (mSecondTagsView != null) {
             for (int i = 0, size = mSecondTagsView.getChildCount(); i < size; i++) {
-                if(mSecondTagsView.getChildAt(i).getTag()!=null&&mSecondTagsView.getChildAt(i).getTag()instanceof FilterItemModel){
-                    mSecondTagsView.getChildAt(i).setSelected(TextUtils.equals(((FilterItemModel) mSecondTagsView.getChildAt(i).getTag()).tagId,mTagSecondId));
-                }else {
+                if (mSecondTagsView.getChildAt(i).getTag() != null && mSecondTagsView.getChildAt(i).getTag() instanceof FilterItemModel) {
+                    mSecondTagsView.getChildAt(i).setSelected(TextUtils.equals(((FilterItemModel) mSecondTagsView.getChildAt(i).getTag()).tagId, mTagSecondId));
+                } else {
                     mSecondTagsView.getChildAt(i).setSelected(false);
                 }
             }
         }
     }
 
-    public void setTagId(String tagId){
+    public void setTagId(String tagId) {
         mTagId = tagId;
 
     }
 
-    public void setTagSecondId(String tagSecondId){
+    public void clearTagId() {
+        mTagId = "";
+
+    }
+
+    public void setTagSecondId(String tagSecondId) {
         mTagSecondId = tagSecondId;
+    }
+
+    public void clearTagSecondId() {
+        mTagSecondId = "";
     }
 
 

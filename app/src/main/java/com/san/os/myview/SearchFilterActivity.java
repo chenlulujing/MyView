@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.RelativeLayout;
 
+import com.san.os.myview.model.SearchFilterBuilder;
+
 /**
  * @author chenlulu@qiyi.com
  * @Description
@@ -22,11 +24,18 @@ public class SearchFilterActivity extends FragmentActivity {
     private DrawerLayout mDrawerLayout;
     private RelativeLayout mDrawerContent;
 
+    private SearchFilterBuilder mSearchFilterBuilder;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_searchfilter);
         initView();
+        initData();
+    }
+
+    private void initData() {
+        mSearchFilterBuilder = new SearchFilterBuilder();
     }
 
     private void initView() {
@@ -44,5 +53,8 @@ public class SearchFilterActivity extends FragmentActivity {
     public void openFilterPage() {
         mDrawerLayout.openDrawer(mDrawerContent);
     }
+
+
+
 
 }

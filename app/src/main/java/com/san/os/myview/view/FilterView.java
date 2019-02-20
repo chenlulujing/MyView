@@ -24,7 +24,7 @@ import io.reactivex.functions.Consumer;
 public class FilterView extends LinearLayout {
 
     private TagClickListener mTagClickListener;
-    FilterItemView chanelFilterView, wordSizeFilterView, serializeFilterView;
+    FilterItemView mChanelFilterView, mWordSizeFilterView, mStatusFilterView;
 
     private HashMap<String, List<FilterItemModel>> mChannelData = new HashMap<>();
 
@@ -51,7 +51,7 @@ public class FilterView extends LinearLayout {
     String[] serializeTags_ids = {"IS_FINISHED", "IS_SERIALIZED"};
     String[] chanelSecondTags1_des = {"影视原著", "小说", "文学", "青春", "经管", "人文社科", "生活", "科技", "成功励志"};
     String[] chanelSecondTags2_des = {"都市", "奇幻", "玄幻", "武侠", "仙侠", "科幻", "灵异", "历史", "军事", "游戏", "竞技", "其他"};
-    String[] chanelSecondTags2_ids = {"10000133", "10000633", "10001133", "10002233", "10002633", "10003133", "10003933", "10004433", "10004433", "10006033", "10006533", "10007033"};
+    String[] chanelSecondTags2_ids = {"10000133", "10000633", "10001133", "10002233", "10002633", "10003133", "10003933", "10004433", "10004933", "10006033", "10006533", "10007033"};
     String[] chanelSecondTags1_ids = {"10500133", "10500233", "10500333", "10500433", "10500533", "10501233", "10500633", "10500833", "10503233"};
     String[] chanelSecondTags3_des = {"玄幻言情", "现代言情", "浪漫青春", "古代言情", "仙侠奇缘", "悬疑灵异", "科幻游戏", "其他"};
     String[] chanelSecondTags3_ids = {"10007233", "10008133", "10009233", "10009733", "10010433", "10010933", "10011533", "10012833"};
@@ -64,32 +64,32 @@ public class FilterView extends LinearLayout {
         initChannelData();
 
         //频道
-        chanelFilterView = new FilterItemView(context, true);
+        mChanelFilterView = new FilterItemView(context, true);
         List<FilterItemModel> tags1 = new ArrayList<>();
         for (int i = 0, size = chanelTags_des.length; i < size; i++) {
             tags1.add(new FilterItemModel("频道", FilterItemModel.CLASS_CHANEL_PRIMARY, chanelTags_des[i], chanelTags_ids[i]));
         }
-        chanelFilterView.setData("频道", tags1, 3, mTagClickListener);
-        addItem(chanelFilterView);
+        mChanelFilterView.setData("频道", tags1, 3, mTagClickListener);
+        addItem(mChanelFilterView);
 
 
         //字数
-        wordSizeFilterView = new FilterItemView(context);
+        mWordSizeFilterView = new FilterItemView(context);
         List<FilterItemModel> tags2 = new ArrayList<>();
         for (int i = 0, size = wordSizeTags_desc.length; i < size; i++) {
             tags2.add(new FilterItemModel("字数", FilterItemModel.CLASS_WORDSIZE, wordSizeTags_desc[i], wordSizeTags_ids[i]));
         }
-        wordSizeFilterView.setData("字数", tags2, 2, mTagClickListener);
-        addItem(wordSizeFilterView);
+        mWordSizeFilterView.setData("字数", tags2, 2, mTagClickListener);
+        addItem(mWordSizeFilterView);
 
         //状态
-        serializeFilterView = new FilterItemView(context);
+        mStatusFilterView = new FilterItemView(context);
         List<FilterItemModel> tags3 = new ArrayList<>();
         for (int i = 0, size = serializeTags_des.length; i < size; i++) {
             tags3.add(new FilterItemModel("状态", FilterItemModel.CLASS_STATUS, serializeTags_des[i], serializeTags_ids[i]));
         }
-        serializeFilterView.setData("状态", tags3, 3, mTagClickListener);
-        addItem(serializeFilterView);
+        mStatusFilterView.setData("状态", tags3, 3, mTagClickListener);
+        addItem(mStatusFilterView);
     }
 
     private void initChannelData() {
@@ -116,11 +116,11 @@ public class FilterView extends LinearLayout {
     }
 
     private void showChanelSecond(String secondDesc) {
-        chanelFilterView.setSecondTags(secondDesc + "分类", mChannelData.get(secondDesc), 3, mTagClickListener);
+        mChanelFilterView.setSecondTags(secondDesc + "分类", mChannelData.get(secondDesc), 3, mTagClickListener);
     }
 
     private void hideChanelSecond() {
-        chanelFilterView.hideChanelSecond();
+        mChanelFilterView.hideChanelSecond();
     }
 
     public void addItem(FilterItemView itemView, int index) {
@@ -137,31 +137,43 @@ public class FilterView extends LinearLayout {
 
             switch (item.classification_id){
                 case FilterItemModel.CLASS_CHANEL_PRIMARY:
-                    chanelFilterView.setTagId(item.tagId);
+                    mChanelFilterView.setTagId(item.tagId);
                     if (item.mIsSelected) {
                         showChanelSecond(item.desc);
-                        chanelFilterView.clearSelectedStatus();
+                        mChanelFilterView.clearOtherSelectedStatus();
+                        mChanelFilterView.clearTagSecondId();
                     } else {
+                        mChanelFilterView.clearTagId();
                         hideChanelSecond();
+                        request();
                     }
                     break;
                 case FilterItemModel.CLASS_CHANEL_SECOEND:
-                    chanelFilterView.setTagSecondId(item.tagId);
+                    mChanelFilterView.setTagSecondId(item.tagId);
                     if(item.mIsSelected){
-                        chanelFilterView.clearSelectedStatus();
+                        mChanelFilterView.clearOtherSelectedStatus();
+                    }else {
+                        mChanelFilterView.clearTagSecondId();
                     }
+                    request();
                     break;
                 case FilterItemModel.CLASS_WORDSIZE:
-                    wordSizeFilterView.setTagId(item.tagId);
+                    mWordSizeFilterView.setTagId(item.tagId);
                     if(item.mIsSelected){
-                        wordSizeFilterView.clearSelectedStatus();
+                        mWordSizeFilterView.clearOtherSelectedStatus();
+                    }else {
+                        mWordSizeFilterView.clearTagId();
                     }
+                    request();
                     break;
                 case FilterItemModel.CLASS_STATUS:
-                    serializeFilterView.setTagId(item.tagId);
+                    mStatusFilterView.setTagId(item.tagId);
                     if(item.mIsSelected){
-                        serializeFilterView.clearSelectedStatus();
+                        mStatusFilterView.clearOtherSelectedStatus();
+                    }else {
+                        mWordSizeFilterView.clearTagId();
                     }
+                    request();
                     break;
                 default:
             }
@@ -185,5 +197,8 @@ public class FilterView extends LinearLayout {
                 Observable.just(v.getTag()).subscribe(mConsumer);
             }
         }
+    }
+
+    private void request(){
     }
 }
