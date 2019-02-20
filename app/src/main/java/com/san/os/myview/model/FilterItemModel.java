@@ -7,10 +7,10 @@ package com.san.os.myview.model;
  */
 
 public class FilterItemModel {
-    public static final int CLASS_CHANEL_PRIMARY = 1;
-    public static final int CLASS_CHANEL_SECOEND = 1;
-    public static final int CLASS_WORDSIZE = 1;
-    public static final int CLASS_STATUS = 1;
+    public static final int CLASS_CHANEL_PRIMARY = 1 << 0;
+    public static final int CLASS_CHANEL_SECOEND = 1 << 1;
+    public static final int CLASS_WORDSIZE = 1 << 2;
+    public static final int CLASS_STATUS = 1 << 3;
 
 
     public String classification_des;

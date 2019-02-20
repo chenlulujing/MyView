@@ -1,6 +1,7 @@
 package com.san.os.myview.view;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.LinearLayout;
@@ -153,8 +154,12 @@ public class FilterItemView extends LinearLayout {
 //    }
 
     public void setSecondTags(String secondTitle, List<FilterItemModel> secondTags, int size, FilterView.TagClickListener listener) {
-        if (mSecondTagsView != null && mSecondTagsView != null) {
+        if (mSecondTagsView != null && mSecondTagsView != null&&secondTags!=null) {
+            if(mSecondTitleView.getTag()!=null&&mSecondTitleView.getTag() instanceof String&& TextUtils.equals((String)mSecondTitleView.getTag(),secondTitle)){
+                return;
+            }
             mSecondTitleView.setText(secondTitle);
+            mSecondTitleView.setTag(secondTitle);
             int tagWidth = (int) ((ToolBox.dip2px(280) - MARGINLEFTRIGHT * 2 - ITEM_MARGIN_LR) / ((float) size));
             if (mSecondTagsView.getChildCount() != 0) {
                 mSecondTagsView.removeAllViews();
