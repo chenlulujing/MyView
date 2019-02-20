@@ -34,8 +34,8 @@ public class FilterItemView extends LinearLayout {
     private FlowGroupLayout mSecondTagsView;
 
 
-    private String mTagId;
-    private String mTagSecondId;
+    private String mTagId = "";
+    private String mTagSecondId = "";
 
     public FilterItemView(Context context) {
         super(context);
@@ -234,6 +234,14 @@ public class FilterItemView extends LinearLayout {
 
     public void clearTagSecondId() {
         mTagSecondId = "";
+    }
+
+    public String getTagId(){
+        return mTagId;
+    }
+
+    public String getTagSecondId(){
+        return mTagSecondId;
     }
 
 

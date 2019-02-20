@@ -2,7 +2,9 @@ package com.san.os.myview.view;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -134,49 +136,45 @@ public class FilterView extends LinearLayout {
     private Consumer<FilterItemModel> observer = new Consumer<FilterItemModel>() {
         @Override
         public void accept(FilterItemModel item) throws Exception {
-
             switch (item.classification_id){
                 case FilterItemModel.CLASS_CHANEL_PRIMARY:
-                    mChanelFilterView.setTagId(item.tagId);
                     if (item.mIsSelected) {
+                        mChanelFilterView.setTagId(item.tagId);
                         showChanelSecond(item.desc);
                         mChanelFilterView.clearOtherSelectedStatus();
                         mChanelFilterView.clearTagSecondId();
                     } else {
                         mChanelFilterView.clearTagId();
                         hideChanelSecond();
-                        request();
                     }
                     break;
                 case FilterItemModel.CLASS_CHANEL_SECOEND:
-                    mChanelFilterView.setTagSecondId(item.tagId);
                     if(item.mIsSelected){
+                        mChanelFilterView.setTagSecondId(item.tagId);
                         mChanelFilterView.clearOtherSelectedStatus();
                     }else {
                         mChanelFilterView.clearTagSecondId();
                     }
-                    request();
                     break;
                 case FilterItemModel.CLASS_WORDSIZE:
-                    mWordSizeFilterView.setTagId(item.tagId);
                     if(item.mIsSelected){
+                        mWordSizeFilterView.setTagId(item.tagId);
                         mWordSizeFilterView.clearOtherSelectedStatus();
                     }else {
                         mWordSizeFilterView.clearTagId();
                     }
-                    request();
                     break;
                 case FilterItemModel.CLASS_STATUS:
-                    mStatusFilterView.setTagId(item.tagId);
                     if(item.mIsSelected){
+                        mStatusFilterView.setTagId(item.tagId);
                         mStatusFilterView.clearOtherSelectedStatus();
                     }else {
                         mWordSizeFilterView.clearTagId();
                     }
-                    request();
                     break;
                 default:
             }
+            request();
         }
     };
 
@@ -200,5 +198,15 @@ public class FilterView extends LinearLayout {
     }
 
     private void request(){
+
+        if(!TextUtils.isEmpty(mChanelFilterView.getTagSecondId())){
+
+        }else if(!TextUtils.isEmpty(mChanelFilterView.getTagId())){
+
+        }else {
+
+        }
+
+        Log.i("ll_request","");
     }
 }
