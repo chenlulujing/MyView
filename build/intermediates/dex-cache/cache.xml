@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/chenlulu/.android/build-cache/5d77097c5fc0d88f2af0018277f717bab92a5f16/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_b559418cc761614e62d430d43b0a7162cbc48acc.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/chenlulu/.android/build-cache/72ee928472b13f90793868e3dfa382c902fc4587/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -21,6 +30,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/chenlulu/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.1/1b1c911686eb40179219466e6a59b634b9d7a748/reactive-streams-1.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b1c911686eb40179219466e6a59b634b9d7a748">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.1_4a75cfc0529c9965496e83a59db293c9f12ec89a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/chenlulu/.android/build-cache/ece204a1966aac8b215343a264e6651bafc77f96/output/jars/libs/internal_impl-22.2.1.jar"
         jumboMode="false"
         optimize="true"
@@ -36,6 +54,15 @@
         revision="25.0.0"
         sha1="e74e74ab128a6c81d184098111fac3561bab53e8">
         <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_56da89519e66200dc9e816dd8ec79e40d5281f9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.6/596a6b4752ca6ec511a167e92b6387654f32023b/rxjava-2.1.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="596a6b4752ca6ec511a167e92b6387654f32023b">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/rxjava-2.1.6_79f7dd1cc7bc3a6107de15f1db88fa54069b6f7b.jar" />
     </item>
     <item
         is-multidex="false"

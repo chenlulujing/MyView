@@ -12,23 +12,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.san.os.myview.R;
+import com.san.os.myview.tool.ToolBox;
 import com.san.os.myview.utils.DeviceUtils;
 
 import java.util.List;
+
+import io.reactivex.Observable;
+import io.reactivex.functions.Consumer;
 
 
 public class DropDownMenu extends LinearLayout {
 
     //底部容器，包含popupMenuViews，maskView
     private FrameLayout containerView;
-    //弹出菜单父布局
-    private FrameLayout popupMenuViews;
+    private LinearLayout mPopuMenuRootView;
     //遮罩半透明View，点击可关闭DropDownMenu
-    private View maskView;
+    private View mShadowView;
     //是否下拉
     private boolean mIsShow;
 
@@ -92,36 +98,40 @@ public class DropDownMenu extends LinearLayout {
 
     }
 
-    /**
-     * 初始化DropDownMenu
-     *
-     * @param tabTexts
-     */
-    public void setDropDownMenu(@NonNull List<String> tabTexts, @NonNull View popupView) {
+    public void setDropDownMenu(final String[] items) {
+        if (items == null || items.length == 0) {
+            return;
+        }
 
-        maskView = new View(getContext());
-        maskView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
-        maskView.setBackgroundColor(maskColor);
-        maskView.setOnClickListener(new OnClickListener() {
+        //添加阴影
+        mShadowView = new View(getContext());
+        mShadowView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        mShadowView.setBackgroundColor(maskColor);
+        mShadowView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 closeMenu();
             }
         });
-        containerView.addView(maskView, 0);
-        maskView.setVisibility(GONE);
+        containerView.addView(mShadowView, 0);
+        mShadowView.setVisibility(GONE);
+
+
+        //添加菜单选项
+        mPopuMenuRootView = new LinearLayout(getContext());
+        mPopuMenuRootView.setVisibility(GONE);
+        mPopuMenuRootView.setBackgroundColor(ToolBox.getResources().getColor(R.color.white));
+        mPopuMenuRootView.setOrientation(LinearLayout.VERTICAL);
+        for (int i = 0, size = items.length; i < size; i++) {
+            ItemView tv = new ItemView(getContext(), items[i], i, observer);
+            tv.setTag(items[i]);
+            mPopuMenuRootView.addView(tv);
+        }
         if (containerView.getChildAt(1) != null) {
             containerView.removeViewAt(1);
         }
-
-        popupMenuViews = new FrameLayout(getContext());
-        popupMenuViews.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (DeviceUtils.getScreenSize(getContext()).y * menuHeighPercent)));
-        popupMenuViews.setVisibility(GONE);
-        containerView.addView(popupMenuViews, 1);
-
-        popupView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        popupMenuViews.addView(popupView);
-
+        mPopuMenuRootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        containerView.addView(mPopuMenuRootView);
     }
 
 
@@ -140,12 +150,24 @@ public class DropDownMenu extends LinearLayout {
      */
     public void closeMenu() {
         if (mIsShow) {
-            popupMenuViews.setVisibility(View.GONE);
-            popupMenuViews.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_menu_out));
-            maskView.setVisibility(GONE);
-            maskView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_mask_out));
+            mPopuMenuRootView.setVisibility(View.GONE);
+            mPopuMenuRootView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_menu_out));
+            mShadowView.setVisibility(GONE);
+            mShadowView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_mask_out));
             mIsShow = false;
         }
+    }
+
+    private void showMenu() {
+        if (!mIsShow) {
+            mPopuMenuRootView.setVisibility(View.VISIBLE);
+            mPopuMenuRootView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_menu_in));
+            mShadowView.setVisibility(VISIBLE);
+            mShadowView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_mask_in));
+            mPopuMenuRootView.setVisibility(View.VISIBLE);
+            mIsShow = true;
+        }
+
 
     }
 
@@ -169,17 +191,110 @@ public class DropDownMenu extends LinearLayout {
         }
     }
 
-    private void showMenu() {
-        popupMenuViews.setVisibility(View.VISIBLE);
-        popupMenuViews.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_menu_in));
-        maskView.setVisibility(VISIBLE);
-        maskView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_mask_in));
-        popupMenuViews.setVisibility(View.VISIBLE);
-        mIsShow = true;
-    }
 
     public int dpTpPx(float value) {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, value, dm) + 0.5);
     }
+
+    private Consumer<Integer> observer = new Consumer<Integer>() {
+        @Override
+        public void accept(Integer index) throws Exception {
+            if (mPopuMenuRootView != null) {
+                for (int i = 0, size = mPopuMenuRootView.getChildCount(); i < size; i++) {
+                    mPopuMenuRootView.getChildAt(i).setSelected(index == i);
+                }
+            }
+        }
+    };
+
+
+    public static class ItemView extends RelativeLayout {
+
+
+        private TextView mStrTv;
+        private ImageView mCheckView;
+
+        private String mStr;
+        private int mIndex;
+        private Consumer mConsumer;
+
+        public ItemView(Context context) {
+            super(context);
+            init(context);
+        }
+
+        public ItemView(Context context, AttributeSet attrs) {
+            super(context, attrs);
+            init(context);
+        }
+
+        public ItemView(Context context, AttributeSet attrs, int defStyleAttr) {
+            super(context, attrs, defStyleAttr);
+            init(context);
+        }
+
+        public ItemView(Context context, String str, int index, Consumer consumer) {
+            super(context);
+            init(context, str, index, consumer);
+        }
+
+        private void init(Context context) {
+
+            setPadding(20, 20, 20, 20);
+            mStrTv = new TextView(context);
+            RelativeLayout.LayoutParams rlpStrTv = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            rlpStrTv.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+            addView(mStrTv, rlpStrTv);
+
+            mCheckView = new ImageView(context);
+            mCheckView.setVisibility(View.INVISIBLE);
+            mCheckView.setBackgroundResource(R.drawable.filter_selected);
+            RelativeLayout.LayoutParams rlpCheckView = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            rlpCheckView.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            addView(mCheckView, rlpCheckView);
+
+        }
+
+        private void init(Context context, String str, int index, Consumer consumer) {
+
+            mStr = str;
+            mIndex = index;
+            mConsumer = consumer;
+
+            setPadding(40, 40, 40, 40);
+            mStrTv = new TextView(context);
+            mStrTv.setText(str);
+            RelativeLayout.LayoutParams rlpStrTv = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            rlpStrTv.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+            addView(mStrTv, rlpStrTv);
+
+            mCheckView = new ImageView(context);
+            mCheckView.setVisibility(View.INVISIBLE);
+            mCheckView.setBackgroundResource(R.drawable.filter_selected);
+            RelativeLayout.LayoutParams rlpCheckView = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            rlpCheckView.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            addView(mCheckView, rlpCheckView);
+
+            setSelected(false);
+            setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Observable.just(mIndex).subscribe(mConsumer);
+                }
+            });
+
+        }
+
+        public void setData(String str) {
+
+        }
+
+        @Override
+        public void setSelected(boolean selected) {
+            super.setSelected(selected);
+            mCheckView.setVisibility(selected ? VISIBLE : INVISIBLE);
+        }
+    }
+
 }

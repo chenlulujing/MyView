@@ -1,12 +1,10 @@
 package com.san.os.myview;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +14,6 @@ import android.widget.TextView;
 
 import com.san.os.myview.tool.ToolBox;
 import com.san.os.myview.view.DropDownMenu;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author chenlulu@qiyi.com
@@ -103,8 +97,7 @@ public class SearchReslultFragment extends Fragment {
         });
     }
 
-    private String citys[] = {"不限", "武汉", "北京", "上海", "成都", "广州", "深圳", "重庆", "天津", "西安", "南京", "杭州"};
-    private String headers[] = {"城市"};
+    private String citys[] = {"按综合","按人气","按更新","按字数"};
     private void initDropDownMenu() {
 
         LinearLayout sortRootView = new LinearLayout(getActivity());
@@ -116,6 +109,6 @@ public class SearchReslultFragment extends Fragment {
             sortRootView.addView(tv);
         }
         //init dropdownview
-        mDropDownMenu.setDropDownMenu(Arrays.asList(headers), sortRootView);
+        mDropDownMenu.setDropDownMenu(citys);
     }
 }
