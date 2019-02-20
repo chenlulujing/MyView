@@ -33,6 +33,10 @@ public class FilterItemView extends LinearLayout {
     private TextView mSecondTitleView;
     private FlowGroupLayout mSecondTagsView;
 
+
+    private String mTagId;
+    private String mTagSecondId;
+
     public FilterItemView(Context context) {
         super(context);
         init(context, false);
@@ -154,8 +158,11 @@ public class FilterItemView extends LinearLayout {
 //    }
 
     public void setSecondTags(String secondTitle, List<FilterItemModel> secondTags, int size, FilterView.TagClickListener listener) {
-        if (mSecondTagsView != null && mSecondTagsView != null&&secondTags!=null) {
-            if(mSecondTitleView.getTag()!=null&&mSecondTitleView.getTag() instanceof String&& TextUtils.equals((String)mSecondTitleView.getTag(),secondTitle)){
+        if (mSecondTagsView != null && mSecondTagsView != null && secondTags != null) {
+            if (mSecondTitleView.getTag() != null && mSecondTitleView.getTag() instanceof String && TextUtils.equals((String) mSecondTitleView.getTag(), secondTitle)) {
+                if (mSecondTitleView.getVisibility() == GONE) {
+                    showChanelSecond();
+                }
                 return;
             }
             mSecondTitleView.setText(secondTitle);
@@ -176,15 +183,49 @@ public class FilterItemView extends LinearLayout {
                 tagView.setOnClickListener(listener);
                 mSecondTagsView.addView(tagView, llp);
             }
-
-            mSecondTitleView.setVisibility(VISIBLE);
-            mSecondTagsView.setVisibility(VISIBLE);
+            showChanelSecond();
         }
     }
 
-    public void hideChanelSecond(){
+    public void hideChanelSecond() {
         mSecondTitleView.setVisibility(GONE);
         mSecondTagsView.setVisibility(GONE);
     }
+
+    public void showChanelSecond() {
+        mSecondTitleView.setVisibility(VISIBLE);
+        mSecondTagsView.setVisibility(VISIBLE);
+    }
+
+    public void clearSelectedStatus() {
+        if (mTagsView != null) {
+            for (int i = 0, size = mTagsView.getChildCount(); i < size; i++) {
+                if(mTagsView.getChildAt(i).getTag()!=null&&mTagsView.getChildAt(i).getTag() instanceof FilterItemModel){
+                    mTagsView.getChildAt(i).setSelected(TextUtils.equals(((FilterItemModel) mTagsView.getChildAt(i).getTag()).tagId,mTagId));
+                }else {
+                    mTagsView.getChildAt(i).setSelected(false);
+                }
+            }
+        }
+        if (mSecondTagsView != null) {
+            for (int i = 0, size = mSecondTagsView.getChildCount(); i < size; i++) {
+                if(mSecondTagsView.getChildAt(i).getTag()!=null&&mSecondTagsView.getChildAt(i).getTag()instanceof FilterItemModel){
+                    mSecondTagsView.getChildAt(i).setSelected(TextUtils.equals(((FilterItemModel) mSecondTagsView.getChildAt(i).getTag()).tagId,mTagSecondId));
+                }else {
+                    mSecondTagsView.getChildAt(i).setSelected(false);
+                }
+            }
+        }
+    }
+
+    public void setTagId(String tagId){
+        mTagId = tagId;
+
+    }
+
+    public void setTagSecondId(String tagSecondId){
+        mTagSecondId = tagSecondId;
+    }
+
 
 }

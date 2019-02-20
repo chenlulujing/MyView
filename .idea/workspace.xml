@@ -43,7 +43,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/model/FilterItemModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/model/FilterItemModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterItemView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterItemView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterView.java" />
     </list>
@@ -156,10 +155,12 @@
       <file leaf-file-name="FilterItemView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterItemView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="156" column="75" lean-forward="false" selection-start-line="156" selection-start-column="75" selection-end-line="156" selection-end-column="75" />
+            <state relative-caret-position="470">
+              <caret line="220" column="16" lean-forward="false" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#9980#9981#0" expanded="true" />
+                <element signature="e#10022#10023#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,18 +169,17 @@
       <file leaf-file-name="FilterView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2579">
-              <caret line="132" column="26" lean-forward="true" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+            <state relative-caret-position="811">
+              <caret line="167" column="9" lean-forward="false" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5118#5119#0" expanded="true" />
-                <element signature="e#5169#5170#0" expanded="true" />
-                <element signature="e#5324#5325#0" expanded="true" />
-                <element signature="e#5357#5358#0" expanded="true" />
-                <element signature="e#5409#5833#0" expanded="true" />
-                <element signature="e#5832#5833#0" expanded="true" />
-                <element signature="e#6001#6002#0" expanded="true" />
-                <element signature="e#6045#6046#0" expanded="true" />
+                <element signature="e#5094#5095#0" expanded="true" />
+                <element signature="e#5145#5146#0" expanded="true" />
+                <element signature="e#5300#5301#0" expanded="true" />
+                <element signature="e#5333#5334#0" expanded="true" />
+                <element signature="e#5385#6827#0" expanded="true" />
+                <element signature="e#6995#6996#0" expanded="true" />
+                <element signature="e#7039#7040#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,7 +221,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>blur</find>
       <find>mParent</find>
       <find>ViewRootImpl</find>
       <find>CALLBACK_TRAVERSAL</find>
@@ -251,6 +250,7 @@
       <find>ItemView</find>
       <find>tags1Second</find>
       <find>showChanelSecond</find>
+      <find>mTagsView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3093,7 +3093,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1550648721890" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1550651149506" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3141,7 +3141,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1550648721890" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1550651149506" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3348,7 +3348,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1550648721893" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1550651149513" />
       </method>
     </configuration>
     <list size="1">
@@ -3513,7 +3513,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.026567481" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3060574" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.024442082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3526,7 +3526,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11052072" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20660277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1799787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Freeline" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3651,12 +3651,19 @@
           <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterItemView.java</url>
+          <line>190</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="103" />
+      <option name="time" value="111" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
         <watch expression="translate(20)" />
+        <watch expression="mTagsView.getChildAt(0).getTag()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -4582,28 +4589,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterItemView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="156" column="75" lean-forward="false" selection-start-line="156" selection-start-column="75" selection-end-line="156" selection-end-column="75" />
+        <state relative-caret-position="470">
+          <caret line="220" column="16" lean-forward="false" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#9980#9981#0" expanded="true" />
+            <element signature="e#10022#10023#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/san/os/myview/view/FilterView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2579">
-          <caret line="132" column="26" lean-forward="true" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+        <state relative-caret-position="811">
+          <caret line="167" column="9" lean-forward="false" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5118#5119#0" expanded="true" />
-            <element signature="e#5169#5170#0" expanded="true" />
-            <element signature="e#5324#5325#0" expanded="true" />
-            <element signature="e#5357#5358#0" expanded="true" />
-            <element signature="e#5409#5833#0" expanded="true" />
-            <element signature="e#5832#5833#0" expanded="true" />
-            <element signature="e#6001#6002#0" expanded="true" />
-            <element signature="e#6045#6046#0" expanded="true" />
+            <element signature="e#5094#5095#0" expanded="true" />
+            <element signature="e#5145#5146#0" expanded="true" />
+            <element signature="e#5300#5301#0" expanded="true" />
+            <element signature="e#5333#5334#0" expanded="true" />
+            <element signature="e#5385#6827#0" expanded="true" />
+            <element signature="e#6995#6996#0" expanded="true" />
+            <element signature="e#7039#7040#0" expanded="true" />
           </folding>
         </state>
       </provider>
