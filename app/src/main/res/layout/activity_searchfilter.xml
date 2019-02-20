@@ -33,12 +33,39 @@
             android:layout_width="280dp"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:background="@color/blue_2f67b3"
+            android:background="@color/white"
             android:clickable="true">
+
+            <LinearLayout
+                android:id="@+id/bottom_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                >
+                <TextView
+                    android:id="@+id/reset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="重置" />
+
+                <TextView
+                    android:id="@+id/enter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="确定" />
+            </LinearLayout>
 
             <com.san.os.myview.view.FilterView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_root" />
 
         </RelativeLayout>
     </android.support.v4.widget.DrawerLayout>
