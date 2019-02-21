@@ -9,7 +9,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.RelativeLayout;
 
+import com.san.os.myview.model.FilterItemModel;
 import com.san.os.myview.model.SearchFilterBuilder;
+import com.san.os.myview.view.FilterView;
+
+import io.reactivex.functions.Consumer;
 
 /**
  * @author chenlulu@qiyi.com
@@ -23,6 +27,7 @@ public class SearchFilterActivity extends FragmentActivity {
     Fragment mReslultFragment;
     private DrawerLayout mDrawerLayout;
     private RelativeLayout mDrawerContent;
+    private FilterView mFilterView;
 
     private SearchFilterBuilder mSearchFilterBuilder;
 
@@ -40,9 +45,13 @@ public class SearchFilterActivity extends FragmentActivity {
 
     private void initView() {
         mReslultFragment = new SearchReslultFragment();
+        ((SearchReslultFragment) mReslultFragment).setObserver(observer);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerContent = (RelativeLayout) findViewById(R.id.drawer_content);
+        mFilterView = (FilterView) findViewById(R.id.filterview);
 
+        mFilterView.setObserver(observer);
+        mFilterView.initdata(this);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -55,6 +64,28 @@ public class SearchFilterActivity extends FragmentActivity {
     }
 
 
-
+    private Consumer<FilterItemModel> observer = new Consumer<FilterItemModel>() {
+        @Override
+        public void accept(FilterItemModel item) throws Exception {
+            switch (item.classification_id) {
+                case FilterItemModel.CLASS_CHANEL_PRIMARY:
+                    mFilterView.chanelFilterClick(item);
+                    break;
+                case FilterItemModel.CLASS_CHANEL_SECOEND:
+                    mFilterView.chanelSecondFilterClick(item);
+                    break;
+                case FilterItemModel.CLASS_WORDSIZE:
+                    mFilterView.wordSizeFilterClick(item);
+                    break;
+                case FilterItemModel.CLASS_STATUS:
+                    mFilterView.statusFilterClick(item);
+                    break;
+                case FilterItemModel.SORT:
+                    ((SearchReslultFragment) mReslultFragment).dropDownMenuItemClick(item);
+                    break;
+                default:
+            }
+        }
+    };
 
 }

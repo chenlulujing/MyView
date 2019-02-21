@@ -61,8 +61,12 @@ public class FilterView extends LinearLayout {
 
     private void init(Context context) {
         setOrientation(VERTICAL);
-        mTagClickListener = new TagClickListener(observer);
 
+
+    }
+
+    public void initdata(Context context) {
+        mTagClickListener = new TagClickListener(observer);
         initChannelData();
 
         //频道
@@ -133,50 +137,7 @@ public class FilterView extends LinearLayout {
         addView(itemView);
     }
 
-    private Consumer<FilterItemModel> observer = new Consumer<FilterItemModel>() {
-        @Override
-        public void accept(FilterItemModel item) throws Exception {
-            switch (item.classification_id){
-                case FilterItemModel.CLASS_CHANEL_PRIMARY:
-                    if (item.mIsSelected) {
-                        mChanelFilterView.setTagId(item.tagId);
-                        showChanelSecond(item.desc);
-                        mChanelFilterView.clearOtherSelectedStatus();
-                        mChanelFilterView.clearTagSecondId();
-                    } else {
-                        mChanelFilterView.clearTagId();
-                        hideChanelSecond();
-                    }
-                    break;
-                case FilterItemModel.CLASS_CHANEL_SECOEND:
-                    if(item.mIsSelected){
-                        mChanelFilterView.setTagSecondId(item.tagId);
-                        mChanelFilterView.clearOtherSelectedStatus();
-                    }else {
-                        mChanelFilterView.clearTagSecondId();
-                    }
-                    break;
-                case FilterItemModel.CLASS_WORDSIZE:
-                    if(item.mIsSelected){
-                        mWordSizeFilterView.setTagId(item.tagId);
-                        mWordSizeFilterView.clearOtherSelectedStatus();
-                    }else {
-                        mWordSizeFilterView.clearTagId();
-                    }
-                    break;
-                case FilterItemModel.CLASS_STATUS:
-                    if(item.mIsSelected){
-                        mStatusFilterView.setTagId(item.tagId);
-                        mStatusFilterView.clearOtherSelectedStatus();
-                    }else {
-                        mWordSizeFilterView.clearTagId();
-                    }
-                    break;
-                default:
-            }
-            request();
-        }
-    };
+
 
 
     public static class TagClickListener implements View.OnClickListener {
@@ -209,4 +170,47 @@ public class FilterView extends LinearLayout {
 
         Log.i("ll_request","");
     }
+    private Consumer observer;
+    public void setObserver(Consumer observer){
+        this.observer = observer;
+
+    }
+
+    public void chanelFilterClick(FilterItemModel item){
+        if (item.mIsSelected) {
+            mChanelFilterView.setTagId(item.tagId);
+            showChanelSecond(item.desc);
+            mChanelFilterView.clearOtherSelectedStatus();
+            mChanelFilterView.clearTagSecondId();
+        } else {
+            mChanelFilterView.clearTagId();
+            hideChanelSecond();
+        }
+    }
+    public void chanelSecondFilterClick(FilterItemModel item){
+        if(item.mIsSelected){
+            mChanelFilterView.setTagSecondId(item.tagId);
+            mChanelFilterView.clearOtherSelectedStatus();
+        }else {
+            mChanelFilterView.clearTagSecondId();
+        }
+    }
+    public void wordSizeFilterClick(FilterItemModel item){
+        if(item.mIsSelected){
+            mWordSizeFilterView.setTagId(item.tagId);
+            mWordSizeFilterView.clearOtherSelectedStatus();
+        }else {
+            mWordSizeFilterView.clearTagId();
+        }
+    }
+    public void statusFilterClick(FilterItemModel item){
+        if(item.mIsSelected){
+            mStatusFilterView.setTagId(item.tagId);
+            mStatusFilterView.clearOtherSelectedStatus();
+        }else {
+            mWordSizeFilterView.clearTagId();
+        }
+    }
+
+
 }

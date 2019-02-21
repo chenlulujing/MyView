@@ -11,6 +11,7 @@ public class FilterItemModel {
     public static final int CLASS_CHANEL_SECOEND = 1 << 1;
     public static final int CLASS_WORDSIZE = 1 << 2;
     public static final int CLASS_STATUS = 1 << 3;
+    public static final int SORT = 1 << 4;
 
 
     public String classification_des;
@@ -22,6 +23,16 @@ public class FilterItemModel {
     public FilterItemModel(String classification_des, int classification_id, String desc, String tagId) {
         this.classification_des = classification_des;
         this.classification_id = classification_id;
+        this.desc = desc;
+        this.tagId = tagId;
+    }
+
+    public FilterItemModel(String classification_des, int classification_id) {
+        this.classification_des = classification_des;
+        this.classification_id = classification_id;
+    }
+
+    public FilterItemModel(String desc, String tagId) {
         this.desc = desc;
         this.tagId = tagId;
     }

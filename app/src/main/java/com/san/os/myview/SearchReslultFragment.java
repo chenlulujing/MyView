@@ -12,8 +12,14 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.san.os.myview.model.FilterItemModel;
 import com.san.os.myview.tool.ToolBox;
 import com.san.os.myview.view.DropDownMenu;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.reactivex.functions.Consumer;
 
 /**
  * @author chenlulu@qiyi.com
@@ -52,6 +58,7 @@ public class SearchReslultFragment extends Fragment {
         mDrawerLayout = (DrawerLayout) mRootView.findViewById(R.id.drawer_layout);
         mDrawerContent = (FrameLayout) mRootView.findViewById(R.id.drawer_content);
         mDropDownMenu = (DropDownMenu) mRootView.findViewById(R.id.dropdownmenu);
+        mDropDownMenu.setObserver(observer);
 
         initDropDownMenu();
 
@@ -97,18 +104,35 @@ public class SearchReslultFragment extends Fragment {
         });
     }
 
-    private String citys[] = {"按综合","按人气","按更新","按字数"};
+    private String citys_des[] = {"按综合","按人气","按更新","按字数"};
+    private String citys_id[] = {"按综合","按人气","按更新","按字数"};
     private void initDropDownMenu() {
 
         LinearLayout sortRootView = new LinearLayout(getActivity());
         sortRootView.setBackgroundColor(ToolBox.getResources().getColor(R.color.white));
         sortRootView.setOrientation(LinearLayout.VERTICAL);
-        for(int i=0,size=citys.length;i<size;i++){
+        for(int i=0,size=citys_des.length;i<size;i++){
             TextView tv = new TextView(getActivity());
-            tv.setText(citys[i]);
+            tv.setText(citys_des[i]);
             sortRootView.addView(tv);
         }
         //init dropdownview
-        mDropDownMenu.setDropDownMenu(citys);
+        List<FilterItemModel> mdatas = new ArrayList<>();
+        for(int i=0,size = citys_des.length;i<size;i++){
+            FilterItemModel item = new FilterItemModel("排序",FilterItemModel.SORT,citys_des[i],citys_id[i]);
+            mdatas.add(item);
+        }
+        mDropDownMenu.setDropDownMenu(mdatas);
+    }
+
+    private Consumer observer;
+    public void setObserver(Consumer<FilterItemModel> consumer) {
+        observer = consumer;
+    }
+
+    public void dropDownMenuItemClick(FilterItemModel item) {
+        if(mDropDownMenu!=null){
+            mDropDownMenu.refresh(item);
+        }
     }
 }

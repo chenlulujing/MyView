@@ -2,12 +2,10 @@ package com.san.os.myview.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
@@ -16,11 +14,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.san.os.myview.R;
+import com.san.os.myview.model.FilterItemModel;
 import com.san.os.myview.tool.ToolBox;
-import com.san.os.myview.utils.DeviceUtils;
 
 import java.util.List;
 
@@ -98,8 +95,8 @@ public class DropDownMenu extends LinearLayout {
 
     }
 
-    public void setDropDownMenu(final String[] items) {
-        if (items == null || items.length == 0) {
+    public void setDropDownMenu(final List<FilterItemModel> items) {
+        if (items == null || items.size() == 0) {
             return;
         }
 
@@ -122,9 +119,8 @@ public class DropDownMenu extends LinearLayout {
         mPopuMenuRootView.setVisibility(GONE);
         mPopuMenuRootView.setBackgroundColor(ToolBox.getResources().getColor(R.color.white));
         mPopuMenuRootView.setOrientation(LinearLayout.VERTICAL);
-        for (int i = 0, size = items.length; i < size; i++) {
-            ItemView tv = new ItemView(getContext(), items[i], i, observer);
-            tv.setTag(items[i]);
+        for (int i = 0, size = items.size(); i < size; i++) {
+            ItemView tv = new ItemView(getContext(), items.get(i), i, mObserver);
             mPopuMenuRootView.addView(tv);
         }
         if (containerView.getChildAt(1) != null) {
@@ -197,16 +193,24 @@ public class DropDownMenu extends LinearLayout {
         return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, value, dm) + 0.5);
     }
 
-    private Consumer<Integer> observer = new Consumer<Integer>() {
-        @Override
-        public void accept(Integer index) throws Exception {
-            if (mPopuMenuRootView != null) {
-                for (int i = 0, size = mPopuMenuRootView.getChildCount(); i < size; i++) {
-                    mPopuMenuRootView.getChildAt(i).setSelected(index == i);
+
+    public void refresh(FilterItemModel item) {
+        if (mPopuMenuRootView != null) {
+            for (int i = 0, size = mPopuMenuRootView.getChildCount(); i < size; i++) {
+                if(mPopuMenuRootView.getChildAt(i).getTag()!=null&&mPopuMenuRootView.getChildAt(i).getTag() instanceof FilterItemModel){
+                    mPopuMenuRootView.getChildAt(i).setSelected(TextUtils.equals(((FilterItemModel) mPopuMenuRootView.getChildAt(i).getTag()).tagId,item.tagId));
+                }else {
+                    mPopuMenuRootView.getChildAt(i).setSelected(false);
                 }
+
             }
         }
-    };
+    }
+
+    private Consumer mObserver;
+    public void setObserver(Consumer consumer) {
+        mObserver = consumer;
+    }
 
 
     public static class ItemView extends RelativeLayout {
@@ -215,9 +219,9 @@ public class DropDownMenu extends LinearLayout {
         private TextView mStrTv;
         private ImageView mCheckView;
 
-        private String mStr;
-        private int mIndex;
         private Consumer mConsumer;
+
+        private FilterItemModel mFilterItemModel;
 
         public ItemView(Context context) {
             super(context);
@@ -234,9 +238,9 @@ public class DropDownMenu extends LinearLayout {
             init(context);
         }
 
-        public ItemView(Context context, String str, int index, Consumer consumer) {
+        public ItemView(Context context, FilterItemModel data, int index, Consumer consumer) {
             super(context);
-            init(context, str, index, consumer);
+            init(context, data, index, consumer);
         }
 
         private void init(Context context) {
@@ -256,15 +260,14 @@ public class DropDownMenu extends LinearLayout {
 
         }
 
-        private void init(Context context, String str, int index, Consumer consumer) {
+        private void init(Context context, FilterItemModel data, int index, Consumer consumer) {
 
-            mStr = str;
-            mIndex = index;
             mConsumer = consumer;
-
+            mFilterItemModel = data;
+            setTag(data);
             setPadding(40, 40, 40, 40);
             mStrTv = new TextView(context);
-            mStrTv.setText(str);
+            mStrTv.setText(data.desc);
             RelativeLayout.LayoutParams rlpStrTv = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
             rlpStrTv.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
             addView(mStrTv, rlpStrTv);
@@ -280,15 +283,12 @@ public class DropDownMenu extends LinearLayout {
             setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Observable.just(mIndex).subscribe(mConsumer);
+                    Observable.just(mFilterItemModel).subscribe(mConsumer);
                 }
             });
 
         }
 
-        public void setData(String str) {
-
-        }
 
         @Override
         public void setSelected(boolean selected) {

@@ -63,6 +63,7 @@
             </LinearLayout>
 
             <com.san.os.myview.view.FilterView
+                android:id="@+id/filterview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_above="@id/bottom_root" />
