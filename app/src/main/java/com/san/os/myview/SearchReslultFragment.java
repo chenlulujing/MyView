@@ -3,12 +3,9 @@ package com.san.os.myview;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -57,14 +54,6 @@ public class SearchReslultFragment extends Fragment {
 
         initDropDownMenu();
 
-
-
-        Fragment fragment = new FilterFragment();
-        FragmentManager fragmentManager = getFragmentManager();
-        Bundle bundle = new Bundle();
-        fragment.setArguments(bundle);
-        fragmentManager.beginTransaction().replace(R.id.drawer_content, fragment).commitAllowingStateLoss();
-
         mRootView.findViewById(R.id.sort).setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -84,40 +73,42 @@ public class SearchReslultFragment extends Fragment {
         });
     }
 
-    private String citys_des[] = {"按综合","按人气","按更新","按字数"};
-    private String citys_id[] = {"metadata","word_count","chapter_last_online_time","read_book_uv"};
+    private String citys_des[] = {"按综合", "按人气", "按更新", "按字数"};
+    private String citys_id[] = {"metadata", "word_count", "chapter_last_online_time", "read_book_uv"};
+
     private void initDropDownMenu() {
 
         LinearLayout sortRootView = new LinearLayout(getActivity());
         sortRootView.setBackgroundColor(ToolBox.getResources().getColor(R.color.white));
         sortRootView.setOrientation(LinearLayout.VERTICAL);
-        for(int i=0,size=citys_des.length;i<size;i++){
+        for (int i = 0, size = citys_des.length; i < size; i++) {
             TextView tv = new TextView(getActivity());
             tv.setText(citys_des[i]);
             sortRootView.addView(tv);
         }
         //init dropdownview
         List<FilterItemModel> mdatas = new ArrayList<>();
-        for(int i=0,size = citys_des.length;i<size;i++){
-            FilterItemModel item = new FilterItemModel("排序",FilterItemModel.SORT,citys_des[i],citys_id[i]);
+        for (int i = 0, size = citys_des.length; i < size; i++) {
+            FilterItemModel item = new FilterItemModel("排序", FilterItemModel.SORT, citys_des[i], citys_id[i]);
             mdatas.add(item);
         }
         mDropDownMenu.setDropDownMenu(mdatas);
     }
 
     private Consumer observer;
+
     public void setObserver(Consumer<FilterItemModel> consumer) {
         observer = consumer;
     }
 
     public void dropDownMenuItemClick(FilterItemModel item) {
-        if(mDropDownMenu!=null){
+        if (mDropDownMenu != null) {
             mDropDownMenu.refresh(item);
         }
     }
 
-    public void closeSortView(){
-        if(mDropDownMenu!=null){
+    public void closeSortView() {
+        if (mDropDownMenu != null) {
             mDropDownMenu.closeMenu();
         }
     }
