@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.san.os.myview.model.FilterItemModel;
@@ -51,6 +52,22 @@ public class SearchFilterActivity extends FragmentActivity {
         mDrawerContent = (RelativeLayout) findViewById(R.id.drawer_content);
         mFilterView = (FilterView) findViewById(R.id.filterview);
 
+
+        mDrawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+            }
+        });
+
+
         mFilterView.setObserver(observer);
         mFilterView.initdata(this);
 
@@ -62,6 +79,9 @@ public class SearchFilterActivity extends FragmentActivity {
 
     public void openFilterPage() {
         mDrawerLayout.openDrawer(mDrawerContent);
+        if(mReslultFragment!=null&&mReslultFragment instanceof SearchReslultFragment){
+            ((SearchReslultFragment) mReslultFragment).closeSortView();
+        }
     }
 
 

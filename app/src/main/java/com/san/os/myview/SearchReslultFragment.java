@@ -30,9 +30,6 @@ import io.reactivex.functions.Consumer;
 public class SearchReslultFragment extends Fragment {
 
     private View mRootView;
-
-    private DrawerLayout mDrawerLayout;
-    private FrameLayout mDrawerContent;
     private DropDownMenu mDropDownMenu;
 
     @Override
@@ -55,27 +52,11 @@ public class SearchReslultFragment extends Fragment {
 
     private void initView() {
 
-        mDrawerLayout = (DrawerLayout) mRootView.findViewById(R.id.drawer_layout);
-        mDrawerContent = (FrameLayout) mRootView.findViewById(R.id.drawer_content);
         mDropDownMenu = (DropDownMenu) mRootView.findViewById(R.id.dropdownmenu);
         mDropDownMenu.setObserver(observer);
 
         initDropDownMenu();
 
-        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-        mDrawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener() {
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-                mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-            }
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
-            }
-        });
 
 
         Fragment fragment = new FilterFragment();
@@ -96,7 +77,6 @@ public class SearchReslultFragment extends Fragment {
         mRootView.findViewById(R.id.filter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mDrawerLayout.openDrawer(mDrawerContent);
                 if (getActivity() instanceof SearchFilterActivity) {
                     ((SearchFilterActivity) getActivity()).openFilterPage();
                 }
@@ -133,6 +113,12 @@ public class SearchReslultFragment extends Fragment {
     public void dropDownMenuItemClick(FilterItemModel item) {
         if(mDropDownMenu!=null){
             mDropDownMenu.refresh(item);
+        }
+    }
+
+    public void closeSortView(){
+        if(mDropDownMenu!=null){
+            mDropDownMenu.closeMenu();
         }
     }
 }
