@@ -137,7 +137,11 @@ public class FilterView extends LinearLayout {
         addView(itemView);
     }
 
-
+    public void clearStatus() {
+        mChanelFilterView.clearStatus();
+        mWordSizeFilterView.clearStatus();
+        mStatusFilterView.clearStatus();
+    }
 
 
     public static class TagClickListener implements View.OnClickListener {

@@ -112,4 +112,10 @@ public class SearchReslultFragment extends Fragment {
             mDropDownMenu.closeMenu();
         }
     }
+
+    public void clearDownMenuItemStatus() {
+        if (mDropDownMenu != null) {
+            mDropDownMenu.clearDownMenuItemStatus();
+        }
+    }
 }

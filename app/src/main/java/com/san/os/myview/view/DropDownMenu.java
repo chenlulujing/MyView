@@ -212,6 +212,12 @@ public class DropDownMenu extends LinearLayout {
         mObserver = consumer;
     }
 
+    public void clearDownMenuItemStatus() {
+        for (int i = 0, size = mPopuMenuRootView.getChildCount(); i < size; i++) {
+            mPopuMenuRootView.getChildAt(i).setSelected(false);
+        }
+    }
+
 
     public static class ItemView extends RelativeLayout {
 

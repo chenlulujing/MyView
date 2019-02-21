@@ -23,7 +23,7 @@ import io.reactivex.functions.Consumer;
  * @date 2019-02-18 16:46
  */
 
-public class SearchFilterActivity extends FragmentActivity {
+public class SearchFilterActivity extends FragmentActivity implements View.OnClickListener {
 
 
     Fragment mReslultFragment;
@@ -32,6 +32,7 @@ public class SearchFilterActivity extends FragmentActivity {
     private FilterView mFilterView;
 
     private SearchFilterBuilder mSearchFilterBuilder;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +52,9 @@ public class SearchFilterActivity extends FragmentActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerContent = (RelativeLayout) findViewById(R.id.drawer_content);
         mFilterView = (FilterView) findViewById(R.id.filterview);
+
+        findViewById(R.id.reset).setOnClickListener(this);
+        findViewById(R.id.enter).setOnClickListener(this);
 
 
         mDrawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener() {
@@ -79,11 +83,10 @@ public class SearchFilterActivity extends FragmentActivity {
 
     public void openFilterPage() {
         mDrawerLayout.openDrawer(mDrawerContent);
-        if(mReslultFragment!=null&&mReslultFragment instanceof SearchReslultFragment){
+        if (mReslultFragment != null && mReslultFragment instanceof SearchReslultFragment) {
             ((SearchReslultFragment) mReslultFragment).closeSortView();
         }
     }
-
 
 
     private Consumer<FilterItemModel> observer = new Consumer<FilterItemModel>() {
@@ -92,19 +95,19 @@ public class SearchFilterActivity extends FragmentActivity {
             switch (item.classification_id) {
                 case FilterItemModel.CLASS_CHANEL_PRIMARY:
                     mFilterView.chanelFilterClick(item);
-                    mSearchFilterBuilder.category_id = item.mIsSelected? item.tagId:"";
+                    mSearchFilterBuilder.category_id = item.mIsSelected ? item.tagId : "";
                     break;
                 case FilterItemModel.CLASS_CHANEL_SECOEND:
                     mFilterView.chanelSecondFilterClick(item);
-                    mSearchFilterBuilder.category_id = item.mIsSelected? item.tagId:"";
+                    mSearchFilterBuilder.category_id = item.mIsSelected ? item.tagId : "";
                     break;
                 case FilterItemModel.CLASS_WORDSIZE:
                     mFilterView.wordSizeFilterClick(item);
-                    mSearchFilterBuilder.wordCount = item.mIsSelected? item.tagId:"";
+                    mSearchFilterBuilder.wordCount = item.mIsSelected ? item.tagId : "";
                     break;
                 case FilterItemModel.CLASS_STATUS:
                     mFilterView.statusFilterClick(item);
-                    mSearchFilterBuilder.serialize_status = item.mIsSelected? item.tagId:"";
+                    mSearchFilterBuilder.serialize_status = item.mIsSelected ? item.tagId : "";
                     break;
                 case FilterItemModel.SORT:
                     ((SearchReslultFragment) mReslultFragment).dropDownMenuItemClick(item);
@@ -114,8 +117,21 @@ public class SearchFilterActivity extends FragmentActivity {
             }
 
             String params = mSearchFilterBuilder.toString();
-            Log.i("llc_filter",params);
+            Log.i("llc_filter", params);
         }
     };
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.enter:
+
+                break;
+            case R.id.reset:
+                mFilterView.clearStatus();
+                mSearchFilterBuilder.clearStatus();
+                break;
+            default:
+        }
+    }
 }

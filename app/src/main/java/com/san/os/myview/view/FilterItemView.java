@@ -236,13 +236,25 @@ public class FilterItemView extends LinearLayout {
         mTagSecondId = "";
     }
 
-    public String getTagId(){
+    public String getTagId() {
         return mTagId;
     }
 
-    public String getTagSecondId(){
+    public String getTagSecondId() {
         return mTagSecondId;
     }
 
 
+    public void clearStatus() {
+        if (mTagsView != null) {
+            for (int i = 0, size = mTagsView.getChildCount(); i < size; i++) {
+                mTagsView.getChildAt(i).setSelected(false);
+            }
+        }
+        if (mSecondTagsView != null) {
+            for (int i = 0, size = mSecondTagsView.getChildCount(); i < size; i++) {
+                mSecondTagsView.getChildAt(i).setSelected(false);
+            }
+        }
+    }
 }
