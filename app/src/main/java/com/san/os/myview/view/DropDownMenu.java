@@ -219,7 +219,7 @@ public class DropDownMenu extends LinearLayout {
         private TextView mStrTv;
         private ImageView mCheckView;
 
-        private Consumer mConsumer;
+        private Consumer mObserver;
 
         private FilterItemModel mFilterItemModel;
 
@@ -262,7 +262,7 @@ public class DropDownMenu extends LinearLayout {
 
         private void init(Context context, FilterItemModel data, int index, Consumer consumer) {
 
-            mConsumer = consumer;
+            mObserver = consumer;
             mFilterItemModel = data;
             setTag(data);
             setPadding(40, 40, 40, 40);
@@ -283,7 +283,9 @@ public class DropDownMenu extends LinearLayout {
             setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Observable.just(mFilterItemModel).subscribe(mConsumer);
+                    v.setSelected(!v.isSelected());
+                    mFilterItemModel.mIsSelected = v.isSelected();
+                    Observable.just(mFilterItemModel).subscribe(mObserver);
                 }
             });
 

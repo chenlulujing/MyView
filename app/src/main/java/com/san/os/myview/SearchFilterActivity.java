@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.widget.RelativeLayout;
 
 import com.san.os.myview.model.FilterItemModel;
@@ -64,27 +65,36 @@ public class SearchFilterActivity extends FragmentActivity {
     }
 
 
+
     private Consumer<FilterItemModel> observer = new Consumer<FilterItemModel>() {
         @Override
         public void accept(FilterItemModel item) throws Exception {
             switch (item.classification_id) {
                 case FilterItemModel.CLASS_CHANEL_PRIMARY:
                     mFilterView.chanelFilterClick(item);
+                    mSearchFilterBuilder.category_id = item.mIsSelected? item.tagId:"";
                     break;
                 case FilterItemModel.CLASS_CHANEL_SECOEND:
                     mFilterView.chanelSecondFilterClick(item);
+                    mSearchFilterBuilder.category_id = item.mIsSelected? item.tagId:"";
                     break;
                 case FilterItemModel.CLASS_WORDSIZE:
                     mFilterView.wordSizeFilterClick(item);
+                    mSearchFilterBuilder.wordCount = item.mIsSelected? item.tagId:"";
                     break;
                 case FilterItemModel.CLASS_STATUS:
                     mFilterView.statusFilterClick(item);
+                    mSearchFilterBuilder.serialize_status = item.mIsSelected? item.tagId:"";
                     break;
                 case FilterItemModel.SORT:
                     ((SearchReslultFragment) mReslultFragment).dropDownMenuItemClick(item);
+                    mSearchFilterBuilder.order = item.tagId;
                     break;
                 default:
             }
+
+            String params = mSearchFilterBuilder.toString();
+            Log.i("llc_filter",params);
         }
     };
 

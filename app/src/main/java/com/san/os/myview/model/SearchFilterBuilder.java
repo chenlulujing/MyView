@@ -8,13 +8,13 @@ package com.san.os.myview.model;
 
 public class SearchFilterBuilder {
 
-    public int orider;
-    public String category_id;
-    public int serialize_status;
-    public long wordCount;
+    public String order="";
+    public String category_id="";
+    public String serialize_status="";
+    public String wordCount="";
 
     @Override
     public String toString() {
-        return "&orider="+orider+"&category_id="+category_id+"&serialize_status="+serialize_status+"&wordCount="+wordCount;
+        return "&order="+order+"&category_id="+category_id+"&serialize_status="+serialize_status+"&wordCount="+wordCount;
     }
 }

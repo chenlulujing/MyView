@@ -105,7 +105,7 @@ public class SearchReslultFragment extends Fragment {
     }
 
     private String citys_des[] = {"按综合","按人气","按更新","按字数"};
-    private String citys_id[] = {"按综合","按人气","按更新","按字数"};
+    private String citys_id[] = {"metadata","word_count","chapter_last_online_time","read_book_uv"};
     private void initDropDownMenu() {
 
         LinearLayout sortRootView = new LinearLayout(getActivity());
