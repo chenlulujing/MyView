@@ -28,6 +28,7 @@ public class FilterView extends LinearLayout {
     private TagClickListener mTagClickListener;
     FilterItemView mChanelFilterView, mWordSizeFilterView, mStatusFilterView;
 
+
     private HashMap<String, List<FilterItemModel>> mChannelData = new HashMap<>();
 
     public FilterView(Context context) {
@@ -146,10 +147,10 @@ public class FilterView extends LinearLayout {
 
     public static class TagClickListener implements View.OnClickListener {
 
-        private Consumer mConsumer;
+        private Consumer mObserver;
 
         public TagClickListener(Consumer consumer) {
-            mConsumer = consumer;
+            mObserver = consumer;
         }
 
         @Override
@@ -157,7 +158,7 @@ public class FilterView extends LinearLayout {
             v.setSelected(!v.isSelected());
             if (v.getTag() != null && v.getTag() instanceof FilterItemModel) {
                 ((FilterItemModel) v.getTag()).mIsSelected = v.isSelected();
-                Observable.just(v.getTag()).subscribe(mConsumer);
+                Observable.just(v.getTag()).subscribe(mObserver);
             }
         }
     }
