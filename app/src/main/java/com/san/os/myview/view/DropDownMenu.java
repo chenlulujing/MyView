@@ -80,6 +80,7 @@ public class DropDownMenu extends LinearLayout {
         menuSelectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuSelectedIcon, menuSelectedIcon);
         menuUnselectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuUnselectedIcon, menuUnselectedIcon);
         menuHeighPercent = a.getFloat(R.styleable.DropDownMenu_ddmenuMenuHeightPercent, menuHeighPercent);
+        a.getDrawable(R.styleable.DropDownMenu_ddmenuMenuHeightPercent);
         a.recycle();
 
         //为tabMenuView添加下划线
