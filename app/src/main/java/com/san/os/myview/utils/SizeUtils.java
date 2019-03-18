@@ -28,14 +28,18 @@ public class SizeUtils {
         return (getDisplayWidth() - leftMargin - rightMargin) / count;
     }
 
-    public int sp2px(Context context, float spValue) {
+    public static int sp2px(Context context, float spValue) {
         final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
         return (int) (spValue * fontScale + 0.5f);
     }
 
-    public int dip2px(float dpValue) {
+    public static int dip2px(float dpValue) {
         float rs = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, getDisplayMetrics());
         return (int) rs;
+    }
+
+    public static int translate(float one){
+        return (int)(getDisplayWidth()/750f*one);
     }
 
 
@@ -64,7 +68,7 @@ public class SizeUtils {
     }
 
 
-    public DisplayMetrics getDisplayMetrics() {
+    public static DisplayMetrics getDisplayMetrics() {
         DisplayMetrics metrics = new DisplayMetrics();
         WindowManager wm =
                 (WindowManager) MyViewApplication.getInstance().getSystemService(Context.WINDOW_SERVICE);

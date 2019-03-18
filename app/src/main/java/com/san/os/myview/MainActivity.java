@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mSearchFilter;
     private Button mBottomPopw;
     private Button mDayNightView;
+    private Button mScrollGuideView;
 
     private int FILE_SELECT_CODE = 100;
 
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSearchFilter = (Button) findViewById(R.id.search_filter);
         mBottomPopw = (Button) findViewById(R.id.bottom_popw);
         mDayNightView = (Button) findViewById(R.id.daynight_view);
+        mScrollGuideView =(Button)  findViewById(R.id.scroll_guide);
 
         mBtnUpdate.setOnClickListener(this);
         mBtnHandler.setOnClickListener(this);
@@ -148,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSearchFilter.setOnClickListener(this);
         mBottomPopw.setOnClickListener(this);
         mDayNightView.setOnClickListener(this);
+        mScrollGuideView.setOnClickListener(this);
 
         initEidtText();
 
@@ -336,6 +339,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.daynight_view:
                 Intent intent25 = new Intent(this, DayNightViewActivity.class);
                 startActivity(intent25);
+                break;
+            case R.id.scroll_guide:
+                Intent intent26 = new Intent(this, LeftScrollGuideActivity.class);
+                startActivity(intent26);
                 break;
             default:
 

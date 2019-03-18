@@ -48,6 +48,7 @@
         <activity android:name="com.san.os.myview.SearchFilterActivity"></activity>
         <activity android:name="com.san.os.myview.BottomPopWActivity"></activity>
         <activity android:name="com.san.os.myview.DayNightViewActivity"></activity>
+        <activity android:name="com.san.os.myview.LeftScrollGuideActivity"></activity>
     </application>
 
 </manifest>

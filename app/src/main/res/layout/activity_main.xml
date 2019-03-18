@@ -279,6 +279,13 @@
                 android:layout_below="@id/bottom_popw"
                 android:text="daynight_view"
                 />
+            <Button
+                android:id="@+id/scroll_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/daynight_view"
+                android:text="scroll_guide"
+                />
 
         </RelativeLayout>
 
