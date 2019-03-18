@@ -10,8 +10,12 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -36,7 +40,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private SearchEditText mEditText;
     private Button mBtnUpdate;
@@ -68,6 +72,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mLinearLayout;
     private Button mSearchTags;
     private Button mSearchFilter;
+    private Button mBottomPopw;
+    private Button mDayNightView;
 
     private int FILE_SELECT_CODE = 100;
 
@@ -77,7 +83,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
         mEditText = (SearchEditText) findViewById(R.id.edittext);
@@ -110,6 +116,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLinearLayout = (Button) findViewById(R.id.mylinearayout);
         mSearchTags = (Button) findViewById(R.id.searchtags);
         mSearchFilter = (Button) findViewById(R.id.search_filter);
+        mBottomPopw = (Button) findViewById(R.id.bottom_popw);
+        mDayNightView = (Button) findViewById(R.id.daynight_view);
 
         mBtnUpdate.setOnClickListener(this);
         mBtnHandler.setOnClickListener(this);
@@ -138,6 +146,38 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLinearLayout.setOnClickListener(this);
         mSearchTags.setOnClickListener(this);
         mSearchFilter.setOnClickListener(this);
+        mBottomPopw.setOnClickListener(this);
+        mDayNightView.setOnClickListener(this);
+
+        initEidtText();
+
+    }
+
+    private void initEidtText() {
+
+        mEditText.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                return false;
+            }
+        });
+        mEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        mEditText.setHint("hahah");
+        mEditText.setText("hello");
     }
 
     @Override
@@ -289,6 +329,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent23 = new Intent(this, SearchFilterActivity.class);
                 startActivity(intent23);
                 break;
+            case R.id.bottom_popw:
+                Intent intent24 = new Intent(this, BottomPopWActivity.class);
+                startActivity(intent24);
+                break;
+            case R.id.daynight_view:
+                Intent intent25 = new Intent(this, DayNightViewActivity.class);
+                startActivity(intent25);
+                break;
+            default:
 
         }
 

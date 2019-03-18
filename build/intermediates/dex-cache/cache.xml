@@ -2,6 +2,96 @@
 <items version="2" >
 
     <item
+        is-multidex="true"
+        jar="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_eca3dffd1a1854917575b539914454da4a8285ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chenlulu/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.6/596a6b4752ca6ec511a167e92b6387654f32023b/rxjava-2.1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="596a6b4752ca6ec511a167e92b6387654f32023b">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-2.1.6_79f7dd1cc7bc3a6107de15f1db88fa54069b6f7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="65ae6cc3fa854df606d05d71d62f43ef986e7fa6">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7a1a2aef40164a0598c28c2e326bfc7dd361e245/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chenlulu/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.1/1b1c911686eb40179219466e6a59b634b9d7a748/reactive-streams-1.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b1c911686eb40179219466e6a59b634b9d7a748">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10/reactive-streams-1.0.1_4a75cfc0529c9965496e83a59db293c9f12ec89a/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.1/1b1c911686eb40179219466e6a59b634b9d7a748/reactive-streams-1.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b1c911686eb40179219466e6a59b634b9d7a748">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.1_4a75cfc0529c9965496e83a59db293c9f12ec89a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/.android/build-cache/ece204a1966aac8b215343a264e6651bafc77f96/output/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1_c8659a580254c48f9e21b46d6744248738028f96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chenlulu/Documents/Demo/MyView/floatingmenu/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2d4e52527e8a6db7cef7594874bfa072cb421198">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_56da89519e66200dc9e816dd8ec79e40d5281f9c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chenlulu/.android/build-cache/ece204a1966aac8b215343a264e6651bafc77f96/output/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_c8659a580254c48f9e21b46d6744248738028f96/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chenlulu/.android/build-cache/5d77097c5fc0d88f2af0018277f717bab92a5f16/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b559418cc761614e62d430d43b0a7162cbc48acc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chenlulu/.android/build-cache/ece204a1966aac8b215343a264e6651bafc77f96/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5b6bea544fe4123a14afd04640f3d1bbfc2aa2e4/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/chenlulu/.android/build-cache/5d77097c5fc0d88f2af0018277f717bab92a5f16/output/jars/classes.jar"
         jumboMode="false"
@@ -29,31 +119,22 @@
         <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_5b6bea544fe4123a14afd04640f3d1bbfc2aa2e4.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chenlulu/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.1/1b1c911686eb40179219466e6a59b634b9d7a748/reactive-streams-1.0.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chenlulu/.android/build-cache/72ee928472b13f90793868e3dfa382c902fc4587/output/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="1b1c911686eb40179219466e6a59b634b9d7a748">
-        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.1_4a75cfc0529c9965496e83a59db293c9f12ec89a.jar" />
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ad5e034a6c09d4cd90d35cea727f8df490b9599/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chenlulu/.android/build-cache/ece204a1966aac8b215343a264e6651bafc77f96/output/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chenlulu/Documents/AndroidTool/AndroidSDK/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1_c8659a580254c48f9e21b46d6744248738028f96.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chenlulu/Documents/Demo/MyView/floatingmenu/build/intermediates/bundles/default/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e74e74ab128a6c81d184098111fac3561bab53e8">
-        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/pre-dexed/debug/classes_56da89519e66200dc9e816dd8ec79e40d5281f9c.jar" />
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/chenlulu/Documents/Demo/MyView/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_e31d0ec2483e24fc0ff709c1281dbb1ae0f95441/classes.dex" />
     </item>
     <item
         is-multidex="false"

@@ -12,12 +12,18 @@
                 android:id="@+id/myview"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"></com.san.os.myview.TextImageView>
-
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/myview"/>
             <com.san.os.myview.SearchEditText
                 android:id="@+id/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/myview" />
+                android:layout_below="@id/edit"
+                android:visibility="gone"
+                />
 
             <Button
                 android:id="@+id/update"
@@ -256,6 +262,22 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/searchtags"
                 android:text="search_filter"
+                />
+
+            <Button
+                android:id="@+id/bottom_popw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/search_filter"
+                android:text="bottom_popw"
+                />
+
+            <Button
+                android:id="@+id/daynight_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottom_popw"
+                android:text="daynight_view"
                 />
 
         </RelativeLayout>
