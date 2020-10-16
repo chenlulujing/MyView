@@ -287,6 +287,14 @@
                 android:text="scroll_guide"
                 />
 
+            <Button
+                android:id="@+id/jump_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scroll_guide"
+                android:text="jump_loading"
+                />
+
         </RelativeLayout>
 
     </ScrollView>

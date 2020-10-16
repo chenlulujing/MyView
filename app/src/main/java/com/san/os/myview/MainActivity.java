@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBottomPopw;
     private Button mDayNightView;
     private Button mScrollGuideView;
+    private Button mJumpLoadingView;
 
     private int FILE_SELECT_CODE = 100;
 
@@ -120,6 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBottomPopw = (Button) findViewById(R.id.bottom_popw);
         mDayNightView = (Button) findViewById(R.id.daynight_view);
         mScrollGuideView =(Button)  findViewById(R.id.scroll_guide);
+        mJumpLoadingView =(Button)  findViewById(R.id.jump_loading);
 
         mBtnUpdate.setOnClickListener(this);
         mBtnHandler.setOnClickListener(this);
@@ -151,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBottomPopw.setOnClickListener(this);
         mDayNightView.setOnClickListener(this);
         mScrollGuideView.setOnClickListener(this);
+        mJumpLoadingView.setOnClickListener(this);
 
         initEidtText();
 
@@ -343,6 +346,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.scroll_guide:
                 Intent intent26 = new Intent(this, LeftScrollGuideActivity.class);
                 startActivity(intent26);
+                break;
+            case R.id.jump_loading:
+                Intent intent27 = new Intent(this, JumpLoadingActivity.class);
+                startActivity(intent27);
                 break;
             default:
 
